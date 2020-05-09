@@ -1,0 +1,58 @@
+#contactForm .h4 {
+  font-weight: 400;
+  border-bottom: 1px solid silver;
+  font-size: 1.1em;
+  /*color: green;*/
+}
+
+.required-input {
+  color: maroon;
+}
+
+.static-map {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) and (min-width: 767px) {
+  #contactForm .static-map img {
+    width: 100%;
+  }
+}
+
+.img-gal {
+  width: 230px;
+  height: 200px;
+  padding: 5px;
+}
+
+.card.card-top {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.img-fluid.shadow.img-health {
+  width: 450px;
+  height: 350px;
+}
+
+.register-form {
+  display: table-cell;
+  /*padding: 40px;*/
+  width: 500px;
+  background-color: #e7e5e5;
+  padding: 40px 60px;
+  color: #505e6c;
+}
+
+.section-1 {
+  padding: 20px 0px;
+}
+
+.section-1.row.col-md-6.pray.img {
+  padding: 20px 0px;
+}
+
+.section-1.row. {
+  padding: 20px 0px;
+}
+
