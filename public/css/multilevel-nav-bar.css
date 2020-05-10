@@ -1,47 +1,38 @@
 @media only screen and (max-width: 991px) {
-    .navbar-hover .show>.dropdown-toggle::after {
-        transform: rotate(-90deg);
-    }
+  .navbar-hover .show > .dropdown-toggle::after {
+    transform: rotate(-90deg);
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .navbar-hover .collapse ul li {
-        position: relative;
-    }
+  .navbar-hover .collapse ul li {
+    position: relative;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .navbar-hover .collapse ul li:hover>ul {
-        display: block;
-    }
+  .navbar-hover .collapse ul li:hover > ul {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .navbar-hover .collapse ul ul {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 250px;
-        display: none;
-    }
+  .navbar-hover .collapse ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .navbar-hover .collapse ul ul ul {
-        position: absolute;
-        top: 0;
-        left: 100%;
-        min-width: 250px;
-        display: none;
-    }
-
+  .navbar-hover .collapse ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    display: none;
+  }
 }
 
-.dropdown-item {
-    color: green;
-
-}
-
-.nav-link {
-    color: green;
-}
