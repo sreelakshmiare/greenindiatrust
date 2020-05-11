@@ -2,50 +2,59 @@
 @section('center')
 
 <section class="section-about">
-        <div class="container">
-            <h5 class="text--justify text-success">Volunteering Information</h5>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <h4 class="text--justify text-success">Volunteering</h4>
-                    <hr>
-                    <p class="text--justify text-success">Green India trust offers various opportunities and offers for you to get<br> involved to save our&nbsp;Mother Earth on which we live and our own ones who are in the dungeon of&nbsp;misfortunes and inabilities without a small hand of
-                        support cannot come to life&nbsp;and “SURVIVAL”.<br><br>Green India Trust understands that everyone has an inner passion and <br>love towards the suffering&nbsp;lives around the globe and to save our <br>natural resources, the
-                        Nature’s Gift,&nbsp;the planet, but they are not given<br> “A RIGHT OPPORTUNITY for a GENUINE “and Worth&nbsp;Spending for their <br>contribution.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Green India Trust’s
-                        accountable and transparent structure&nbsp;and voluntary service designs and facilitates few innovative, feasible and worthy opportunities to serve the Earth, its resources and the very needy lives&nbsp;around. Weekly 5 days this
-                        schedule can be followed with changes according to the situation and convenience of the team. Green India Trust gives volunteering opportunities to our working as volunteer on Saturday or Sunday meet like-minded people. You can
-                        join us with your family especially children. We have different kind of activities as Tree Plantation, Medical Camps, awareness for rural areas etc. &nbsp;That we ask is for you to spend couple of hours with us on every Saturday
-                        or Sunday, just a will to see your home town turn clean, green and better place tolive and enjoy for all.<br><br>Brand Ambassador <br>We need the speakers, communicator the environmentalists, the social <br>activist and the passionate
-                        individuals, who can drive our different <br>initiatives from their institutions or organizations, housing society <br>and locality.<br><br><br><br><br></p>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <h4 class="text--justify text-success">Fill the Volunteer Form(*required)</h4>
-                    <hr>
-                    <form class="bg-light shadow register-form" data-bss-recipient="1f7b8ae5bcbd3903e7424d6bcfe078ed">
-                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-                        <div class="form-group"><textarea class="form-control" name="address">Address</textarea></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)"></div>
-                        <div class="form-group"><label class="text-success">Gender</label>
-                            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Male</label></div>
-                            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Female</label></div>
-                        </div>
-                        <div class="form-group"><input class="form-control" type="tel" name="phone" placeholder="Primary Phone"></div>
-                        <div class="form-group"><label class="text-success">Volunteering Days</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">Weekends</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-                        <div
-                            class="form-group"><label class="text-success">Education</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">Weekends</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-                <div
-                    class="form-group">
-                    <div class="form-check"><label class="form-check-label text-success"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <h4 class="text--justify text-success">Volunteering Information</h4>
+                <p class="text-justify text--justify text-success">Green India trust offers various opportunities and offers for you to get<br> involved to save our&nbsp;Mother Earth on which we live and our own ones who are in the dungeon of&nbsp;misfortunes and inabilities without a small hand of
+                    support cannot come to life&nbsp;and “SURVIVAL”.<br><br>Green India Trust understands that everyone has an inner passion and <br>love towards the suffering&nbsp;lives around the globe and to save our <br>natural resources, the
+                    Nature’s Gift,&nbsp;the planet, but they are not given<br> “A RIGHT OPPORTUNITY for a GENUINE “and Worth&nbsp;Spending for their <br>contribution. Green India Trust’s accountable and transparent structure&nbsp;and voluntary service
+                    designs and facilitates few innovative, feasible and worthy opportunities to serve the Earth, its resources and the very needy lives&nbsp;around. Weekly 5 days this schedule can be followed with changes according to the situation
+                    and convenience of the team. Green India Trust gives volunteering opportunities to our working as volunteer on Saturday or Sunday meet like-minded people. You can join us with your family especially children. We have different
+                    kind of activities as Tree Plantation, Medical Camps, awareness for rural areas etc. &nbsp;That we ask is for you to spend couple of hours with us on every Saturday or Sunday, just a will to see your home town turn clean, green
+                    and better place tolive and enjoy for all.<br><br>Brand Ambassador <br>We need the speakers, communicator the environmentalists, the social <br>activist and the passionate individuals, who can drive our different <br>initiatives
+                    from their institutions or organizations, housing society <br>and locality.<br><br><br><br><br></p>
             </div>
-            <div class="form-group"><button class="btn btn-primary btn-block text-white bg-success" type="submit">Sign Up</button></div>
-            </form>
+            <div class="col-lg-6">
+                <div class="bg-white border rounded-0 shadow">
+                    <form>
+                        <h5 class="text-center text-success"><strong>Volunteer Application Form</strong></h5>
+                        <div class="shadow-sm form-row">
+                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Firstname" required=""></div>
+                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Lastname" required=""></div>
+                            <div class="form-group col-md-6"><input class="form-control" type="email" placeholder="Email"></div>
+                            <div class="form-group col-md-6"><input class="form-control" type="password" placeholder="Password"></div>
+                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Mobile Number" required=""></div>
+                            <div class="form-group col-md-4"><input class="form-control" type="text" placeholder="Gender" required=""></div>
+                            <div class="form-group col-md-2"><input class="form-control" type="text" placeholder="Age" required=""></div>
+                            <div class="form-group col-md-12"><input class="form-control" type="text" placeholder="Address" required=""></div>
+                            <div class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Education</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+                            <div
+                                class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Expected Period of Volunteership</option><option value="13">Weekdays</option><option value="14">Weekends</option></optgroup></select></div>
+                        <div
+                            class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Areas of Interest</option><option value="13">Administration Work</option><option value="14">Events Organizing</option><option value="14">Fundraising for GIT</option><option value="14">Teaching at Education Institution</option><option value="14">Creating Awareness for rural areas</option><option value="14">  Social Media Relations/Public Relation</option><option value="14">8.  health care expect/ environmentalist</option></optgroup></select></div>
+                <div
+                    class="form-group col-md-12"><label>Are You Relocating For conducting camps and events?</label>
+                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Yes&nbsp;</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">No</label></div>
+            </div>
+            <div class="col-md-12"><label>Emergency Contact Details</label></div>
+            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Name" required=""></div>
+            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Mobile Number" required=""></div>
+            <div><label>Would You like to Donate?</label>
+                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1"><a href="donatepage.html">Yes</a>&nbsp;</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1"><a href="#">No</a></label></div>
+            </div>
+            <div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Accept the Terms and Conditions<br></label></div>
+            </div>
+            <div class="text-right form-group col-md-6"><a class="btn btn-success btn-sm text-center" role="button" href="donatepage.html"><strong>Submit</strong></a></div>
         </div>
-        </div>
-        </div>
-    </section>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
 
 @endsection

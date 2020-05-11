@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 
                     <h4 class="text-justify text-success">Our Objectives</h4>
-                    <p class="text-justify text-success"><img class="object_img" src=" {{ asset('img/objectives.png') }}">
+                    <p class="text-justify text-success"><img class="object_img" src="{{ asset('img/objectives.png')}}">
 					GIT’s establishment and striving even in its financial constraints are the passion, need and experiences the founding members had, and thus its objectives are genuine, need-based and must-to-be achieved only.
 					</p>
 

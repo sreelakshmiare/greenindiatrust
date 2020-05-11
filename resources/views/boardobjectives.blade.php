@@ -1,8 +1,7 @@
 @extends('layouts.index')
 @section('center')
 
- <section>
-     <div class="container">
+<section><div class="container">
     <div class="row">
         <div class="col object">
             <h6 class="text-success mt-auto"><strong>Our Board Objectives</strong></h6>
@@ -16,6 +15,5 @@
             </ol>
         </div>
     </div>
-</div>
-</section>
+</div></section>
 @endsection

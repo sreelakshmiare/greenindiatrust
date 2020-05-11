@@ -19,14 +19,15 @@
         </div>
     </div>
 </section>
-    <section class="section-about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src=" {{ asset('img/education.jpg') }}"></div>
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src=" {{ asset('img/education2.jpg') }}"></div>
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src=" {{ asset('img/education3.jpg') }}"></div>
-            </div>
+
+<section class="section-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/education.jpg')}}"></div>
+            <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/education2.jpg')}}"></div>
+            <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/education3.jpg')}}"></div>
         </div>
-    </section>
+    </div>
+</section>
 
 @endsection

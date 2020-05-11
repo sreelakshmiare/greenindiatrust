@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 
                     <h4 class="text-justify text-success">Enironment Awareness:</h4>
-                    <p class="text-justify text-success"><img class = "para_img float-right" src=" {{asset('img/environment.jpg') }}" >Environmental awareness is to understand the fragility of our environment and the importance of its protection.  Promoting environmental awareness is an easy way to become an environmental steward and participate in creating a brighter future for our children . 
+                    <p class="text-justify text-success"><img class = "para_img float-right" src="{{ asset('img/environment.jpg')}}" >Environmental awareness is to understand the fragility of our environment and the importance of its protection.  Promoting environmental awareness is an easy way to become an environmental steward and participate in creating a brighter future for our children . 
 					</p>
 
 					<p class="text-justify text-success">We provide a common platform and involve youths in social and environmental causes to make them understand the importance of Environment. We encourage the youths to come togetherness to contribute and bring positive change in our society and Mother Nature. Here youth and colleges can showcase their green ideas, thoughts, social leadership, innovation, technology and how they can positively transform environment and society. 
@@ -48,21 +48,24 @@
 		
 </div>
 	
+
+
+
 </div>
         </div>
     </section>
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src=" {{ asset('img/aware.jpg') }}"></div>
-                <div class="col-lg-4 offset-lg-1"><img class="para_img" src=" {{ asset('img/aware1.jpg') }}"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/aware.jpg')}}"></div>
+                <div class="col-lg-4 offset-lg-1"><img class="para_img" src="{{ asset('img/aware1.jpg')}}"></div>
             </div>
         </div>
     </section>
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col offset-lg-0 text-center"><img class="img-thumbnail img-fluid" src="{{ asset('img/aware2.jpg') }}" width="650" height="350"></div>
+                <div class="col offset-lg-0 text-center"><img class="img-thumbnail img-fluid" src="{{ asset('img/aware2.jpg')}}" width="650" height="350"></div>
             </div>
         </div>
     </section>

@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 
                     <h4 class="text-justify text-success">Green Wall and Researches:</h4>
-                    <p class="text-justify text-success"><img class = "para_img float-right" src=" {{ asset('img/green.jpg') }}" >Coastal Resources are of much help to the mankind. Ecosystems of		coastal resources have specific impacts on human life. This “Green Wall” Project deals with issues related to Palmyra covers and other forms of plantation.
+                    <p class="text-justify text-success"><img class = "para_img float-right" src="{{ asset('img/green.jpg')}}" >Coastal Resources are of much help to the mankind. Ecosystems of		coastal resources have specific impacts on human life. This “Green Wall” Project deals with issues related to Palmyra covers and other forms of plantation.
 						The “Green Wall” Project of Green India Trust will establish a systematic management of plantation ecosystem to secure this valuable resource. 
 					</p>
 
@@ -24,7 +24,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col offset-lg-3"><img class="img-fluid border rounded-0" src=" {{ asset('img/map.jpg') }}" width="400" height="300"></div>
+                <div class="col offset-lg-3"><img class="img-fluid border rounded-0" src="{{ asset('img/map.jpg')}}" width="400" height="300"></div>
             </div>
         </div>
         <section>
@@ -80,12 +80,22 @@
 		
 </div>
 	
+
+
+
+
+    
+    
+    
+   
+    
+   
 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-1"><img class="para_img" src="{{ asset('img/green1.jpg') }}"></div>
-                    <div class="col-lg-5 offset-lg-1"><img class="para_img" src="{{ asset('img/green2.jpg') }}"></div>
+                    <div class="col-lg-5 offset-lg-1"><img class="para_img" src="{{ asset('img/green1.jpg')}}"></div>
+                    <div class="col-lg-5 offset-lg-1"><img class="para_img" src="{{ asset('img/green2.jpg')}}"></div>
                 </div>
             </div>
         </section>

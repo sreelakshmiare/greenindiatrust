@@ -5,6 +5,12 @@
   width: 80px;
 }
 
+.admin_logo_img {
+  vertical-align: middle;
+  border-style: none;
+  height: 50px;
+  width: 60px;
+}
 form.example input[type=search] {
   padding: 10px;
   font-size: 17px;

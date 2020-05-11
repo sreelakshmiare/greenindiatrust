@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 
                     <h4 class="text-justify text-success">AP-Biodiversity:</h4>
-                    <p class="text-justify text-success"><img class = "para_img float-right" src="{{asset('img/apbio.jpg') }}" >The term biological diversity - or biodiversity - is applied to the variety of life on earth and the natural patterns it forms. The biodiversity we see today is the fruit of billions of years of evolution, shaped by natural processes and increasingly by the influence of humans. It forms the web of life of which we are an integral part and upon which we so fully depend. Biological diversity encompasses all species of plants, animals and micro-organisms and the variations between them, and the eco-systems of which they form a part. It occurs at three levels: 
+                    <p class="text-justify text-success"><img class = "para_img float-right" src="{{ asset('img/apbio.jpg')}}" >The term biological diversity - or biodiversity - is applied to the variety of life on earth and the natural patterns it forms. The biodiversity we see today is the fruit of billions of years of evolution, shaped by natural processes and increasingly by the influence of humans. It forms the web of life of which we are an integral part and upon which we so fully depend. Biological diversity encompasses all species of plants, animals and micro-organisms and the variations between them, and the eco-systems of which they form a part. It occurs at three levels: 
 					</p>
 						
 						<ol class = "orderlist text-success">
@@ -229,23 +229,23 @@
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src=" {{ asset('img/bio1.jpg') }}"></div>
-                <div class="col-lg-4 offset-lg-1"><img class="para_img" src=" {{ asset('img/bio2.jpg') }}"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/bio1.jpg')}}"></div>
+                <div class="col-lg-4 offset-lg-1"><img class="para_img" src="{{ asset('img/bio2.jpg')}}"></div>
             </div>
         </div>
     </section>
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/bio3.jpg') }}"></div>
-                <div class="col-lg-4 offset-lg-1"><img class="para_img" src="{{ asset('img/bio4.jpg') }}"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/bio3.jpg')}}"></div>
+                <div class="col-lg-4 offset-lg-1"><img class="para_img" src="{{ asset('img/bio4.jpg')}}"></div>
             </div>
         </div>
     </section>
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 offset-lg-0 text-center"><img src="{{ asset('img/biocert.jpg') }}" width="650" height="350"></div>
+                <div class="col-lg-9 offset-lg-0 text-center"><img src="{{ asset('img/biocert.jpg')}}" width="650" height="350"></div>
             </div>
         </div>
     </section>

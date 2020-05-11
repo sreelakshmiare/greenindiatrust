@@ -23,10 +23,10 @@
 <section class="section-about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports.png') }}" /></div>
-            <div class="col-lg-3 offset-lg-0"><img class="award-img" src=" {{ asset('img/reports1.png') }}"/></div>
-            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports2.png') }}" /></div>
-            <div class="col-lg-3 offset-lg-0"><img class="award-img" src=" {{ asset('/img/reports3.png') }}" /></div>
+            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports.png')}}" /></div>
+            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports1.png')}}" /></div>
+            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports2.png')}}" /></div>
+            <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/reports3.png')}}" /></div>
 			</div>
     </div>
 </section>

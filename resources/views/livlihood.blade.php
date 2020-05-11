@@ -30,9 +30,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 offset-lg-1">
-                    <h6 class="text-success">SHG Group</h6><img class="para_img" src="{{ asset('img/shggroup.jpg') }}"></div>
+                    <h6 class="text-success">SHG Group</h6><img class="para_img" src="{{ asset('img/shggroup.jpg')}}"></div>
                 <div class="col-lg-4 offset-lg-1">
-                    <h6 class="text-success">Computer Training</h6><img class="para_img" src="{{ asset('img/comptraining.jpg') }}"></div>
+                    <h6 class="text-success">Computer Training</h6><img class="para_img" src="{{ asset('img/comptraining.jpg')}}"></div>
             </div>
         </div>
     </section>

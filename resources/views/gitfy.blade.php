@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-md-12">
                 
-                    <h4 class="text-justify text-success">Organic Farming</h4>
-                    <p class="text-justify text-success"> <strong>Upcoming Project......</strong> 
+                    <h4 class="text-justify text-success">Green India Trust FY 20-21</h4>
+                    <p class="text-justify text-success"><strong>Upcoming Project......</strong>
 					</p>
-					<br/><br/<br/><br/><br/>
+					<br/><br/><br/><br/><br/>
 					<p class="text-justify text-success">
 					</p>
 					<br/><br/>
@@ -23,4 +23,4 @@
     </div>
 </section>
 
-@endsection
+    @endsection
