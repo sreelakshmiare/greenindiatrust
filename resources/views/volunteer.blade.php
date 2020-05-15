@@ -6,14 +6,14 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <h4 class="text--justify text-success">Volunteering Information</h4>
-                <p class="text-justify text--justify text-success">Green India trust offers various opportunities and offers for you to get<br> involved to save our&nbsp;Mother Earth on which we live and our own ones who are in the dungeon of&nbsp;misfortunes and inabilities without a small hand of
-                    support cannot come to life&nbsp;and “SURVIVAL”.<br><br>Green India Trust understands that everyone has an inner passion and <br>love towards the suffering&nbsp;lives around the globe and to save our <br>natural resources, the
-                    Nature’s Gift,&nbsp;the planet, but they are not given<br> “A RIGHT OPPORTUNITY for a GENUINE “and Worth&nbsp;Spending for their <br>contribution. Green India Trust’s accountable and transparent structure&nbsp;and voluntary service
-                    designs and facilitates few innovative, feasible and worthy opportunities to serve the Earth, its resources and the very needy lives&nbsp;around. Weekly 5 days this schedule can be followed with changes according to the situation
-                    and convenience of the team. Green India Trust gives volunteering opportunities to our working as volunteer on Saturday or Sunday meet like-minded people. You can join us with your family especially children. We have different
-                    kind of activities as Tree Plantation, Medical Camps, awareness for rural areas etc. &nbsp;That we ask is for you to spend couple of hours with us on every Saturday or Sunday, just a will to see your home town turn clean, green
-                    and better place tolive and enjoy for all.<br><br>Brand Ambassador <br>We need the speakers, communicator the environmentalists, the social <br>activist and the passionate individuals, who can drive our different <br>initiatives
-                    from their institutions or organizations, housing society <br>and locality.<br><br><br><br><br></p>
+                <p class="text-justify text-success">Green India trust offers various opportunities and offers for you to get  involved to save our Mother Earth on which we live and our own ones who are in the dungeon of misfortunes and inabilities without a small hand of
+                    support cannot come to life and “SURVIVAL”. <BR> <BR>Green India Trust understands that everyone has an inner passion and  love towards the suffering lives around the globe and to save our  natural resources, the
+                    Nature’s Gift, the planet, but they are not given “A RIGHT OPPORTUNITY for a GENUINE “and Worth Spending for their  contribution. <BR><BR>Green India Trust’s accountable and transparent structure and voluntary service
+                    designs and facilitates few innovative, feasible and worthy opportunities to serve the Earth, its resources and the very needy lives around. Weekly 5 days this schedule can be followed with changes according to the situation
+                    and convenience of the team. <BR><BR>Green India Trust gives volunteering opportunities to our working as volunteer on Saturday or Sunday meet like-minded people. You can join us with your family especially children. We have different
+                    kind of activities as Tree Plantation, Medical Camps, awareness for rural areas etc.  That we ask is for you to spend couple of hours with us on every Saturday or Sunday, just a will to see your home town turn clean, green
+                    and better place tolive and enjoy for all.Brand Ambassador We need the speakers, communicator the environmentalists, the social  activist and the passionate individuals, who can drive our different  initiatives
+                    from their institutions or organizations, housing society and locality.<br><br><br><br><br></p>
             </div>
             <div class="col-lg-6">
                 <div class="bg-white border rounded-0 shadow">

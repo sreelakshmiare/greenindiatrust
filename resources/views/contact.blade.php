@@ -52,7 +52,7 @@
                         <h2 class="text-success h4"><i class="fa fa-location-arrow"></i> Locate Us</h2>
                         <div class="form-row">
                             <div class="col-12">
-                                <div class="static-map"><iframe allowfullscreen="" frameborder="0" src=""
+                                <div class="static-map"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDCa9v4vrSSf97hHgNyrx5fjH024gKq0jU&amp;q=Green+India+Trust%2C+Pogathota%2C+Nellore%2C+Andhra+Pradesh+524001&amp;zoom=15"
                                         width="100%" height="400"></iframe></div>
                             </div>
                             <div class="col-sm-6 col-md-12 col-lg-6">

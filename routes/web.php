@@ -22,6 +22,14 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/donate', function () {
+    return view('donate');
+})->name('donate');
+
+Route::get('/smokefree', function () {
+    return view('smokefree');
+})->name('smokefree');
+
 Route::get('/mission', function () {
     return view('mission');
 })->name('mission');
@@ -149,7 +157,46 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => ['restrictToAdmin']], function () {
+    Route::get('admin/menus', 
+        ["uses"=>"Admin\AdminMenusController@index",'as'=>'adminDisplayMenus']
+    );
 
-Route::get('admin/menus', 
-    ["uses"=>"Admin\AdminMenusController@index",'as'=>'adminDisplayMenus']
-)->middleware('restrictToAdmin');
+    Route::get('admin/searchAchievements', 
+        ["uses"=>"Admin\AchievementsController@searchAchievements",'as'=>'adminSearchAchievements']
+    );
+
+    Route::get('admin/achievements', 
+        ["uses"=>"Admin\AchievementsController@index",'as'=>'adminDisplayAchievements']
+    );
+    
+    // edit Achievement
+    Route::get('admin/editAchievementForm/{id}', 
+        ["uses"=>"Admin\AchievementsController@editAchievementForm", 
+        "as"=> "adminEditAchievementForm"]
+    );
+    // Update Achievement
+    Route::post('admin/updateAchievement/{id}', 
+        ["uses"=>"Admin\AchievementsController@updateAchievement", 
+        "as"=> "adminUpdateAchievement"]
+    );    
+       
+    // Delete Achievement
+    Route::get('admin/deleteAchievement/{id}', 
+        ["uses"=>"Admin\AchievementsController@deleteAchievement", 
+        "as"=> "adminDeleteAchievement"]
+    );
+
+    //display create Achievement form
+    Route::get('admin/createAchievementForm', 
+        ["uses"=>"Admin\AchievementsController@createAchievementForm", 
+        "as"=> "adminCreateAchievementForm"]
+    );
+
+    //send new Achievement data to database
+    Route::post('admin/sendCreateAchievementForm/', 
+        ["uses"=>"Admin\AchievementsController@sendCreateAchievementForm", 
+        "as"=> "adminSendCreateAchievementForm"]
+    );
+    // end Achievements
+});

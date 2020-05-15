@@ -25,7 +25,7 @@
                 <div class="col-lg-7 col-xl-7">
                     <h5 class="text-center text-success heading-home">&nbsp;<strong>About Green India Trust</strong></h5>
                     <p class="text-justify text-success para-home">Founded in 2008 by&nbsp;<strong>Dr. Ch. Murali&nbsp;Krishna</strong>&nbsp;along with like-minded and passionate friends, Green India Trust (GIT)&nbsp;is a collective effort of a resourceful and professional common platform for&nbsp;partnership
-                        and accordance towards development, empowerment and conservation in&nbsp;livelihood, rural communities, rural infrastructure, NRM and health.<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="aboutus.html">Read More</a>&nbsp;
+                        and accordance towards development, empowerment and conservation in&nbsp;livelihood, rural communities, rural infrastructure, NRM and health.<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('about')}}">Read More</a>&nbsp;
                         &nbsp;<br><a href="healthcare.html"></a><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" src="{{ asset('img/home-about.jpg')}}" style="/*padding: 15px;*/"></div>
@@ -42,7 +42,7 @@
                 <div class="col-lg-7">
                     <h5 class="text-center text-success heading-home"><strong>Environment</strong></h5>
                     <p class="text-justify text-success para-home">Environmental awareness is to understand the fragility of our environment and the importance of its protection. &nbsp;Promoting environmental awareness is an easy way to become an environmental steward and participate in creating
-                        a brighter future for our children.&nbsp; <br><a href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="environment-aware.html">Read More</a><br><br></p>
+                        a brighter future for our children.&nbsp; <br><a href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('environment')}}">Read More</a><br><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" src="{{ asset('img/home-enivironment.jpg')}}" width="400" style="/*padding: 15px;*/"></div>
             </div>
@@ -72,7 +72,7 @@
                     <h5 class="text-center text-success heading-home"><strong>Livlihood</strong></h5>
                     <p class="text-justify text-success para-home">The livelihood and community development projects implemented by Green India Trust have a holistic approach encompassing many components of education, skills training, capacity building and awareness. The projects work in sync
                         with government development programmes and facilitate linkages to public services and schemes for the project beneficiaries.&nbsp;<br><a href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm"
-                            role="button" href="livelihood.html">Read More</a><br><br></p>
+                            role="button" href="{{route('livlihood')}}">Read More</a><br><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" src="{{ asset('img/home-enivironment.jpg')}}" width="400" style="/*padding: 15px;*/"></div>
             </div>
@@ -88,7 +88,7 @@
                     <h5 class="text-center text-success heading-home"><strong>Women Empowers</strong></h5>
                     <p class="text-justify text-success para-home">GIT has few Core Areas of Focus under which it designs, plans, and works and responding to the civic need and&nbsp;concerns, GIT works on few cross-cutting the matic areas also as when such emergency and need arise.&nbsp;<br>
                         <a
-                            href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="livlihood.html">Read More</a><br></p>
+                            href="{{route('healthcare')}}"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="livlihood.html">Read More</a><br></p>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
                     <h5 class="text-center text-success heading-home"><strong>Education</strong></h5>
                     <p class="text-justify text-success para-home">Green India trust to educate the local man power and to create the awareness program in rural areas often urge their children to take up domestic tasks or help in labor, instead of helping them attain an education.&nbsp;<br>
                         <a
-                            href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="education.html">Read More</a><br><br></p>
+                            href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('education')}}">Read More</a><br><br></p>
                 </div>
                 <div class="col-lg-5"><img class="img-thumbnail img-fluid about-img" src="{{ asset('img/home-education.jpg')}}"></div>
             </div>

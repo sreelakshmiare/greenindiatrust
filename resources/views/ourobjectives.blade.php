@@ -14,7 +14,7 @@
 					<br/>
 					<br/>
 
-					<p class="text-justify text-success"><strong>Our Board Objectives </strong><a class="btn btn-success" href="ourboardobjectives.html">Click Here</a>
+					<p class="text-justify text-success"><strong>Our Board Objectives </strong><a class="btn btn-success" href="{{route('boardobjectives')}}">Click Here</a>
 
 					</p>
 							

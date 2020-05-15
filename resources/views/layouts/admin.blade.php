@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('admin/fonts/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/fonts/fontawesome5-overrides.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/css/Navigation-Clean.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/css/Contact-Form-Clean.css')}}">
     <link rel="stylesheet" href="{{asset('admin/css/sidebar.css')}}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
@@ -53,13 +54,13 @@
         <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link text-left text-white py-1 px-0 position-relative" data-toggle="dropdown" aria-expanded="false" href="#">
                 <i class="fas fa-sliders-h mx-3"></i>
-                <span class="text-nowrap mx-2">Products Admin</span>
+                <span class="text-nowrap mx-2">Useful Admins</span>
                 <i class="fas fa-caret-down float-none float-lg-right fa-sm"></i>
             </a>
             <div
                 class="dropdown-menu border-0 animated fadeIn" role="menu">
-                <a class="dropdown-item text-white" role="presentation" href="#">
-                    <span>Manage Products</span>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayAchievements')}}">
+                    <span>Achievements</span>
                 </a>
                             
             </div>

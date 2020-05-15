@@ -79,8 +79,8 @@
 						</ol>
 					
 					  
-						<p class="text-justify text-success">CSR Initiatives for 35 AC Category Benefits, CONTACT here :<a href = "#"> gitrust@gmail.com</a></p>
-						<p class="text-justify text-success">Or Leave a single line here, we will contact you :<a href = "#" class = "btn btn-success"> Contact Us</a></p>
+						<p class="text-justify text-success">CSR Initiatives for 35 AC Category Benefits, CONTACT here :<a href = "{{route('contact')}}"> gitrust@gmail.com</a></p>
+						<p class="text-justify text-success">Or Leave a single line here, we will contact you :<a href = "{{route('contact')}}" class = "btn btn-success"> Contact Us</a></p>
 			 </div>
             
         </div>
