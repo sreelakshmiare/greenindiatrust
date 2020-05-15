@@ -112,7 +112,7 @@ form.example::after {
 }
 
 .text-justify.text-success.para-home {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .text-center.text-success.heading-home {
@@ -213,3 +213,8 @@ form.example::after {
 .text-center.row.team-row {
   margin-top: -40px;
 }
+.form-group {
+  margin-bottom: 1rem;
+  margin-top: 1.2rem;
+}
+

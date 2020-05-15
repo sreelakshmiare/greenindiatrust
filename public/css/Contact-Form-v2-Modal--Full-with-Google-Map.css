@@ -56,3 +56,12 @@
   padding: 20px 0px;
 }
 
+.w-100.d-block.carousel-img {
+  height: 600px;
+}
+
+.award-next-img {
+  width: 300px;
+  height: 250px;
+}
+

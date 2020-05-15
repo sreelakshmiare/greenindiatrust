@@ -32,12 +32,30 @@
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/limca-record.jpg')}}"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/IndiaBookOfRecords.png')}}"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/ScheduleOfWorldCongress.png')}}"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="award-img" src="{{ asset('img/BioDiversityConserver.png')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award11.jpg')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award9.png')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award12.png')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/BioDiversityConserver.png')}}"></div>
             </div>
         </div>
     </section>
-
+	<section class="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award2.jpg"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award4.jpg"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="shadow award-img" src="assets/img/award5.jpg"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award8.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award1.jpg"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award10.jpg"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award3.jpg"></div>
+            </div>
+        </div>
+    </section>
 @endsection

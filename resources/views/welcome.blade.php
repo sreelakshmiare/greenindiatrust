@@ -4,9 +4,9 @@
     <div class="container">
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active"><img class="w-100 d-block" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image" style="height: 400px;"></div>
-                <div class="carousel-item"><img class="w-100 d-block" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image" style="height: 400px;"></div>
-                <div class="carousel-item"><img class="w-100 d-block" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image" style="height: 400px;"></div>
+                <div class="carousel-item active"><img class="w-100 d-block carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
+                <div class="carousel-item"><img class="w-100 d-block carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
+                <div class="carousel-item"><img class="w-100 d-block.carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
             </div>
             <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button"
                     data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
@@ -23,7 +23,7 @@
         <div class="bg-light div-homeabout">
             <div class="row">
                 <div class="col-lg-7 col-xl-7">
-                    <h5 class="text-center text-success heading-home">&nbsp;<strong>About Green India Trust</strong></h5>
+                    <h4 class="text-center text-success heading-home">&nbsp;<strong>About Green India Trust</strong></h4>
                     <p class="text-justify text-success para-home">Founded in 2008 by&nbsp;<strong>Dr. Ch. Murali&nbsp;Krishna</strong>&nbsp;along with like-minded and passionate friends, Green India Trust (GIT)&nbsp;is a collective effort of a resourceful and professional common platform for&nbsp;partnership
                         and accordance towards development, empowerment and conservation in&nbsp;livelihood, rural communities, rural infrastructure, NRM and health.<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('about')}}">Read More</a>&nbsp;
                         &nbsp;<br><a href="healthcare.html"></a><br></p>
@@ -40,7 +40,7 @@
             <hr>
             <div class="row">
                 <div class="col-lg-7">
-                    <h5 class="text-center text-success heading-home"><strong>Environment</strong></h5>
+                        <h4 class="text-center text-success heading-home"><strong>Environment</strong></h4>
                     <p class="text-justify text-success para-home">Environmental awareness is to understand the fragility of our environment and the importance of its protection. &nbsp;Promoting environmental awareness is an easy way to become an environmental steward and participate in creating
                         a brighter future for our children.&nbsp; <br><a href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('environment')}}">Read More</a><br><br></p>
                 </div>
@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid about-img" src="{{ asset('img/home-health.jpg')}}"></div>
                 <div class="col-lg-7 col-xl-7">
-                    <h5 class="text-center text-success heading-home"><strong>Health Care</strong></h5>
+                        <h4 class="text-center text-success heading-home"><strong>Health Care</strong></h4>
                     <p class="text-justify text-success para-home">GIT has few Core Areas of Focus under which it designs, plans, and works and responding to the civic need and&nbsp;concerns, GIT works on few cross-cutting the matic areas also as when such emergency and need arise.&nbsp;<br>
                         <a
                             href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="healthcare.html">Read More</a><br></p>
@@ -69,7 +69,7 @@
         <div>
             <div class="row">
                 <div class="col-lg-7">
-                    <h5 class="text-center text-success heading-home"><strong>Livlihood</strong></h5>
+                        <h4 class="text-center text-success heading-home"><strong>Livlihood</strong></h4>
                     <p class="text-justify text-success para-home">The livelihood and community development projects implemented by Green India Trust have a holistic approach encompassing many components of education, skills training, capacity building and awareness. The projects work in sync
                         with government development programmes and facilitate linkages to public services and schemes for the project beneficiaries.&nbsp;<br><a href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm"
                             role="button" href="{{route('livlihood')}}">Read More</a><br><br></p>
@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid about-img" src="{{ asset('img/home-womenpower.jpg')}}"></div>
                 <div class="col-lg-7 col-xl-7">
-                    <h5 class="text-center text-success heading-home"><strong>Women Empowers</strong></h5>
+                        <h4 class="text-center text-success heading-home"><strong>Women Empowers</strong></h4>
                     <p class="text-justify text-success para-home">GIT has few Core Areas of Focus under which it designs, plans, and works and responding to the civic need and&nbsp;concerns, GIT works on few cross-cutting the matic areas also as when such emergency and need arise.&nbsp;<br>
                         <a
                             href="{{route('healthcare')}}"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="livlihood.html">Read More</a><br></p>
@@ -99,7 +99,7 @@
         <div>
             <div class="row">
                 <div class="col-lg-7">
-                    <h5 class="text-center text-success heading-home"><strong>Education</strong></h5>
+                        <h4 class="text-center text-success heading-home"><strong>Education</strong></h4>
                     <p class="text-justify text-success para-home">Green India trust to educate the local man power and to create the awareness program in rural areas often urge their children to take up domestic tasks or help in labor, instead of helping them attain an education.&nbsp;<br>
                         <a
                             href="healthcare.html"></a><a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('education')}}">Read More</a><br><br></p>
@@ -111,6 +111,8 @@
 </section>
 <section class="bg-light section-2">
     <div class="container-fluid text-center">
+            <h4 class="text-center text-success div-head"><strong>OUR WORKING NUMBERS.....</strong></h4>
+            <hr>
         <div class="number d-flex flex-md-row flex-wrap justify-content-center">
             <div class="rect">
                 <h6>Trees Planted</h6>
@@ -230,16 +232,16 @@
 </div>
     </div>
 </section>
-<section class="bg-light section-about">
+    <section class="bg-white section-about">
     <div class="container bottom">
         <div class="row">
             <div class="col-lg-12">
                 <h4 class="text-center text-success div-head"><strong>OUR ASSOCIATE PARTNERS</strong></h4>
                 <hr>
             </div>
-            <div class="col-lg-3 offset-lg-1 text-center"><img class="img-thumbnail img-fluid border rounded-0 shadow brand-logo" src="{{ asset('img/neshna%20Trust%20logo.JPG')}}"></div>
-            <div class="col-lg-3 text-center"><img class="img-thumbnail img-fluid border rounded-0 shadow brand-logo" src="{{ asset('img/AGF%20LOGO.jpg')}}"></div>
-            <div class="col-lg-3 text-center"><img class="img-fluid border rounded-0 shadow brand-logo" src="{{ asset('img/STRADA%20DEI%20%20main%20log.JPG')}}"></div>
+            <div class="col-lg-3 offset-lg-1 text-center"><img class="img-fluid brand-logo" src="{{ asset('img/neshna%20Trust%20logo.JPG')}}"></div>
+            <div class="col-lg-3 text-center"><img class="img-fluid brand-logo" src="{{ asset('img/AGF%20LOGO.jpg')}}"></div>
+            <div class="col-lg-3 text-center"><img class="img-fluid brand-logo" src="{{ asset('img/STRADA%20DEI%20%20main%20log.JPG')}}"></div>
         </div>
     </div>
 </section>

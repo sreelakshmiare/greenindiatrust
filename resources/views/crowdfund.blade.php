@@ -14,7 +14,7 @@
 
 <strong>Make an Impact:</strong> Know that all the funds raised through your campaign will be utilised to plantation in the rural areas and conduct the free medical camps.
 </p></div>
-            <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/fundraising.jpg')}}"><a class="btn btn-success btn-sm text-white border rounded-0 fund-button" role="button">Start Fundraising</a></div>
+            <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/fundraising.jpg')}}"><a class="btn btn-success btn-sm text-white border rounded-0 fund-button" role="button" href="sign-up.html">Start Fundraising</a></div>
         </div>
     </div>
 </section>

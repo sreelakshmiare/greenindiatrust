@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/Contact-Form-v2-Modal--Full-with-Google-Map.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Features-Clean.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Footer-Clean.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Login-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Social-Icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Lightbox-Gallery.css') }}">
@@ -25,24 +27,14 @@
     <div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-lg-2"><img class="logo_img" src="{{ asset('img/Green_India_Logo.jpg')}}"></div>
-                <div class="col-12 col-md-4 col-lg-4 offset-lg-3 text-right">
-                    <div class="form-group">
-                        <form class="text-right example" style="margin: auto;width: auto;">
-                            <input class="border rounded-0 form-control" type="search">
-                            <button class="btn btn-success btn-sm bg-success border rounded" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3 offset-lg-0">
+                <div class="col-md-4 col-lg-2"><img class="logo_img" src="assets/img/Green_India_Logo.jpg"></div>
+                <div class="col-md-4 col-lg-3 offset-lg-7">
                     <div class="row" style="margin: 25px 0px 0px 0px;">
                         <div class="col-lg-5 text-left"><a class="btn btn-primary text-left bg-success" role="button" href="{{route('donate')}}">Donate</a></div>
                         @if(Auth::check())                       
-                            <div class="col-lg-3 text-right"><a href="{{ url('/home') }}" class="btn btn-primary bg-success" type="button">Profile</a></div>                            
+                            <div class="col-lg-4 text-right"><a href="{{ url('/home') }}" class="btn btn-primary bg-success" type="button">Profile</a></div>                            
                         @else
-                            <div class="col-lg-3 text-right"><a href="{{ route('login') }}" class="btn btn-primary bg-success" type="button">Login</a></div>
+                            <div class="col-lg-4 text-right"><a href="{{ route('login') }}" class="btn btn-primary bg-success" type="button">Login</a></div>
                         @endif
                         
                     </div>
@@ -55,7 +47,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarHover">
-			<ul class="navbar-nav text-center">
+			<ul class="navbar-nav flex-grow-1 justify-content-center mr-auto">
 				
 				<li class="nav-item active">
 					<a class="nav-link" href="/"><i class="fa fa-home fa-lg text-white"></i> 
