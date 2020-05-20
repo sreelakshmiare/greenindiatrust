@@ -22,6 +22,7 @@ class CreateMenu extends Migration
             $table->string('function_cd')->nullable();
             $table->string('active_ind')->default("Y");
             $table->string('external_url')->nullable();
+            $table->integer("sub_parent_id")->nullable();
             $table->timestamps();
         });
     }

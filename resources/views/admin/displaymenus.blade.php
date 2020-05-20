@@ -17,7 +17,21 @@
                 </tr>
             </thead>
             <tbody>
-                <a href="#" class="btn btn-primary">Create New Menu</a>
+                <div class="row">
+                    <div class="col">
+                        <a href="{{route('adminCreateMenuForm')}}" class="btn btn-primary">Create New Menu</a>
+                    </div>
+                    <form action="{{ route('adminSearchMenus')}}" method="get" enctype="multipart/form-data">                    
+                        <div class="col">                        
+                                {{csrf_field()}}      
+                                <input class="form-control" type="search" id="searchText" name="searchText" placeholder="Menu Search" value="{{$searchText}}">
+                        </div>
+                        <div class="col">                                 
+                            <button class="btn btn-primary" type="submit">Search </button> 
+                            <a href="{{route('adminDisplayMenus')}}" class="btn btn-primary">Clear</a>                      
+                        </div>
+                    </form>
+                </div>
                 @foreach($menus as $menu)
                     <tr>
                         <td>{{$menu['id']}}</td>
@@ -25,8 +39,8 @@
                         <td>{{$menu['action']}}</td>
                         <td>{{$menu['active_ind']}}</td>
                         <td>{{$menu['sort_order']}}</td>
-                        <td><a href="#" class="btn btn-primary">Edit</a></td>
-                        <td><a href="#"  class="btn btn-warning">Remove</a></td>
+                        <td><a href="{{ route('adminEditMenuForm',['id' => $menu['id'] ])}}" class="btn btn-primary">Edit</a></td>
+                        <td><a href="{{ route('adminDeleteMenu',['id' => $menu['id'] ])}}"  class="btn btn-warning">Remove</a></td>
                     </tr>
                 @endforeach
             </tbody>

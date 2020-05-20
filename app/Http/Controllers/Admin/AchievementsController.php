@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Log;
 class AchievementsController extends Controller
 {
     public function index() {
-        $achievements = Achievements::paginate(5);
+        $achievements = Achievements::paginate(10);
         $searchText = ''; 
         return view("admin.displayachievements",['achievements'=>$achievements,
         'searchText'=>$searchText]);

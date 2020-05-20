@@ -62,6 +62,15 @@
                 <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayAchievements')}}">
                     <span>Achievements</span>
                 </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayDonations')}}">
+                    <span>Manage Donation Amounts</span>
+                </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayCategories')}}">
+                    <span>Gallery Categories</span>
+                </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayGalleryImages')}}">
+                    <span>Manage Gallery Images</span>
+                </a>
                             
             </div>
         </li>
@@ -74,22 +83,16 @@
             </a>
             <div
                 class="dropdown-menu border-0 animated fadeIn" role="menu">
-                <a class="dropdown-item text-white" role="presentation" href="#">
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayUsers')}}">
                     <span>Manage Users</span>
                 </a>
-                <a class="dropdown-item text-white" role="presentation" href="#">
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayMenus')}}">
                     <span>Manage Menus</span>
                 </a>
-                <a class="dropdown-item text-white" role="presentation" href="#">
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayRoles')}}">
                     <span>Manage Roles</span>
-                </a>
-                <a class="dropdown-item text-white" role="presentation" href="#">
-                    <span>Manage Functions</span>
-                </a>
-                <a class="dropdown-item text-white" role="presentation" href="#">
-                    <span>Manage Broadcasts</span>
-                </a>
-                <a class="dropdown-item text-white" role="presentation" href="#">
+                </a>                
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayCarouselImages')}}">
                     <span>Manage Carousel Images</span>
                 </a>                
             </div>
