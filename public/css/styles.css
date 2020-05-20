@@ -1,220 +1,229 @@
 .logo_img {
-  vertical-align: middle;
-  border-style: none;
-  height: 70px;
-  width: 80px;
+    vertical-align: middle;
+    border-style: none;
+    height: 70px;
+    width: 80px;
 }
 
 .admin_logo_img {
-  vertical-align: middle;
-  border-style: none;
-  height: 50px;
-  width: 60px;
+    vertical-align: middle;
+    border-style: none;
+    height: 50px;
+    width: 60px;
 }
+
 form.example input[type=search] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 50%;
-  background: #f1f1f1;
-  margin: 25px 0px 0px 0px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 50%;
+    background: #f1f1f1;
+    margin: 25px 0px 0px 0px;
 }
 
 form.example button {
-  float: left;
-  width: 10%;
-  height: 40px;
-  padding: 5px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-  text-align: center;
-  margin: 25px 0px 0px 0px;
+    float: left;
+    width: 10%;
+    height: 40px;
+    padding: 5px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 25px 0px 0px 0px;
 }
 
 form.example button:hover {
-  background: #0b7dda;
+    background: #0b7dda;
 }
 
 form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .section-about {
-  padding: 20px 0px;
+    padding: 20px 0px;
 }
 
 .section-about .row .col-md-12 h4 {
-  font-weight: bold;
-  padding: 0.4em 0;
-  font-size: 1.4em;
+    font-weight: bold;
+    padding: 0.4em 0;
+    font-size: 1.4em;
 }
 
 .section-about .row .col-md-12 p {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .para_img {
-  padding: 3px 3px 3px 18px;
-  width: 300px;
-  height: 200px;
+    padding: 3px 3px 3px 18px;
+    width: 300px;
+    height: 200px;
 }
 
 .core_img {
-  padding: 2px 2px 2px 6px;
-  width: 250px;
-  height: 150px;
+    padding: 2px 2px 2px 6px;
+    width: 250px;
+    height: 150px;
 }
 
 .list-unstyled {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .container.core {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .object_img {
-  width: 450px;
-  float: left;
-  padding: 2px 8px 2px 2px;
+    width: 450px;
+    float: left;
+    padding: 2px 8px 2px 2px;
 }
 
 .col.object {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .orderlist {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .td-class {
-  font-size: smaller;
+    font-size: smaller;
 }
 
 .btn.btn-success.fund-button {
-  width: 280px;
-  margin-left: 18px;
-  margin-bottom: 5px;
-  margin-top: -3px;
-  margin: -3px 0px 5px 18px;
+    width: 280px;
+    margin-left: 18px;
+    margin-bottom: 5px;
+    margin-top: -3px;
+    margin: -3px 0px 5px 18px;
 }
 
 .award-img {
-  width: 200px;
-  height: 250px;
+    width: 200px;
+    height: 250px;
 }
 
 .text-justify.text-success.para-home {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 .text-center.text-success.heading-home {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .brand-logo {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  padding-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    padding-bottom: 10px;
 }
 
 .number {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .number .rect {
-  position: relative;
-  z-index: 1;
-  width: 12rem;
-  height: 9rem;
-  color: rgb(51,157,56);
-  padding-top: 3.5vmin;
-  margin: 1rem;
-  border-radius: 0.5em;
-  box-shadow: 1px 2px 50px 0px rgba(6,245,15,0.349);
+    position: relative;
+    z-index: 1;
+    width: 12rem;
+    height: 9rem;
+    color: rgb(51, 157, 56);
+    padding-top: 3.5vmin;
+    margin: 1rem;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 50px 0px rgba(6, 245, 15, 0.349);
 }
 
 .section-4 .container h1 {
-  font-size: 6vmin;
-  padding-top: 14vmin;
+    font-size: 6vmin;
+    padding-top: 14vmin;
 }
 
 .section-4 .card {
-  width: 22rem;
-  margin-top: 10vmin;
+    width: 22rem;
+    margin-top: 10vmin;
 }
 
 .section-4 .carousel-item {
-  padding-left: 3vmin;
+    padding-left: 3vmin;
 }
 
 .nav-item.tabitem {
-  margin-right: 70px;
+    margin-right: 70px;
 }
 
 .text-success.para-tab {
-  margin-top: 15px;
-  font-weight: 500;
+    margin-top: 15px;
+    font-weight: 500;
 }
 
 .div-livedonate {
-  padding: 2vmin 1vmin;
-  margin-bottom: 10px;
+    padding: 2vmin 1vmin;
+    margin-bottom: 10px;
 }
 
 .btn.btn-success.btn-sm.text-white.button-donate {
-  margin-left: 2vmin;
-  margin-right: 4vmin;
-  margin-top: 10px;
+    margin-left: 2vmin;
+    margin-right: 4vmin;
+    margin-top: 10px;
 }
 
 .img-thumbnail.img-fluid.img-donate {
-  /*margin-top: 10px;*/
-  margin-left: 05px;
-  width: 200px;
-  height: 330px;
+    /*margin-top: 10px;*/
+    margin-left: 05px;
+    width: 200px;
+    height: 330px;
 }
 
 .img-thumbnail.img-fluid.shadow.img-donate1 {
-  width: 200px;
-  height: 180px;
-  margin-left: 5px;
+    width: 200px;
+    height: 180px;
+    margin-left: 5px;
 }
 
 .shadow-sm.form-row {
-  padding: 30px;
+    padding: 30px;
 }
 
 .navbar.navbar-expand-md.navbar-light.navbar-hover.w-100.py-0.nav-color {
-  background-color: rgb(40,167,69);
+    background-color: rgb(40, 167, 69);
 }
 
 .nav-item {
-  padding-right: 4px;
+    padding-right: 4px;
 }
 
 .about-img {
-  width: 400px;
-  height: 230px;
+    width: 400px;
+    height: 230px;
 }
 
 .text-center.text-success.div-head {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .text-center.row.team-row {
-  margin-top: -40px;
-}
-.form-group {
-  margin-bottom: 1rem;
-  margin-top: 1.2rem;
+    margin-top: -40px;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+}
+
+
+
+.bg-light.shadow.form {
+    width: 70%;
+    margin: auto;
+    padding-top: 30px;
+}
