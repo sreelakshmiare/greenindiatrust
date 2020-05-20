@@ -2,77 +2,225 @@
 @section('center')
 
 <section class="section-about">
-    <div class="container">
-        <h5 class="text--justify text-success">Personal Information</h5>
-        <div class="class-form">
-            
+
+    <div id="paymentDetail" class="container text-center" style="display: none;">
+        <div class="card text-center" style="width: 50rem;">
+            <div class="card-header bg-success text-white">
+                <h6 class="mb-0">Order Created Successfully - 
+                    <strong>
+                    <span id="user_donation_id"></span></strong> 
+                    with Payment Id: <strong><span id="paymentID"></span></strong></h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Thank you for Donating for Green India Trust</p>
+                  <div class="row">
+                      <div class="col text-center">
+                          <a href="/" class="btn btn-success bg-success text-center" type="button">Explore GIT</a>
+                      </div>
+                      <div class="col text-center d-none">
+                        <form id="invoiceform"action="/invoice" method="post" target="_blank" enctype="multipart/form-data">
+                          {{csrf_field()}}
+                          <input type="hidden" name="ord_id" id="ord_id" value="">
+                          <input type="hidden" name="user_ord_id" id="user_ord_id" value="">
+                          <input class="btn btn-success" type="submit" value="Generate Receipt">
+                        </form>
+                      </div>
+                  </div>
+            </div>
+        </div> 
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>    
+    <div id="personalinfo" class="container">        
+        <div class="class-form">            
             <form class="bg-light shadow form">
-                
                 <div class="form-row">
-                    <div class="col-lg-5 offset-lg-1 form-group"><input type="text" class="form-control" placeholder="Firstname" />
+                    <div class="col-lg-5 offset-lg-1 form-group">
+                        <h4 class="text-justify text-success"><strong>Personal Information</strong></h4>
                     </div>
-                    <div class="col-lg-5 form-group"><input type="text" class="form-control" placeholder="Lastname" />
+                    <div class="col-lg-5 form-group">
+                        <h6 class="text-justify text-success"><strong>Donation Amount :  {{$donation_amount }}</strong></h6>
+                        <input type="hidden" id="donationAmount" name="donationAmount" value="{{$donation_amount}}">
+                        <input type="hidden" id="donationName" name="donationName" value="{{$donation_name}}">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-5 offset-lg-1 form-group">
+                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Firstname" />
+                    </div>
+                    <div class="col-lg-5 form-group">
+                        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Lastname" />
                     </div>
                 </div>
                
                 <div class="form-row">
-                    <div class="col-lg-5 offset-lg-1 form-group"><input type="email" class="form-control" placeholder="Email" />
+                    <div class="col-lg-5 offset-lg-1 form-group">
+                        <input type="email"  name="email" id="email" class="form-control" placeholder="Email" />
                     </div>
-                    <div class="col-lg-5 form-group"><input type="password" class="form-control" placeholder="Password" />
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="col-lg-10 offset-lg-1 form-group">
-                        <textarea class="form-control" placeholder="Address" rows="5">
-                        </textarea>
+                    <div class="col-lg-5 form-group">
+                        <input type="text" name="pan" id="pan" class="form-control" placeholder="PAN" />
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="col-lg-5 offset-lg-1 form-group">
-                            <input type="text" class="form-control" placeholder="City" />
+                        <textarea class="form-control" name="address" id="address" placeholder="Address" rows="5"></textarea>
                     </div>
-                    <div class="col-lg-3 form-group">
-                            <select class="form-control">
-                                <option value="12" selected>Choose State</option>
-                                <option value="13">Andhra Pradesh</option><option value="14">Arunachal Pradesh</option>
-                                <option value>Assam</option><option value>Bihar</option><option value>Chandigarh</option>
-                                <option value>Chhattisgarh</option><option value>Delhi</option><option value>Goa</option>
-                                <option value>Gujarat</option><option value>Haryana</option><option value>Himachal Pradesh</option>
-                                <option value>Jharkhand</option><option value>Karnataka</option><option value>Kerala</option>
-                                <option value>Madhya Pradesh</option><option value>Maharashtra</option>
-                                <option value>Manipur</option><option value>Meghalaya</option>
-                                <option value>Mizoram</option><option value>Nagaland</option>
-                                <option value>Odisha</option><option value>Punjab</option>
-                                <option value>Rajasthan</option><option value>Sikkim</option>
-                                <option value>Tamil Nadu</option><option value>Telangana</option>
-                                <option value>Tripura</option><option value>Uttar Pradesh</option>
-                                <option value>Uttarakhand</option><option value>West Bengal</option>
-                            </select>
+                    <div class="col-lg-5 form-group">
+                        <input type="text" class="form-control" name="aadhar" id="aadhar" placeholder="Aadhar">                       
                     </div>
-                    <div
-                        class="col-lg-2 form-group"><input type="text" class="form-control" placeholder="Zip" />
+                </div>
+                
+                <div class="form-row">
+                    <div class="col-lg-4 offset-lg-1 form-group">
+                            <input type="text" class="form-control" name="city" id="city" placeholder="City" />
+                    </div>
+                    <div class="col-lg-4 form-group">
+                        <select class="form-control" name="state" id="state" required>
+                            <option value="">Please Select</option> 
+                            @foreach ($states['states'] as $state)
+                                <option value="{{$state['state']}}">{{ $state['state'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-lg-2 form-group">
+                        <input type="text" class="form-control" name="pin" id="pin" placeholder="PinCode" />
                     </div>
                 </div>
        
                 <div class="form-row">
                     <div class="col-lg-5 offset-lg-1 form-group">
-                        <input type="text" class="form-control" placeholder="Aadhar No." />
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" />
                     </div>
                     <div class="col-lg-3 form-group">
-                        <input type="text" class="form-control" placeholder="PAN" />
+                        
                     </div>
                 </div>
        
                 <div class="form-row">
-                    <div class="col-lg-2 offset-lg-1 text-left form-group">
-                            <a class="btn btn-success" role="button" href="razorpay.html">Sign Up</a>
+                    <div class="col-lg-5 offset-lg-1 text-left form-group">
+                        <button class="btn bg-success text-white btn-md btn-block" id="paybtn" type="button">Proceed to Payment</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </section>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    $('#rzp-footer-form').submit(function (e) {
+        var button = $(this).find('button');
+        var parent = $(this);
+        button.attr('disabled', 'true').html('Please Wait...');
+        $.ajax({
+            method: 'get',
+            url: this.action,
+            data: $(this).serialize(),
+            complete: function (r) {
+                console.log('complete');
+                console.log(r);
+            }
+        })
+        return false;
+    })
+</script>
 
+<script>
+    function padStart(str) {
+        return ('0' + str).slice(-2)
+    }
+
+    function demoSuccessHandler(transaction) {
+        // You can write success code here. If you want to store some data in database.
+        $("#paymentDetail").removeAttr('style');
+        $('#paymentID').text(transaction.razorpay_payment_id);
+        var paymentDate = new Date();
+        var firstname = $('#firstname').val();
+        var lastname = $('#lastname').val();
+        var address = $('#address').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var pan = $('#pan').val();
+        var pin = $('#pin').val();
+        var aadhar = $('#aadhar').val();
+        var city = $('#city').val();
+        var state = $('#state').val();
+        var donationAmt = $('#donationAmount').val();
+        var donationName = $('#donationName').val();
+
+        //alert('name = ' +name);
+        $('#paymentDate').text(
+                padStart(paymentDate.getDate()) + '.' + padStart(paymentDate.getMonth() + 1) + '.' + paymentDate.getFullYear() + ' ' + padStart(paymentDate.getHours()) + ':' + padStart(paymentDate.getMinutes())
+                );
+
+        $.ajax({
+            method: 'post',
+            url: "{!!route('doPayment')!!}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "razorpay_payment_id": transaction.razorpay_payment_id,
+                "paymentDate": paymentDate,
+                "name": firstname + lastname ,
+                "address" : address,
+                "email" : email,
+                "phone" : phone,
+                "pan" : pan,
+                "aadhar" : aadhar,
+                "city" : city,
+                "state" : state,
+                "pin" : pin,
+                "donation_amount" : donationAmt,
+                "donation_for" : donationName
+
+            },
+            success: function (data,status, XHR) {
+                console.log('complete' + XHR);
+                console.log(data.user_donation_id);
+                //$('#user_order_id').text(data.user_order_id);
+                $('#user_donation_id').text(data.user_donation_id);
+                //$('#ord_id').val(data.order_id);
+                $("#personalinfo").hide();
+            }
+        })
+    }
+</script>
+<script>
+    var donationAmt = $('#donationAmount').val();
+    var email = $('#email').val();
+    var options = {
+        key: "{{ env('RAZORPAY_KEY') }}",
+        amount: $('#donationAmount').val() * 100,
+        name: 'GreenIndiaTrust',
+        description: 'Donation',        
+        image: '{{asset('new/img/Green_India_Logo.jpg')}}',
+        handler: demoSuccessHandler,
+        prefill: {
+          contact: $('#phone').val(),
+          email: $('#email').val()
+        }
+    }
+</script>
+<script>
+    
+    document.getElementById('paybtn').onclick = function () {
+        options = {
+        key: "{{ env('RAZORPAY_KEY') }}",
+        amount: $('#donationAmount').val() * 100,
+        name: 'GreenIndiaTrust',
+        description: 'Donation',        
+        image: '{{asset('new/img/Green_India_Logo.jpg')}}',
+        handler: demoSuccessHandler,
+        prefill: {
+          contact: $('#phone').val(),
+          email: $('#email').val()
+        }
+    }
+      options.amount = $('#donationAmount').val() * 100;
+      //alert('op - > ' + options);
+        window.r = new Razorpay(options);
+        r.open()
+    }
+    
+</script>
 @endsection

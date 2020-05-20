@@ -27,7 +27,7 @@
     <div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-lg-2"><img class="logo_img" src="assets/img/Green_India_Logo.jpg"></div>
+                <div class="col-md-4 col-lg-2"><img class="logo_img" src="{{ asset('img/Green_India_Logo.jpg') }}"></div>
                 <div class="col-md-4 col-lg-3 offset-lg-7">
                     <div class="row" style="margin: 25px 0px 0px 0px;">
                         <div class="col-lg-5 text-left"><a class="btn btn-primary text-left bg-success" role="button" href="{{route('donate')}}">Donate</a></div>

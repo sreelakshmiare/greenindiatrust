@@ -42,19 +42,19 @@
 	<section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award2.jpg"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award4.jpg"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="shadow award-img" src="assets/img/award5.jpg"></div>
-                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="assets/img/award8.jpg"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award2.jpg')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award4.jpg')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="shadow award-img" src="{{ asset('img/award5.jpg')}}"></div>
+                <div class="col-lg-3 offset-lg-0"><img class="img-fluid shadow award-img" src="{{ asset('img/award8.jpg')}}"></div>
             </div>
         </div>
     </section>
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award1.jpg"></div>
-                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award10.jpg"></div>
-                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="assets/img/award3.jpg"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="{{ asset('img/award1.jpg')}}"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="{{ asset('img/award10.jpg')}}"></div>
+                <div class="col-lg-4 offset-lg-0"><img class="img-fluid shadow award-next-img" src="{{ asset('img/award3.jpg')}}"></div>
             </div>
         </div>
     </section>

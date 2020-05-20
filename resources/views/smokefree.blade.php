@@ -68,7 +68,7 @@
     </section>
     <div class="container">
         <div class="row">
-            <div class="col offset-lg-3"><img class="img-thumbnail" src="{{ assets('img/smokefree.jpg') }} " width="500" height="650"></div>
+            <div class="col offset-lg-3"><img class="img-thumbnail" src="{{ asset('img/smokefree.jpg') }} " width="500" height="650"></div>
         </div>
     </div><section class = "section-about">
     <div class="container text-center">
