@@ -58,7 +58,7 @@ form.example::after {
 }
 
 .section-about .row .col-md-12 p {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .para_img {
@@ -74,7 +74,7 @@ form.example::after {
 }
 
 .list-unstyled {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .container.core {

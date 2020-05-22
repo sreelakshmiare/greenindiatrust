@@ -44,7 +44,8 @@
     </div>    
     <nav class="navbar navbar-expand-md navbar-light navbar-hover w-100 py-0 nav-color">		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHover" aria-controls="navbarDD" aria-expanded="false" aria-label="Navigation">
-			<span class="navbar-toggler-icon"></span>
+        <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarHover">
 			<ul class="navbar-nav flex-grow-1 justify-content-center mr-auto">
@@ -92,7 +93,7 @@
 							</ul>
 						</li>
 						
-                        <li><a class="dropdown-item" href="{{route('livlihood')}}">Livihood</a></li>
+                        <li><a class="dropdown-item" href="{{route('livlihood')}}">Livlihood</a></li>
                         <li><a class="dropdown-item" href="{{route('education')}}">Education</a></li>
 					</ul>
 				</li>

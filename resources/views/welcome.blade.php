@@ -6,7 +6,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active"><img class="w-100 d-block carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
                 <div class="carousel-item"><img class="w-100 d-block carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
-                <div class="carousel-item"><img class="w-100 d-block.carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
+                <div class="carousel-item"><img class="w-100 d-block carousel-img" src="{{ asset('img/Green%20Friont.jpg')}}" alt="Slide Image"></div>
             </div>
             <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button"
                     data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-7 col-xl-7">
                     <h4 class="text-center text-success heading-home">&nbsp;<strong>About Green India Trust</strong></h4>
                     <p class="text-justify text-success para-home">Founded in 2008 by&nbsp;<strong>Dr. Ch. Murali&nbsp;Krishna</strong>&nbsp;along with like-minded and passionate friends, Green India Trust (GIT)&nbsp;is a collective effort of a resourceful and professional common platform for&nbsp;partnership
-                        and accordance towards development, empowerment and conservation in&nbsp;livelihood, rural communities, rural infrastructure, NRM and health.<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('about')}}">Read More</a>&nbsp;
+                        and accordance towards development, empowerment and conservation in &nbsp;livelihood, rural communities, rural infrastructure, NRM and health.<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" href="{{route('about')}}">Read More</a>&nbsp;
                         &nbsp;<br><a href="healthcare.html"></a><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" src="{{ asset('img/home-about.jpg')}}" style="/*padding: 15px;*/"></div>
