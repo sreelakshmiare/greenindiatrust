@@ -26,7 +26,7 @@
 </section>
 <section>
     <div class="container">
-        <div class="bg-light div-homeabout">
+        <div class="bg-white div-homeabout">
             <div class="row">
                 <div class="col-lg-7 col-xl-7">
                     <h4 class="text-center text-success heading-home">&nbsp;<b>About Green India Trust</b></h4>
@@ -49,7 +49,7 @@
         </div>
     </div>
 </section>
-<section class="bg-white">
+<section class="bg-light section-about">
     <div class="container">
         <div>
             <h4 class="text-center text-success div-head"><b>OUR IMPACT</b></h4>
@@ -76,7 +76,7 @@
 </section>
 <section>
     <div class="container">
-        <div class="bg-light">
+        <div class="bg-white">
             <div class="row">
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid about-img" 
                     src="{{ asset('img/home-health.jpg')}}"></div>
@@ -95,7 +95,7 @@
         </div>
     </div>
 </section>
-<section class="bg-white">
+<section class="bg-light">
     <div class="container">
         <div>
             <div class="row">
@@ -119,7 +119,7 @@
 </section>
 <section>
     <div class="container">
-        <div class="bg-light">
+        <div class="bg-white">
             <div class="row">
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid about-img" src="{{ asset('img/home-womenpower.jpg')}}"></div>
                 <div class="col-lg-7 col-xl-7">
@@ -135,7 +135,7 @@
         </div>
     </div>
 </section>
-<section class="bg-white">
+<section class="bg-light">
     <div class="container">
         <div>
             <div class="row">
@@ -149,13 +149,13 @@
                         <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
                          href="{{route('education')}}">Read More</a><br><br></p>
                 </div>
-                <div class="col-lg-5"><img class="img-thumbnail img-fluid about-img" 
+                <div class="col-lg-5"><img class="img-thumbnail img-fluid float-right about-img" 
                 src="{{ asset('img/home-education.jpg')}}"></div>
             </div>
         </div>
     </div>
 </section>
-<section class="bg-light section-2">
+<!--<section class="bg-light section-2">
     <div class="container-fluid text-center">
             <h4 class="text-center text-success div-head"><strong>OUR WORKING NUMBERS.....</strong></h4>
             <hr>
@@ -188,75 +188,47 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section class="stat" id="stats">
+<section class="stat bg-white section-about" id="stats">
     <div class="content-box">
+        <h4 class="text-center text-success div-head"><strong>OUR WORKING NUMBERS.....</strong></h4>
+            <hr>
         <br>
         <br>
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2>
-                            <div class="counter" data-target="60000">0</div>
-                        </h2>
-                        <p> LIKES </p>
+                @foreach($achievements as $achievement)
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            @if($achievement->achievement == 'Trees Planted')
+                                <i class="fa fa-tree"></i>
+                            @elseif($achievement->achievement == 'Pregnanat Women & New Born Babies')
+                                <i class="fa fa-female"></i>
+                            @elseif($achievement->achievement == 'Volunteering')
+                                <i class="fa fa-handshake-o"></i>
+                            @elseif($achievement->achievement == 'Medical Camps')
+                                <i class="fa fa-ambulance"></i>
+                            @elseif($achievement->achievement == 'Women Training')
+                                <i class="fa fa-certificate"></i>
+                            @elseif($achievement->achievement == 'Kids Training')
+                                <i class="fa fa-certificate"></i>
+                            @elseif($achievement->achievement == 'Medical Camp Beneficiaries')
+                                <i class="fa fa-male"></i>
+                            @endif
+                            <h2>
+                                <div class="counter" data-target="{{ $achievement->count }}">0</div>
+                            </h2>
+                            <p> <h4>{{ $achievement->achievement }} </h4></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2><div class="counter" data-target="15000">0</div>
-                        </h2>
-                        <p> VIEWS </p>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2><div class="counter" data-target="15000">0</div>
-                        </h2>
-                        <p> VIEWS </p>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2><div class="counter" data-target="15000">0</div>
-                        </h2>
-                        <p> VIEWS </p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2><div class="counter" data-target="9000">0</div>
-                        </h2>
-                        <p> DISLIKES </p>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <i class="fa fa-camera"></i>
-                        <h2><div class="counter" data-target="5000">0</div>
-                        </h2>
-                        <p> COMMENTS </p>
-                    </div>
-                </div>
+                @endforeach                
             </div>
         </div>
     </div>
 </section>
 
-<section class="section-4">
+<section class="bg-light section-about section-4">
         <div class="container text-center">
             <h4 class="text-center text-success div-head"><b>NEWS AND AWARDS</b></h4>
                 <hr>

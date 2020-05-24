@@ -65,6 +65,12 @@
                 <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayDonations')}}">
                     <span>Manage Donation Amounts</span>
                 </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayFundraises')}}">
+                    <span>Manage Fundraises</span>
+                </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayUserDonations')}}">
+                    <span>Manage User Donations</span>
+                </a>
                 <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayCategories')}}">
                     <span>Gallery Categories</span>
                 </a>

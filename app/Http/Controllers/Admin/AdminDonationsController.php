@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Donations;
 use App\Http\Controllers\Controller;
+use App\UserDonations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -14,12 +15,13 @@ use Illuminate\Support\Facades\Log;
 
 class AdminDonationsController extends Controller
 {
+
     public function index() {
         $donations = Donations::paginate(10);
         $categories = Category::all()->sortBy('name');
         return view("admin.displaydonations",['donations'=>$donations,
                                                 'categories'=>$categories]);
-    }
+    }    
 
     public function editDonationsForm($id){
         $donations = Donations::find($id);

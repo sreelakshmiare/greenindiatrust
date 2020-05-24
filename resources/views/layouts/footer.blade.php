@@ -53,27 +53,26 @@
 <script src="{{ asset('js/smart-forms.min.js')}}"></script>
 <script>
     const counters = document.querySelectorAll('.counter');
-		const speed = 200; // The lower the slower
+	const speed = 200; // The lower the slower
 
-		counters.forEach(counter => {
-			const updateCount = () => {
-				const target = +counter.getAttribute('data-target');
-				const count = + counter.innerText;
-				//console.log("target = "+target +",count = "+count);
-				// Lower inc to slow and higher to slow
-				const inc = target / speed;
+	counters.forEach(counter => {
+		const updateCount = () => {
+			const target = +counter.getAttribute('data-target');
+			const count = + counter.innerText;
+			//console.log("target = "+target +",count = "+count);
+			// Lower inc to slow and higher to slow
+			const inc = target / speed;
 
-				//console.log("inc = "+inc);
-				if (count < target) {					
-					counter.innerText = count + inc;
-					setTimeout(updateCount, 1);
-				} else {
-					counter.innerText = target;
-				}
-			};
-
-			updateCount();
-		});
+			//console.log("inc = "+inc);
+	    	if (count < target) {					
+				counter.innerText = count + inc;
+				setTimeout(updateCount, 1);
+			} else {
+				counter.innerText = target;
+			}
+		};
+		updateCount();
+	});
 </script>
 </body>
 

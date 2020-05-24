@@ -12,6 +12,7 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Donations' => $baseDir . '/app/Donations.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Fundraise' => $baseDir . '/app/Fundraise.php',
     'App\\GalleryImage' => $baseDir . '/app/GalleryImage.php',
     'App\\Http\\Controllers\\Admin\\AchievementsController' => $baseDir . '/app/Http/Controllers/Admin/AchievementsController.php',
     'App\\Http\\Controllers\\Admin\\AdminCarouselImageController' => $baseDir . '/app/Http/Controllers/Admin/AdminCarouselImageController.php',

@@ -34,7 +34,7 @@
 						
 				<h6 class= "text-justify text-success"><strong>The use of this website is subject to the following terms of use: </strong></h6>
 					 <ol class = "orderlist text-success">	
-						<li class="text-success">The content of the pages of this website is for your general information and 
+						<li class="text-justify text-success">The content of the pages of this website is for your general information and 
 						use only. It is subject to change without notice.</li>
 						
 						<li class="text-justify text-success">Neither we, nor any third parties provide any warranty or guarantee as to the
@@ -79,27 +79,27 @@
 					</p>
 
 					<ol class = "orderlist text-success">	
-						<li class="text-success">GIT runs the tree plantation and rural livelihood program in association with our NGO partners. 
+						<li class="text-justify text-success">GIT runs the tree plantation and rural livelihood program in association with our NGO partners. 
 						We follow a strict due diligence process to select sites for plantation and we do a detailed scrutiny 
 						in order to select NGO partner to be responsible for carrying out the plantation in selected locations.</li>
-						<li class="text-success">We leverage services from various environmental agencies and independent experts to select plant species.</li>
-						<li class="text-success">GIT and its affiliates (including our NGO partners) adopt best practices to plant trees and make best efforts 
+						<li class="text-justify text-success">We leverage services from various environmental agencies and independent experts to select plant species.</li>
+						<li class="text-justify text-success">GIT and its affiliates (including our NGO partners) adopt best practices to plant trees and make best efforts 
 						to maintain trees post plantation. However, GIT shall not be responsible for any harm to planted trees which may occur due to reasons 
 						beyond our control (fire, flood, earthquake, drought, diseases and land acquisition by government authorities). 
 						We also enforce fencing and protection mechanism to ensure planted trees are intact and safe however GIT shall not be responsible for the harm occurring from illegal felling or grazing of trees</li>
-						<li class="text-success">Sometimes it may be possible that we may tag already planted tree to your virtual tree. This is done only under the circumstances wherein we feel that actual plantation is not possible 
+						<li class="text-justify text-success">Sometimes it may be possible that we may tag already planted tree to your virtual tree. This is done only under the circumstances wherein we feel that actual plantation is not possible 
 						due to unforeseen conditions. We maintain a separate lot to meet the aforementioned eventuality. 
 						However, GIT never tags trees which have already been tagged to other planters</li>
-						<li class="text-success"> As soon as a virtual tree is planted on GIT portal, we arrange for
+						<li class="text-justify text-success"> As soon as a virtual tree is planted on GIT portal, we arrange for
 						 plantation of the real tree at the location chosen by the planter. However whenever weather conditions do
 						  not allow timely plantation there might be a delay in plantation (to a maximum extent of one year) and
 						   GIT will notify planters about the delay. Subject to weather conditions there might be change in location 
 						   of actual tree plantation, GIT however will notify about the actual location of plantation.</li>
-						<li class="text-success">Wherever contributors/planters are interested to visit plantation sites 
+						<li class="text-justify text-success">Wherever contributors/planters are interested to visit plantation sites 
 						they are encouraged to do so on their own expenses.</li>
-						<li class="text-success">GIT follows strict audit processes to track post plantation growth and survival of planted trees, it also plants extra number of trees (buffer trees) to minimize effect of mortality rate that might occur due to unavoidable circumstances or reasons mentioned earlier. We have implemented best technology system to track and map individual trees however
+						<li class="text-justify text-success">GIT follows strict audit processes to track post plantation growth and survival of planted trees, it also plants extra number of trees (buffer trees) to minimize effect of mortality rate that might occur due to unavoidable circumstances or reasons mentioned earlier. We have implemented best technology system to track and map individual trees however
 						 there might be minor deviation due to unavailability of GPS signals at few places/under few weather conditions</li>
-						<li class="text-success">Planters do not own trees or any products derived from the trees planted by them.</li>
+						<li class="text-justify text-success">Planters do not own trees or any products derived from the trees planted by them.</li>
 					</ol>
 					<p class="text-justify text-success">“We as a merchant shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out 
 					of the decline of authorization for any Transaction, on Account of the Cardholder having exceeded the preset limit mutually 

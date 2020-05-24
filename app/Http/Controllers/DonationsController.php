@@ -2,14 +2,65 @@
 
 namespace App\Http\Controllers;
 
+use App\Achievements;
 use App\Category;
 use App\Donations;
+use App\Fundraise;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class DonationsController extends Controller
 {
+    public function index() {
+        $achievements = Achievements::where('active_ind','Y')->get();        
+        return view("welcome",['achievements'=>$achievements]);
+    }
+
+    public function getActiveFundraiseList() {
+        $fundraiselist = Fundraise::where('active_ind','Y')->paginate(8);
+        return view("activefundraiselist",['fundraiselist'=>$fundraiselist]);
+    }
+    
+    public function sendCreateFundraiseForm(Request $request){
+
+        $first_name =  $request->input('first_name');
+        $last_name =  $request->input('last_name');
+        $email =  $request->input('email');
+        $password =  $request->input('password');
+        $mobile =  $request->input('mobile');
+        $campaign_name =  $request->input('campaign_name');
+        $campaign_amount =  $request->input('campaign_amount');
+        $start_date =  $request->input('start_date');
+        $end_date =  $request->input('end_date');
+        $campaign_desc =  $request->input('campaign_desc');
+        $active_ind =  $request->input('active_ind');
+
+        $created_at = now();
+        $newMenuArray = array("first_name"=> $first_name,
+                            "last_name"=> $last_name,
+                            "email"=> $email,
+                            "password"=> $password,
+                            "mobile"=> $mobile,
+                            "campaign_name"=> $campaign_name,
+                            "campaign_amount"=> $campaign_amount,
+                            "start_date"=>$start_date,
+                            "end_date"=>$end_date,
+                            "campaign_desc"=>$campaign_desc,
+                            "created_at"=>$created_at,
+                            "active_ind"=>'Y'
+                           );
+
+        $created = DB::table("fundraise")->insert($newMenuArray);
+
+        if($created){
+            return redirect()->route("getActiveFundraiseList");
+        }else{
+           return "FundraiseList was not Created";
+        }
+    }
+
     public function getDonationsByCategory() {
         $categories = Category::where('type','Donations')->get();
         foreach ($categories as $category) {

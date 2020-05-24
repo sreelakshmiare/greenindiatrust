@@ -127,22 +127,6 @@ form.example::after {
     padding-bottom: 10px;
 }
 
-.number {
-    margin-top: 15px;
-}
-
-.number .rect {
-    position: relative;
-    z-index: 1;
-    width: 12rem;
-    height: 9rem;
-    color: rgb(51, 157, 56);
-    padding-top: 3.5vmin;
-    margin: 1rem;
-    border-radius: 0.5em;
-    box-shadow: 1px 2px 50px 0px rgba(6, 245, 15, 0.349);
-}
-
 .section-4 .container h1 {
     font-size: 6vmin;
     padding-top: 14vmin;
@@ -208,7 +192,8 @@ form.example::after {
 }
 
 .text-center.text-success.div-head {
-    margin-top: 30px;
+    margin-top: 20px;
+    font-weight: bolder;
 }
 
 .text-center.row.team-row {
@@ -235,7 +220,7 @@ form.example::after {
     margin-top: 0px;
 }
 .stat i{
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .stat-item h2 {

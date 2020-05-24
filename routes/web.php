@@ -14,13 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-})->name('main');
+})->name('main');*/
+
+Route::get('/', 
+        ["uses"=>"DonationsController@index", 
+        "as"=> "main"]
+    );
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/fundraise', function () {
+    return view('fundraise');
+})->name('fundraise');
+
 
 Route::get('/donate', function () {
     return view('donate');
@@ -162,6 +172,16 @@ Route::get('donate',
     ["uses"=>"DonationsController@getDonationsByCategory",'as'=>'donate']
 );
 
+Route::post('sendCreateFundraiseForm', 
+    ["uses"=>"DonationsController@sendCreateFundraiseForm", 
+    "as"=> "sendCreateFundraiseForm"]
+);
+Route::get('getActiveFundraiseList', 
+    ["uses"=>"DonationsController@getActiveFundraiseList", 
+    "as"=> "getActiveFundraiseList"]
+);
+
+
 Route::post('personalDetail', 
     ["uses"=>"DonationsController@personalDetail",'as'=>'personalDetail']
 );
@@ -281,6 +301,7 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
         ["uses"=>"Admin\AdminMenusController@sendCreateMenuForm", 
         "as"=> "adminSendCreateMenuForm"]
     );
+    
 
     Route::get('admin/searchMenus', 
         ["uses"=>"Admin\AdminMenusController@searchMenus",'as'=>'adminSearchMenus']
@@ -413,6 +434,47 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
     );
 
     // End Category
+    
+    
+    Route::get('admin/userDonations', 
+        ["uses"=>"Admin\AdminUserDonationController@index",'as'=>'adminDisplayUserDonations']
+    );
+    // edit UserDonation
+    Route::get('admin/editUserDonationForm/{id}', 
+        ["uses"=>"Admin\AdminUserDonationController@editUserDonationForm", 
+        "as"=> "adminEditUserDonationForm"]
+    );
+    // Update UserDonation
+    Route::post('admin/updateUserDonation/{id}', 
+        ["uses"=>"Admin\AdminUserDonationController@updateUserDonation", 
+        "as"=> "adminUpdateUserDonation"]
+    );
+    // Delete UserDonation
+    Route::get('admin/deleteUserDonation/{id}', 
+        ["uses"=>"Admin\AdminUserDonationController@deleteUserDonation", 
+        "as"=> "adminDeleteUserDonation"]   
+    );
+
+
+    Route::get('admin/fundraises', 
+        ["uses"=>"Admin\AdminFundraiseController@index",'as'=>'adminDisplayFundraises']
+    );
+    // edit Fundraises
+    Route::get('admin/editFundraiseForm/{id}', 
+        ["uses"=>"Admin\AdminFundraiseController@editFundraiseForm", 
+        "as"=> "adminEditFundraiseForm"]
+    );
+    // Update Fundraise
+    Route::post('admin/updateFundraise/{id}', 
+        ["uses"=>"Admin\AdminFundraiseController@updateFundraise", 
+        "as"=> "adminUpdateFundraise"]
+    );
+    // Delete Fundraise
+    Route::get('admin/deleteFundraise/{id}', 
+        ["uses"=>"Admin\AdminFundraiseController@deleteFundraise", 
+        "as"=> "adminDeleteFundraise"]   
+    );
+
 
     // Donations
     // get all Donations

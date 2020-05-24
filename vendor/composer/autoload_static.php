@@ -503,6 +503,7 @@ class ComposerStaticInit56050de90a2889c1ed91ea7ce65b143f
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Donations' => __DIR__ . '/../..' . '/app/Donations.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Fundraise' => __DIR__ . '/../..' . '/app/Fundraise.php',
         'App\\GalleryImage' => __DIR__ . '/../..' . '/app/GalleryImage.php',
         'App\\Http\\Controllers\\Admin\\AchievementsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AchievementsController.php',
         'App\\Http\\Controllers\\Admin\\AdminCarouselImageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminCarouselImageController.php',
