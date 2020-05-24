@@ -190,6 +190,72 @@
     </div>
 </section>
 
+<section class="stat" id="stats">
+    <div class="content-box">
+        <br>
+        <br>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2>
+                            <div class="counter" data-target="60000">0</div>
+                        </h2>
+                        <p> LIKES </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2><div class="counter" data-target="15000">0</div>
+                        </h2>
+                        <p> VIEWS </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2><div class="counter" data-target="15000">0</div>
+                        </h2>
+                        <p> VIEWS </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2><div class="counter" data-target="15000">0</div>
+                        </h2>
+                        <p> VIEWS </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2><div class="counter" data-target="9000">0</div>
+                        </h2>
+                        <p> DISLIKES </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="stat-item">
+                        <i class="fa fa-camera"></i>
+                        <h2><div class="counter" data-target="5000">0</div>
+                        </h2>
+                        <p> COMMENTS </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="section-4">
         <div class="container text-center">
             <h4 class="text-center text-success div-head"><b>NEWS AND AWARDS</b></h4>

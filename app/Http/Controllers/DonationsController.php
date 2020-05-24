@@ -16,6 +16,7 @@ class DonationsController extends Controller
             $donations = Donations::where('category_id', $category->id)->get();
             $category['donations'] = $donations;
         }
+        Log::debug($categories);
         return view("donate",['categories'=>$categories]);
     }
     public function personalDetail(Request $request) {

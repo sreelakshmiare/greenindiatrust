@@ -227,3 +227,24 @@ form.example::after {
     margin: auto;
     padding-top: 30px;
 }
+
+.stat {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: green;
+    margin-top: 0px;
+}
+.stat i{
+    font-size: 20px;
+}
+
+.stat-item h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: darkorange;
+}
+
+.stat p {
+    font-weight: bold;
+    letter-spacing: 1px;
+}

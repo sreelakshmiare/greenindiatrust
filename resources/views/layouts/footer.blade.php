@@ -5,8 +5,8 @@
                 <div class="col-sm-4 col-md-3 item">
                     <h3>About</h3>
                     <ul>
-                        <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                        <li><a href="{{ route('missionandvision') }}">Mission and Vision</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
+                        <li><a href="{{ route('mission') }}">Mission and Vision</a></li>
                         <li><a href="{{ route('ourvalues') }}">Our Value</a></li>
                         <li><a href="{{ route('ourfounder') }}">Our Founder</a></li>
                         <li><a href="{{ route('ourteam') }}">Our Team</a></li>
@@ -17,21 +17,21 @@
                     <h3>Our Work</h3>
                     <ul>
                         <li><a href="{{ route('healthcare') }}">Health Care</a></li>
-                        <li><a href="{{ route('onebilliontreeplantation') }}">One Billion Tree Plantation</a></li>
-                        <li><a href="{{ route('greenwallresearch') }}">Green Wall Research</a></li>
-                        <li><a href="{{ route('greenindianursery') }}">Green India Nursery</a></li>
-                        <li><a href="{{ route('apbiodiversity') }}">AP Biodiversity</a></li>
+                        <li><a href="{{ route('billiontree') }}">One Billion Tree Plantation</a></li>
+                        <li><a href="{{ route('greenwall') }}">Green Wall Research</a></li>
+                        <li><a href="{{ route('nursery') }}">Green India Nursery</a></li>
+                        <li><a href="{{ route('apbio') }}">AP Biodiversity</a></li>
                         <li><a href="{{ route('livlihood') }}">Livlihood</a></li>
-                        <li><a href="{{ route('educationv') }}">Education</a></li>
+                        <li><a href="{{ route('education') }}">Education</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 item">
                     <h3>Get Involved</h3>
                     <ul>
-                        <li><a href="{{ route('volunteering') }}">Volunteering&nbsp;</a></li>
-                        <li><a href="{{ route('onlinefundraising') }}">Online Fundraising</a></li>
-                        <li><a href="{{ route('smvolunteering') }}">SM Voluteering</a></li>
-                        <li><a href="{{ route('crowdfundraising') }}">Crowd Fundraising</a></li>
+                        <li><a href="{{ route('volunteer') }}">Volunteering&nbsp;</a></li>
+                        <li><a href="{{ route('onlinefund') }}">Online Fundraising</a></li>
+                        <li><a href="{{ route('smvolunteer') }}">SM Voluteering</a></li>
+                        <li><a href="{{ route('crowdfund') }}">Crowd Fundraising</a></li>
                         <li><a href="{{ route('termsandconditions') }}">Terms and Conditions</a></li>
                         
                     </ul>
@@ -51,6 +51,30 @@
 <script src="{{ asset('js/lightbox.min.js')}}"></script>
 <script src="{{ asset('js/livereload.js')}}"></script>
 <script src="{{ asset('js/smart-forms.min.js')}}"></script>
+<script>
+    const counters = document.querySelectorAll('.counter');
+		const speed = 200; // The lower the slower
+
+		counters.forEach(counter => {
+			const updateCount = () => {
+				const target = +counter.getAttribute('data-target');
+				const count = + counter.innerText;
+				//console.log("target = "+target +",count = "+count);
+				// Lower inc to slow and higher to slow
+				const inc = target / speed;
+
+				//console.log("inc = "+inc);
+				if (count < target) {					
+					counter.innerText = count + inc;
+					setTimeout(updateCount, 1);
+				} else {
+					counter.innerText = target;
+				}
+			};
+
+			updateCount();
+		});
+</script>
 </body>
 
 </html>

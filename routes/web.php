@@ -30,6 +30,10 @@ Route::get('/smokefree', function () {
     return view('smokefree');
 })->name('smokefree');
 
+Route::get('/termsandconditions', function () {
+    return view('termsandconditions');
+})->name('termsandconditions');
+
 Route::get('/mission', function () {
     return view('mission');
 })->name('mission');

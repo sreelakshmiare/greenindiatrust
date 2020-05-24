@@ -34,85 +34,77 @@
                             @endphp
                             @foreach ($categories as $category)
                                 @if($category->name == "Healthcare Donations")                                    
-                                    @php
-                                        $donations = $category->donations;
-                                    @endphp
-                                    @break;
-                                @endif
-                            @endforeach
-                            @foreach ($donations as $donation)
-                                <div class="bg-light border rounded-0 shadow div-livedonate">
-                                    <form id="{{ $donation->donation_name }}" name="{{ $donation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
-                                        {{csrf_field()}}
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <a href="#">
-                                                    <img class="img-thumbnail img-fluid" src="{{ asset('img/'. $donation->donation_image)}}">
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <p class="text-success description">{{ $donation->donation_description}}</p>
-                                                <h6 class="text-success">Tax Benefit 50%</h6>
-                                                <a href="#">More</a>
-                                            </div>                                    
-                                            <div class="col-lg-4">                                        
-                                                <label class="col-form-label text-left text-success">Amount : Rs. <strong>{{ $donation->donation_amount }}</strong>
-                                                    <input type="hidden" value="{{ $donation->donation_amount }}" name="donation_amount">
-                                                    <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
-                                                    <!-- <select>
-                                                        <optgroup label="This is a group">
-                                                            <option value="12" selected="">Rs 20,000</option>
-                                                            <option value="13">Enter Amount</option>
-                                                            <option value="14">This is item 3</option>
-                                                        </optgroup>
-                                                    </select> -->
-                                                </label>
-                                            </div>
-                                            <div class="col-lg-2 text-left">
-                                                <input type="submit" role="button" class="btn btn-success bg-success" value="Contribute">
-                                            </div>                                        
-                                        </div>
-                                    </form>
-                                </div>
-                            @endforeach                            
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="tab-2">
-                            <p class="text-success para-tab">&nbsp;<strong>Environment Donations</strong></p>
-                            <div class="card-deck">
-                                @php
-                                    $envdonations;
-                                @endphp
-                                @foreach ($categories as $category)
-                                    @if($category->name == "Environment Donations")                                    
-                                        @php
-                                            $envdonations = $category->donations;
-                                        @endphp
-                                        @break;
-                                    @endif
-                                @endforeach
-                                @foreach ($envdonations as $envdonation)
-                                    
-                                        <div class="card shadow">
-                                            <form id="{{ $envdonation->donation_name }}" name="{{ $envdonation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
+                                        @foreach ($category->donations as $donation)
+                                        <div class="bg-light border rounded-0 shadow div-livedonate">
+                                            <form id="{{ $donation->donation_name }}" name="{{ $donation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
                                                 {{csrf_field()}}
-                                                <input type="hidden" value="{{ $envdonation->donation_amount }}" name="donation_amount" id="donation_amount">
-                                                <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
-                                                <img class="card-img-top img-gal w-100" src="{{ asset('img/'.$envdonation->donation_image)}}" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <p class="card-text text-success">{{ $envdonation->donation_description}}</p>                            
-                                                    <label class = "text-muted">Contribution</label> 
-                                                    Rs. <strong><span id="damt">{{ $envdonation->donation_amount }}</span></strong> <br/>
-                                                    <label class="text-success">
-                                                        Quantity <input class="form-control form-control-lg" type="number" id="qty" name="qty" min="1" value="1" placeholder="1" >
-                                                    </label>
-                                                </div>
-                                                <div class ="card-footer text-center bg-white">
-                                                    <input id="envsubmit" type="submit" role="button" class="btn btn-success bg-success" value="Contribute">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <a href="#">
+                                                            <img class="img-thumbnail img-fluid" src="{{ asset('img/'. $donation->donation_image)}}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <p class="text-success description">{{ $donation->donation_description}}</p>
+                                                        <h6 class="text-success">Tax Benefit 50%</h6>
+                                                        <a href="#">More</a>
+                                                    </div>                                    
+                                                    <div class="col-lg-4">                                        
+                                                        <label class="col-form-label text-left text-success">Amount : Rs. <strong>{{ $donation->donation_amount }}</strong>
+                                                            <input type="hidden" value="{{ $donation->donation_amount }}" name="donation_amount">
+                                                            <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
+                                                            <!-- <select>
+                                                                <optgroup label="This is a group">
+                                                                    <option value="12" selected="">Rs 20,000</option>
+                                                                    <option value="13">Enter Amount</option>
+                                                                    <option value="14">This is item 3</option>
+                                                                </optgroup>
+                                                            </select> -->
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-lg-2 text-left">
+                                                        <input type="submit" role="button" class="btn btn-success bg-success" value="Contribute">
+                                                    </div>                                        
                                                 </div>
                                             </form>
                                         </div>
-                                    
-                                @endforeach                                
+                                    @endforeach  
+                                    @break;
+                                @endif
+                            @endforeach
+                                                      
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-2">
+                            <p class="text-success para-tab">&nbsp;<strong>Environment Donations</strong></p>
+                            <div class="card-deck">                                
+                                @foreach ($categories as $category)
+                                    @if($category->name == "Environment Donations")                                    
+                                        @foreach ($category->donations as $envdonation)                                    
+                                                <div class="card shadow">
+                                                    <form id="{{ $envdonation->donation_name }}" name="{{ $envdonation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
+                                                        {{csrf_field()}}
+                                                        <input type="hidden" value="{{ $envdonation->donation_amount }}" name="donation_amount" id="donation_amount">
+                                                        <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
+                                                        <img class="card-img-top img-gal w-100" src="{{ asset('img/'.$envdonation->donation_image)}}" alt="Card image cap">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-success">{{ $envdonation->donation_description}}</p>                            
+                                                            <label class = "text-muted">Contribution</label> 
+                                                            Rs. <strong><span id="damt">{{ $envdonation->donation_amount }}</span></strong> <br/>
+                                                            <label class="text-success">
+                                                                Quantity <input class="form-control form-control-lg" type="number" id="qty" name="qty" min="1" value="1" placeholder="1" >
+                                                            </label>
+                                                        </div>
+                                                        <div class ="card-footer text-center bg-white">
+                                                            <input id="envsubmit" type="submit" role="button" class="btn btn-success bg-success" value="Contribute">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            
+                                        @endforeach
+                                        @break;
+                                    @endif
+                                @endforeach
+                                                                
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-3">
