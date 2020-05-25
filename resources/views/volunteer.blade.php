@@ -2,7 +2,40 @@
 @section('center')
 
 <section class="section-about">
-    <div class="container">
+
+    <div id="paymentDetail" class="container text-center" style="display: none;">
+        <div class="card text-center" style="width: 50rem;">
+            <div class="card-header bg-success text-white">
+                <h6 class="mb-0">Order Created Successfully - 
+                    <strong>
+                    <span id="user_donation_id"></span></strong> 
+                    with Payment Id: <strong><span id="paymentID"></span></strong></h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Thank you for Donating for Green India Trust</p>
+                  <div class="row">
+                      <div class="col text-center">
+                          <a href="/" class="btn btn-success bg-success text-center" type="button">Explore GIT</a>
+                      </div>
+                      <div class="col text-center d-none">
+                        <form id="invoiceform"action="/invoice" method="post" target="_blank" enctype="multipart/form-data">
+                          {{csrf_field()}}
+                          <input type="hidden" name="ord_id" id="ord_id" value="">
+                          <input type="hidden" name="user_ord_id" id="user_ord_id" value="">
+                          <input class="btn btn-success" type="submit" value="Generate Receipt">
+                        </form>
+                      </div>
+                  </div>
+            </div>
+        </div> 
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div> 
+
+
+
+
+    <div id="volunteer_div" class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <h4 class="text--justify text-success">Volunteering Information</h4>
@@ -19,6 +52,7 @@
                 <div class="bg-white border rounded-0 shadow">
                     <form name="volunteerform" id="volunteerform" action="{{ route('sendCreateVolunteerForm')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
+                        <br>
                         <h5 class="text-center text-success"><strong>Volunteer Application Form</strong></h5>
                         <div class="shadow-sm form-row">
                             <div class="form-group col-md-6">
@@ -100,23 +134,25 @@
                             <div>
                                 <label>Would You like to Donate?</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate">
+                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" value="Y">
                                     <label class="form-check-label" for="liketodonate">
                                         <a href="donatepage.html">Yes</a>&nbsp;
                                     </label>                                    
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" checked>
+                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" value="N" checked>
                                     <label class="form-check-label" for="liketodonate">
                                         <a href="#">No</a>
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <label>Enter Donation Amount</label>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input class="form-control" type="text" name="donation_amount" id="donation_amount" placeholder="Donation Amount">
+                            <div id="donation_id" class="row" style="display: none;">
+                                <div class="col-md-6">
+                                    <label>Enter Donation Amount</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" name="donation_amount" id="donation_amount" placeholder="Donation Amount">
+                                </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-check">
@@ -124,9 +160,12 @@
                                     <label class="form-check-label" for="acceptterms">Accept the Terms and Conditions<br></label>
                                 </div>
                             </div>
-                            <div class="text-right form-group col-md-6">
-                                <button class="btn btn-success btn-sm text-center" type="submit">Submit</button>
+                            <div id="submit_div" class="text-right form-group col-md-6">
+                                <button class="btn bg-success btn-md text-white text-center" type="submit">Submit</button>
                             </div>
+                            <div id="razorpay_div"class="text-right form-group col-md-6" style="display: none;">
+                                <button class="btn bg-success text-white btn-md btn-block" id="paybtn" type="submit">Proceed to Payment</button>
+                            </div>                            
                         </div>
                     </form>
                 </div>
@@ -135,10 +174,175 @@
     </div>
 </section>
 <script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    $('#rzp-footer-form').submit(function (e) {
+        var button = $(this).find('button');
+        var parent = $(this);
+        button.attr('disabled', 'true').html('Please Wait...');
+        $.ajax({
+            method: 'get',
+            url: this.action,
+            data: $(this).serialize(),
+            complete: function (r) {
+                console.log('complete');
+                console.log(r);
+            }
+        })
+        return false;
+    })
+</script>
+ 
+<script>
+    function padStart(str) {
+        return ('0' + str).slice(-2)
+    }
+
+    function demoSuccessHandler(transaction) {
+        // You can write success code here. If you want to store some data in database.
+        $("#paymentDetail").removeAttr('style');
+        $('#paymentID').text(transaction.razorpay_payment_id);
+        var paymentDate = new Date();
+        var firstname = $('#first_name').val();
+        var lastname = $('#last_name').val();
+        var address = $('#address').val();
+        var email = $('#email').val();
+        var phone = $('#mobile').val();
+        var pan = $('#pan').val();
+        var pin = $('#pin').val();
+        var aadhar = $('#aadhar').val();
+        var city = $('#city').val();
+        var state = $('#state').val();
+        var donationAmt = $('#donation_amount').val();
+        var donationName = $('#areasofinterest').val();
+
+        //alert('name = ' +name);
+        $('#paymentDate').text(
+                padStart(paymentDate.getDate()) + '.' + padStart(paymentDate.getMonth() + 1) + '.' + paymentDate.getFullYear() + ' ' + padStart(paymentDate.getHours()) + ':' + padStart(paymentDate.getMinutes())
+                );
+
+        $.ajax({
+            method: 'post',
+            url: "{!!route('doPayment')!!}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "razorpay_payment_id": transaction.razorpay_payment_id,
+                "paymentDate": paymentDate,
+                "name": firstname + lastname ,
+                "address" : address,
+                "email" : email,
+                "phone" : phone,
+                "pan" : "NA",
+                "aadhar" : "NA",
+                "city" : "NA",
+                "state" : "NA",
+                "pin" : "000000",
+                "donation_amount" : donationAmt,
+                "donation_for" : donationName
+
+            },
+            success: function (data,status, XHR) {
+                console.log('complete' + XHR);
+                console.log(data.user_donation_id);
+                //$('#user_order_id').text(data.user_order_id);
+                $('#user_donation_id').text(data.user_donation_id);
+                //$('#ord_id').val(data.order_id);
+                $("#volunteer_div").hide();
+            }
+        })
+    }
+</script>
+<script>
+    var donationAmt = $('#donation_amount').val();
+    var email = $('#email').val();
+    var options = {
+        key: "{{ env('RAZORPAY_KEY') }}",
+        amount: $('#donation_amount').val() * 100,
+        name: 'GreenIndiaTrust',
+        description: 'Donation',        
+        image: '{{asset('new/img/Green_India_Logo.jpg')}}',
+        handler: demoSuccessHandler,
+        prefill: {
+          contact: $('#mobile').val(),
+          email: $('#email').val()
+        }
+    }
+</script>
+<script>
+    
+    document.getElementById('paybtn').onclick = function () {         
+        var firstname = $('#first_name').val();
+        var lastname = $('#last_name').val();
+        var address = $('#address').val();
+        var email = $('#email').val();
+        var phone = $('#mobile').val();       
+        var donationAmt = $('#donation_amount').val();
+        var donationName = $('#areasofinterest').val();
+        var terms = $('#acceptterms').is(':checked');
+        console.log('terms = ' + terms);
+        if(firstname=='' || lastname=='' || address=='' || email =='' ||
+        donationAmt=='' || donationName =='' || terms==false) {
+            return;
+        }
+        options = {
+        key: "{{ env('RAZORPAY_KEY') }}",
+        amount: $('#donation_amount').val() * 100,
+        name: 'GreenIndiaTrust',
+        description: 'Donation',        
+        image: '{{asset('new/img/Green_India_Logo.jpg')}}',
+        handler: demoSuccessHandler,
+        prefill: {
+          contact: $('#mobile').val(),
+          email: $('#email').val()
+        }
+    }
+      options.amount = $('#donation_amount').val() * 100;
+      //alert('op - > ' + options);
+        window.r = new Razorpay(options);
+        r.open()
+    }
+    
+</script>
 <script>
     $( "#volunteerform" ).submit(function( event ) {
-        alert( "Thank You for Your Interest in Volunteering for Green India. We will Contact you Soon. Mean while Please check our Active Fundraising Campaigns." );
-        //event.preventDefault();
+        console.log("terms = "+ $('#acceptterms').is(':checked'));
+
+        $('#volunteerform input[name="liketodonate"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value=='Y'){
+                event.preventDefault();               
+            } 
+        });
+
+
+        if($('#acceptterms').is(':checked'))
+        {
+            alert( "Thank You for Your Interest in Volunteering for Green India. We will Contact you Soon. Mean while Please check our Active Fundraising Campaigns." );
+        } else {
+            alert('Please accept Terms and Conditions. ');
+            event.preventDefault();
+        }       
+    });
+
+    $('#volunteerform input[name="liketodonate"]').change(function(e) { 
+        $('#volunteerform input[name="liketodonate"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value=='N'){
+                //alert('setting required');
+                $('#donation_id').attr('style', 'display: none;');
+                $('#razorpay_div').attr('style', 'display: none;');
+                $("#submit_div").removeAttr('style');
+                $('#volunteerform input[type="text"]').removeAttr('required');                
+            } else {
+                $("#donation_id").removeAttr('style');
+                $('#submit_div').attr('style', 'display: none;');
+                $("#razorpay_div").removeAttr('style');
+                $('#volunteerform input[type="text"]').attr("required", true);
+                
+            }
+        });
     });
 </script>
 @endsection

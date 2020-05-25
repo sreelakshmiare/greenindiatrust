@@ -215,11 +215,13 @@
                                 <i class="fa fa-certificate"></i>
                             @elseif($achievement->achievement == 'Medical Camp Beneficiaries')
                                 <i class="fa fa-male"></i>
+                            @else
+                                <i class="fa fa-male"></i>
                             @endif
                             <h2>
                                 <div class="counter" data-target="{{ $achievement->count }}">0</div>
                             </h2>
-                            <p> <h4>{{ $achievement->achievement }} </h4></p>
+                            <p> <h5>{{ $achievement->achievement }} </h5></p>
                         </div>
                     </div>
                 @endforeach                
