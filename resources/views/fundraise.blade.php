@@ -12,7 +12,7 @@
                 <div class="bg-white border rounded-0 shadow">
                     <form action="{{ route('sendCreateFundraiseForm')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
-                        <h5 class="text-center text-success"><strong>Volunteer Application Form</strong></h5>
+                        <h5 class="text-center text-success"><strong>Fundraise Form</strong></h5>
                         <div class="shadow-sm form-row">
                             <div class="form-group col-md-6"><input class="form-control" type="text" name="first_name" id="first_name" placeholder="Firstname" required=""></div>
                             <div class="form-group col-md-6"><input class="form-control" type="text" name="last_name" id="last_name" placeholder="Lastname" required=""></div>

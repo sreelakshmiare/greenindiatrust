@@ -7,7 +7,7 @@
             <h4 class="text-success">Active Fundraising Campaigns</h4>
         </div>
         <div class="col">
-            <a href="{{route('fundraise')}}" class="btn btn-primary bg-success text-white">Create Funraise</a>
+            <a href="{{route('fundraise')}}" class="btn btn-primary bg-success text-white">Create Fundraise</a>
         </div>
     </div>
 </div>
@@ -38,5 +38,9 @@
         </div>        
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
 <br>
 @endsection

@@ -17,44 +17,128 @@
             </div>
             <div class="col-lg-6">
                 <div class="bg-white border rounded-0 shadow">
-                    <form>
+                    <form name="volunteerform" id="volunteerform" action="{{ route('sendCreateVolunteerForm')}}" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <h5 class="text-center text-success"><strong>Volunteer Application Form</strong></h5>
                         <div class="shadow-sm form-row">
-                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Firstname" required=""></div>
-                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Lastname" required=""></div>
-                            <div class="form-group col-md-6"><input class="form-control" type="email" placeholder="Email"></div>
-                            <div class="form-group col-md-6"><input class="form-control" type="password" placeholder="Password"></div>
-                            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Mobile Number" required=""></div>
-                            <div class="form-group col-md-4"><input class="form-control" type="text" placeholder="Gender" required=""></div>
-                            <div class="form-group col-md-2"><input class="form-control" type="text" placeholder="Age" required=""></div>
-                            <div class="form-group col-md-12"><input class="form-control" type="text" placeholder="Address" required=""></div>
-                            <div class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Education</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-                            <div
-                                class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Expected Period of Volunteership</option><option value="13">Weekdays</option><option value="14">Weekends</option></optgroup></select></div>
-                        <div
-                            class="form-group col-md-12"><select class="form-control" required=""><optgroup label="This is a group"><option value="12" selected="">Areas of Interest</option><option value="13">Administration Work</option><option value="14">Events Organizing</option><option value="14">Fundraising for GIT</option><option value="14">Teaching at Education Institution</option><option value="14">Creating Awareness for rural areas</option><option value="14">  Social Media Relations/Public Relation</option><option value="14">8.  health care expect/ environmentalist</option></optgroup></select></div>
-                <div
-                    class="form-group col-md-12"><label>Are You Relocating For conducting camps and events?</label>
-                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Yes&nbsp;</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">No</label></div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="first_name" id="first_name" placeholder="Firstname" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Lastname" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="mobile" id="mobile" placeholder="Mobile Number" required="">
+                            </div>
+                            <div class="form-group col-md-4">
+                            <select class="form-control" name="gender" id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input class="form-control" type="text" name="age" id="age" placeholder="Age" required="">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" name="address" id="address" placeholder="Address" required=""></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <select class="form-control" name="education" id="education" required="">
+                                    <option value="">Select Education</option>
+                                    <option value="Secondary Education">Secondary Education</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Bachelors Degree">Bachelors Degree</option>
+                                    <option value="PostGraduate">PostGraduate</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <select class="form-control" name="periodofvolunteer" id="periodofvolunteer" required>
+                                    <option value="">Select Period of Volunteership</option>
+                                    <option value="Weekdays">Weekdays</option>
+                                    <option value="Weekends">Weekends</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <select class="form-control" name="areasofinterest" id="areasofinterest" required>
+                                    <option value="" selected="">Select Areas of Interest</option>
+                                    <option value="Administration Work">Administration Work</option>
+                                    <option value="Events Organizing">Events Organizing</option>
+                                    <option value="Fundraising for GIT">Fundraising for GIT</option>
+                                    <option value="Teaching at Education Institution">Teaching at Education Institution</option>
+                                    <option value="Creating Awareness for rural areas">Creating Awareness for rural areas</option>
+                                    <option value="Social Media Relations Or Public Relation">Social Media Relations Or Public Relation</option>
+                                    <option value="Health Care Expert Or Environmentalist">Health Care Expert Or Environmentalist</option>                                    
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Are You Relocating For conducting camps and events?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="Y" checked>
+                                    <label class="form-check-label" for="relocating">Yes&nbsp;</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="N">
+                                    <label class="form-check-label" for="relocating">No</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Emergency Contact Details</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="emergency_contact_name" id="emergency_contact_name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="emergency_contact_phone" id="emergency_contact_phone" placeholder="Mobile Number" required>
+                            </div>
+                            <div>
+                                <label>Would You like to Donate?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate">
+                                    <label class="form-check-label" for="liketodonate">
+                                        <a href="donatepage.html">Yes</a>&nbsp;
+                                    </label>                                    
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" checked>
+                                    <label class="form-check-label" for="liketodonate">
+                                        <a href="#">No</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Enter Donation Amount</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="donation_amount" id="donation_amount" placeholder="Donation Amount">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptterms" name="acceptterms" value="Y">
+                                    <label class="form-check-label" for="acceptterms">Accept the Terms and Conditions<br></label>
+                                </div>
+                            </div>
+                            <div class="text-right form-group col-md-6">
+                                <button class="btn btn-success btn-sm text-center" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-12"><label>Emergency Contact Details</label></div>
-            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Name" required=""></div>
-            <div class="form-group col-md-6"><input class="form-control" type="text" placeholder="Mobile Number" required=""></div>
-            <div><label>Would You like to Donate?</label>
-                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1"><a href="donatepage.html">Yes</a>&nbsp;</label></div>
-                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1"><a href="#">No</a></label></div>
-            </div>
-            <div>
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Accept the Terms and Conditions<br></label></div>
-            </div>
-            <div class="text-right form-group col-md-6"><a class="btn btn-success btn-sm text-center" role="button" href="donatepage.html"><strong>Submit</strong></a></div>
         </div>
-        </form>
-    </div>
-    </div>
-    </div>
     </div>
 </section>
-
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script>
+    $( "#volunteerform" ).submit(function( event ) {
+        alert( "Thank You for Your Interest in Volunteering for Green India. We will Contact you Soon. Mean while Please check our Active Fundraising Campaigns." );
+        //event.preventDefault();
+    });
+</script>
 @endsection

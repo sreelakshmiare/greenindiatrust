@@ -107,7 +107,7 @@
 						<li><a class="dropdown-item" href="{{route('onlinefund')}}">Online Fundraising</a></li>
                         <li><a class="dropdown-item" href="{{route('smvolunteer')}}">SM Voluntering</a></li>
                         <li><a class="dropdown-item" href="{{route('crowdfund')}}">Crowd Fundraising</a></li>
-                        <li><a class="dropdown-item" href="{{route('getActiveFundraiseList')}}">Fundraising Campaign</a></li>
+                        <li><a class="dropdown-item" href="{{route('getActiveFundraiseList')}}">Active Crowd Fundraising</a></li>
 					</ul>
 				</li>
                 

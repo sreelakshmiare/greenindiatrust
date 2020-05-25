@@ -206,7 +206,7 @@
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" id="livlihoodtailer" name="livlihoodtailer">
+                                            <input class="form-check-input" type="radio" id="livlihoodtailer" name="livlihoodtailer" value="">
                                             <label class="form-check-label" for="livlihoodtailer">
                                                 <input class="form-control-sm form-control" type="text" name="donation_amount" id="donation_amount" placeholder="Any other amount.">
                                                 <input type="hidden" value="Tailoring Training" name="donation_name">
@@ -216,6 +216,7 @@
                                         <span><a href="#">Learn More</a></span>
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-4">
@@ -400,6 +401,86 @@
         $('#damt').html(totamt);
         $('#donation_amt').val(totamt);
     });
+
+    /*var radiobtns = $('input[name="livamountkeepmother"]', this);
+    $('input[name="livamountkeepmother"]').change(function(e) { 
+        alert($('input[name="livamountkeepmother"]').val());
+        var radiobtns = $('input[name="livamountkeepmother"]');
+        alert(radiobtns);
+
+    });*/
+    $('#livlihoodkeepmotherform input[name="livamountkeepmother"]').change(function(e) { 
+        $('#livlihoodkeepmotherform input[name="livamountkeepmother"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value==''){
+                //alert('setting required');
+                $('#livlihoodkeepmotherform input[type="text"]').attr("required", true);
+            } else {
+                //alert('removing required');
+                $('#livlihoodkeepmotherform input[type="text"]').removeAttr('required');
+            }
+        });
+    });
+
+    $('#livlihoodorganicform input[name="livlihoodorganic"]').change(function(e) { 
+        $('#livlihoodorganicform input[name="livlihoodorganic"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value==''){
+                //alert('setting required');
+                $('#livlihoodorganicform input[type="text"]').attr("required", true);
+            } else {
+                //alert('removing required');
+                $('#livlihoodorganicform input[type="text"]').removeAttr('required');
+            }
+        });
+    });
+
+    $('#livlihoodtailerform input[name="livlihoodtailer"]').change(function(e) { 
+        $('#livlihoodtailerform input[name="livlihoodtailer"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value==''){
+                //alert('setting required');
+                $('#livlihoodtailerform input[type="text"]').attr("required", true);
+            } else {
+                //alert('removing required');
+                $('#livlihoodtailerform input[type="text"]').removeAttr('required');
+            }
+        });
+    });
+
+    $('#educationscomputerform input[name="educationscomputer"]').change(function(e) { 
+        $('#educationscomputerform input[name="educationscomputer"]:checked').each(function() {
+            var value = $(this).val();
+            alert("value = "+value);
+            if(value==''){
+                alert('setting required');
+                $('#educationscomputerform input[type="text"]').attr("required", true);
+            } else {
+                alert('removing required');
+                $('#educationscomputerform input[type="text"]').removeAttr('required');
+            }
+        });
+    });
+
+    $('#educationsschoolform input[name="educationsschool"]').change(function(e) { 
+        $('#educationsschoolform input[name="educationsschool"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value==''){
+                //alert('setting required');
+                $('#educationsschoolform input[type="text"]').attr("required", true);
+            } else {
+                //alert('removing required');
+                $('#educationsschoolform input[type="text"]').removeAttr('required');
+            }
+        });
+    });
+
+    
+    
 </script>
 
 @endsection

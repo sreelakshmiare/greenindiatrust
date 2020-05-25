@@ -68,6 +68,9 @@
                 <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayFundraises')}}">
                     <span>Manage Fundraises</span>
                 </a>
+                <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayVolunteers')}}">
+                    <span>Manage Volunteer Requests</span>
+                </a>
                 <a class="dropdown-item text-white" role="presentation" href="{{route('adminDisplayUserDonations')}}">
                     <span>Manage User Donations</span>
                 </a>

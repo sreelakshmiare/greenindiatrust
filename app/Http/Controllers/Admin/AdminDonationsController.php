@@ -25,7 +25,8 @@ class AdminDonationsController extends Controller
 
     public function editDonationsForm($id){
         $donations = Donations::find($id);
-        $categories = Category::all()->sortBy('name');
+        //$categories = Category::all()->sortBy('name');
+        $categories = Category::where('type', 'Donations')->get();
          return view('admin.editdonationsform',['donations'=>$donations,
                                             'categories'=>$categories]);
     }
@@ -92,7 +93,8 @@ class AdminDonationsController extends Controller
 
     //display create Crop form
     public function createDonationsForm(){
-        $categories = Category::all()->sortBy('name');
+        //$categories = Category::all()->sortBy('name');
+        $categories = Category::where('type', 'Donations')->get();
         return view("admin.createdonationsform",["categories"=>$categories]);
     }
 

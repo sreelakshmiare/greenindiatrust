@@ -181,6 +181,11 @@ Route::get('getActiveFundraiseList',
     "as"=> "getActiveFundraiseList"]
 );
 
+Route::post('sendCreateVolunteerForm', 
+    ["uses"=>"DonationsController@sendCreateVolunteerForm", 
+    "as"=> "sendCreateVolunteerForm"]
+);
+
 
 Route::post('personalDetail', 
     ["uses"=>"DonationsController@personalDetail",'as'=>'personalDetail']
@@ -473,6 +478,27 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
     Route::get('admin/deleteFundraise/{id}', 
         ["uses"=>"Admin\AdminFundraiseController@deleteFundraise", 
         "as"=> "adminDeleteFundraise"]   
+    );
+
+
+
+    Route::get('admin/volunteers', 
+        ["uses"=>"Admin\AdminVolunteerController@index",'as'=>'adminDisplayVolunteers']
+    );
+    // edit Volunteer
+    Route::get('admin/editVolunteerForm/{id}', 
+        ["uses"=>"Admin\AdminVolunteerController@editVolunteerForm", 
+        "as"=> "adminEditVolunteerForm"]
+    );
+    // Update Volunteer
+    Route::post('admin/updateVolunteer/{id}', 
+        ["uses"=>"Admin\AdminVolunteerController@updateVolunteer", 
+        "as"=> "adminUpdateVolunteer"]
+    );
+    // Delete Volunteer
+    Route::get('admin/deleteVolunteer/{id}', 
+        ["uses"=>"Admin\AdminVolunteerController@deleteVolunteer", 
+        "as"=> "adminDeleteVolunteer"]   
     );
 
 

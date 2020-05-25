@@ -22,6 +22,57 @@ class DonationsController extends Controller
         $fundraiselist = Fundraise::where('active_ind','Y')->paginate(8);
         return view("activefundraiselist",['fundraiselist'=>$fundraiselist]);
     }
+
+    public function sendCreateVolunteerForm(Request $request){
+
+        $first_name =  $request->input('first_name');
+        $last_name =  $request->input('last_name');
+        $email =  $request->input('email');
+        $password =  $request->input('password');
+        $mobile =  $request->input('mobile');
+        $gender =  $request->input('gender');
+        $age =  $request->input('age');
+        $address =  $request->input('address');
+        $education =  $request->input('education');
+        $periodofvolunteer =  $request->input('periodofvolunteer');
+        $areasofinterest =  $request->input('areasofinterest');
+        $relocating =  $request->input('relocating');
+        $emergency_contact_name =  $request->input('emergency_contact_name');
+        $emergency_contact_phone =  $request->input('emergency_contact_phone');
+        $liketodonate =  $request->input('liketodonate');
+        $acceptterms =  $request->input('acceptterms');
+        $active_ind =  $request->input('active_ind');
+        
+
+        $created_at = now();
+        $newMenuArray = array("first_name"=> $first_name,
+                            "last_name"=> $last_name,
+                            "email"=> $email,
+                            "password"=> $password,
+                            "mobile"=> $mobile,
+                            "gender"=> $gender,
+                            "age"=> $age,
+                            "address"=>$address,
+                            "education"=>$education,
+                            "periodofvolunteer"=>$periodofvolunteer,
+                            "areasofinterest"=>$areasofinterest,
+                            "relocating"=>$relocating,
+                            "emergency_contact_name"=>$emergency_contact_name,
+                            "emergency_contact_phone"=>$emergency_contact_phone,
+                            "liketodonate"=>$liketodonate,
+                            "acceptterms"=>$acceptterms,
+                            "active_ind"=>'Y',
+                            "created_at"=>$created_at
+                           );
+
+        $created = DB::table("volunteer")->insert($newMenuArray);
+
+        if($created){
+            return redirect()->route("getActiveFundraiseList");
+        }else{
+           return "FundraiseList was not Created";
+        }
+    }
     
     public function sendCreateFundraiseForm(Request $request){
 
