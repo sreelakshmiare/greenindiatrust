@@ -127,7 +127,7 @@ form.example::after {
     padding-bottom: 10px;
 }
 
-.section-4 .container h1 {
+/*.section-4 .container h1 {
     font-size: 6vmin;
     padding-top: 14vmin;
 }
@@ -140,7 +140,7 @@ form.example::after {
 .section-4 .carousel-item {
     padding-left: 3vmin;
 }
-
+*/
 .nav-item.tabitem {
     margin-right: 70px;
 }
@@ -219,7 +219,8 @@ form.example::after {
     color: green;
     margin-top: 0px;
 }
-.stat i{
+
+.stat i {
     font-size: 40px;
 }
 
@@ -232,4 +233,11 @@ form.example::after {
 .stat p {
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.img-size.img-fluid {
+    width: 280px;
+    height: 330px;
+    padding: 5px;
+    margin-top: -10px;
 }

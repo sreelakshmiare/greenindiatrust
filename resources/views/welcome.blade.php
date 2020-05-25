@@ -228,15 +228,69 @@
     </div>
 </section>
 
-<section class="bg-light section-about section-4">
+
+
+<section class="bg-light section-about">
         <div class="container text-center">
             <h4 class="text-center text-success div-head"><b>NEWS AND AWARDS</b></h4>
+        </div>      
                 <hr>
-        <div class="text-center row team-row">
+    <div class = "container">
+       <div class="row">
+            <div class="col">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <div class="card mr-2 d-inline-block shadow-lg">
+                                <div class="card-body">
+                                    <h4 class="card-title text-success">News and Events</h4>
+                                </div>
+                                <div class="card-img-top"><img src="{{ asset('img/news1.jpg') }}" alt="Member" class="img-size img-fluid " /></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="card mr-2 d-inline-block shadow-lg">
+                                <div class="card-body">
+                                    <h4 class="card-title text-success">News and Events</h4>
+                                </div>
+                                <div class="card-img-top"><img src="{{ asset('img/news2.jpg') }}" alt="Member" class="img-size img-fluid " /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <div class="card mr-2 d-inline-block shadow-lg">
+                                <div class="card-body">
+                                    <h4 class="card-title text-success">Awards</h4>
+                                </div>
+                                <div class="card-img-top"><img src="{{ asset('img/award2.jpg') }}" alt="Member" class="img-size img-fluid" /></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="card mr-2 d-inline-block shadow-lg">
+                                <div class="card-body">
+                                    <h4 class="card-title text-success">Awards</h4>
+                                </div>
+                                <div class="card-img-top"><img src="{{ asset('img/award4.jpg') }}" alt="Member" class="img-size img-fluid" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+           
+
+       <!-- <div class="text-center row team-row">
 
 <div class = "col-md-6">
     <div class="carousel-item active text-center">
-        <!--card 2-->
+    
          <div class="card mr-2 d-inline-block shadow-lg">
             <div class="card-body">
                     <h3 class="card-title">News and events</h3>
@@ -248,7 +302,7 @@
 
  <div class = "col-md-6">
     <div class="carousel-item active text-center">
-         <!--card 2-->
+        
              <div class="card mr-2 d-inline-block shadow-lg">
                  <div class="card-body">
                      <h3 class="card-title">Awards</h3>
@@ -257,9 +311,9 @@
              </div>
     </div>
   </div>
-</div>
-</div>
-</section>
+</div>-->
+
+
 
     <section class="bg-white section-about">
     <div class="container bottom">
