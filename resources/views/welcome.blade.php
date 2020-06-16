@@ -243,16 +243,16 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active text-center">
-                            <div class="card mr-2 d-inline-block shadow-lg">
+                            <div class="card mr-2 d-inline-block shadow-lg" style=" height: 25rem; width: 22rem">
                                 <div class="card-body">
                                     <h4 class="card-title text-success">News and Events</h4>
                                 </div>
                                 <div class="card-img-top">
                                     <marquee behavior="scroll" direction="up" style="margin: 1px 5px 1px 5px; height:200px;">
-                                        <p> Green India trust news and events.</p>
-                                        <p> Green India trust news and events.</p>
-                                        <p> Green India trust news and events.</p>
-                                        <p> Green India trust news and events.</p>
+                                        <p class="text-center"> Green India trust news and events.</p>
+                                        <p class="text-center"> Green India trust news and events.</p>
+                                        <p class="text-center"> Green India trust news and events.</p>
+                                        <p class="text-center"> Green India trust news and events.</p>
                                     </marquee>
                                 </div>
                             </div>
@@ -264,7 +264,7 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active text-center">
-                            <div class="card mr-2 d-inline-block shadow-lg">
+                            <div class="card mr-2 d-inline-block shadow-lg" style=" height: 25rem; width: 22rem">
                                 <div class="card-body">
                                     <h4 class="card-title text-success">Awards</h4>
                                 </div>
@@ -272,7 +272,7 @@
                             </div>
                         </div>
                         <div class="carousel-item text-center">
-                            <div class="card mr-2 d-inline-block shadow-lg">
+                            <div class="card mr-2 d-inline-block shadow-lg" style=" height: 25rem; width: 22rem">
                                 <div class="card-body">
                                     <h4 class="card-title text-success">Awards</h4>
                                 </div>

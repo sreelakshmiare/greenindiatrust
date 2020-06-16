@@ -172,6 +172,14 @@
             $("#6000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
             $("#10000").removeClass( "bg-primary" ).addClass( "bg-success" );  
         });
+        $( "#equipmentultraform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $('#donation_amount').val();            
+            if(donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
     });
 </script>
 @endsection
