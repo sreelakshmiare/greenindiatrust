@@ -7,9 +7,11 @@ use App\Category;
 use App\Donations;
 use App\Fundraise;
 use App\Http\Controllers\Controller;
+use App\UserDonations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 class DonationsController extends Controller
 {
@@ -17,6 +19,13 @@ class DonationsController extends Controller
         $achievements = Achievements::where('active_ind','Y')->get();        
         return view("welcome",['achievements'=>$achievements]);
     }
+
+    public function findFundraise($id) {
+        $fundraise = Fundraise::find($id);
+        $user_donations = UserDonations::where('donation_for',$fundraise->campaign_name)->get();
+        return view("fundraisedetail",['fundraise'=>$fundraise,
+                                        'user_donations'=>$user_donations]);
+    }     
 
     public function getActiveFundraiseList() {
         $fundraiselist = Fundraise::where('active_ind','Y')->paginate(8);
@@ -88,6 +97,23 @@ class DonationsController extends Controller
         $campaign_desc =  $request->input('campaign_desc');
         $active_ind =  $request->input('active_ind');
 
+        Validator::make($request->all(),
+            ['images.*'=>"required|file|image|mimes:jpg,png,jpeg,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:15000"])->validate();
+        $stringImageName='';
+        if ($request->hasFile("campaign_image")) {
+            $stringImageName = $request->file("campaign_image")->getClientOriginalName();
+            //$image = $request->file("campaign_image");
+            //$imageEncoded = File::get($request->campaign_image);
+            $request->campaign_image->storeAs("public/images/", $stringImageName);
+        }
+
+        $stringVideoName='';
+        if ($request->hasFile("campaign_video")) {
+            $stringVideoName = $request->file("campaign_video")->getClientOriginalName();
+            //$image = $request->file("campaign_video");
+            //$imageEncoded = File::get($request->campaign_video);
+            $request->campaign_video->storeAs("public/images/", $stringVideoName);
+        }
         $created_at = now();
         $newMenuArray = array("first_name"=> $first_name,
                             "last_name"=> $last_name,
@@ -100,7 +126,9 @@ class DonationsController extends Controller
                             "end_date"=>$end_date,
                             "campaign_desc"=>$campaign_desc,
                             "created_at"=>$created_at,
-                            "active_ind"=>'Y'
+                            "active_ind"=>'Y',
+                            "campaign_image"=> $stringImageName,
+                            "campaign_video"=> $stringVideoName
                            );
 
         $created = DB::table("fundraise")->insert($newMenuArray);

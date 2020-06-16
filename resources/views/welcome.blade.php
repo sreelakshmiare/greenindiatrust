@@ -64,7 +64,7 @@
                              in creating a brighter future for our children.&nbsp; <br>
                              
                             <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
-                              href="{{route('environment')}}">Read More</a>
+                              href="{{route('billiontree')}}">Read More</a>
                               
                               <br><br></p>
                 </div>
@@ -247,17 +247,16 @@
                                 <div class="card-body">
                                     <h4 class="card-title text-success">News and Events</h4>
                                 </div>
-                                <div class="card-img-top"><img src="{{ asset('img/news1.jpg') }}" alt="Member" class="img-size img-fluid " /></div>
-                            </div>
-                        </div>
-                        <div class="carousel-item text-center">
-                            <div class="card mr-2 d-inline-block shadow-lg">
-                                <div class="card-body">
-                                    <h4 class="card-title text-success">News and Events</h4>
+                                <div class="card-img-top">
+                                    <marquee behavior="scroll" direction="up" style="margin: 1px 5px 1px 5px; height:200px;">
+                                        <p> Green India trust news and events.</p>
+                                        <p> Green India trust news and events.</p>
+                                        <p> Green India trust news and events.</p>
+                                        <p> Green India trust news and events.</p>
+                                    </marquee>
                                 </div>
-                                <div class="card-img-top"><img src="{{ asset('img/news2.jpg') }}" alt="Member" class="img-size img-fluid " /></div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -296,7 +295,7 @@
          <div class="card mr-2 d-inline-block shadow-lg">
             <div class="card-body">
                     <h3 class="card-title">News and events</h3>
-                    <img src="{{ asset('img/news1.jpg')}}" alt="Member" class="award-img">
+                    <img src="" alt="Member" class="award-img">
             </div>
          </div>
     </div>
@@ -308,7 +307,7 @@
              <div class="card mr-2 d-inline-block shadow-lg">
                  <div class="card-body">
                      <h3 class="card-title">Awards</h3>
-                        <img src="{{ asset('img/limca-record.jpg')}}" alt="Member" class="award-img">
+                        <img src="" alt="Member" class="award-img">
                  </div>
              </div>
     </div>

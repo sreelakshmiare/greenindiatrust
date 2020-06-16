@@ -28,10 +28,11 @@
                             <p class="card-text">By <strong>{{$fundraise->first_name .' '. $fundraise->last_name}}</strong> on {{$fundraise->created_at}}</p>
                             <p class="card-text">{{$fundraise->campaign_desc}}</p>
                             <p class="card-text">Days Left : {{ round(($endDate - $startDate) / 86400) }} Days</p>
-                            
+                            <h6><strong>Goal Donation: Rs. {{$fundraise->campaign_amount}}</strong></h6>
                         </div>
-                        <div class="card-footer bg-success text-white">
-                            <h6><strong>Goal Donation: Rs. {{$fundraise->campaign_amount}}</strong></h6></div>
+                        <div class="card-footer bg-success text-white text-center">
+                            <a href="{{ route('findFundraise',['id' => $fundraise->id ])}}" class="btn bg-success text-white">View More</a>
+                        </div>
                     </div>
                 </div>
             @endforeach            

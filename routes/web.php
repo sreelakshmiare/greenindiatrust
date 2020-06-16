@@ -160,6 +160,11 @@ Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
+Route::get('findFundraise/{id}', 
+        ["uses"=>"DonationsController@findFundraise", 
+        "as"=> "findFundraise"]
+    );
+
 Route::get('/news', function () {
     return view('news');
 })->name('news');
@@ -167,6 +172,16 @@ Route::get('/news', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/facebooklogin', function () {
+    return view('facebooklogin');
+})->name('facebooklogin');
+
+Route::post('facebookstore', ["uses"=>"FacebookController@store",'as'=>'facebookstore']
+);
+
+Route::post('facebookpost', ["uses"=>"FacebookController@postLink",'as'=>'facebookpost']
+);
 
 Route::get('donate', 
     ["uses"=>"DonationsController@getDonationsByCategory",'as'=>'donate']

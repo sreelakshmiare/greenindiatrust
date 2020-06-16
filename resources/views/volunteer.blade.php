@@ -56,19 +56,16 @@
                         <h5 class="text-center text-success"><strong>Volunteer Application Form</strong></h5>
                         <div class="shadow-sm form-row">
                             <div class="form-group col-md-6">
-                                <input class="form-control" type="text" name="first_name" id="first_name" placeholder="Firstname" required="">
+                                <input class="form-control" type="text" name="first_name" id="first_name" placeholder="Firstname" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Lastname" required="">
+                                <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Lastname" required>
                             </div>
+                            <div class="form-group col-md-12">
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
+                            </div>                            
                             <div class="form-group col-md-6">
-                                <input class="form-control" type="email" name="email" id="email" placeholder="Email">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input class="form-control" type="password" name="password" id="password" placeholder="Password">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input class="form-control" type="text" name="mobile" id="mobile" placeholder="Mobile Number" required="">
+                                <input class="form-control" type="text" name="mobile" id="mobile" placeholder="Mobile Number" required>
                             </div>
                             <div class="form-group col-md-4">
                             <select class="form-control" name="gender" id="gender" required>
@@ -78,13 +75,13 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-2">
-                                <input class="form-control" type="text" name="age" id="age" placeholder="Age" required="">
+                                <input class="form-control" type="text" name="age" id="age" placeholder="Age" required>
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea class="form-control" name="address" id="address" placeholder="Address" required=""></textarea>
+                                <textarea class="form-control" name="address" id="address" placeholder="Address" required></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <select class="form-control" name="education" id="education" required="">
+                                <select class="form-control" name="education" id="education" required>
                                     <option value="">Select Education</option>
                                     <option value="Secondary Education">Secondary Education</option>
                                     <option value="Intermediate">Intermediate</option>
@@ -114,11 +111,11 @@
                             <div class="form-group col-md-12">
                                 <label>Are You Relocating For conducting camps and events?</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="Y" checked>
+                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="Y" >
                                     <label class="form-check-label" for="relocating">Yes&nbsp;</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="N">
+                                    <input class="form-check-input" type="radio" id="relocating" name="relocating" value="N" checked>
                                     <label class="form-check-label" for="relocating">No</label>
                                 </div>
                             </div>
@@ -136,13 +133,13 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" value="Y">
                                     <label class="form-check-label" for="liketodonate">
-                                        <a href="donatepage.html">Yes</a>&nbsp;
+                                        Yes
                                     </label>                                    
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" id="liketodonate" name="liketodonate" value="N" checked>
                                     <label class="form-check-label" for="liketodonate">
-                                        <a href="#">No</a>
+                                        No
                                     </label>
                                 </div>
                             </div>
@@ -164,7 +161,7 @@
                                 <button class="btn bg-success btn-md text-white text-center" type="submit">Submit</button>
                             </div>
                             <div id="razorpay_div"class="text-right form-group col-md-6" style="display: none;">
-                                <button class="btn bg-success text-white btn-md btn-block" id="paybtn" type="submit">Proceed to Payment</button>
+                                <button class="btn bg-success text-white btn-md btn-block" id="paybtn" type="submit">Submit</button>
                             </div>                            
                         </div>
                     </form>

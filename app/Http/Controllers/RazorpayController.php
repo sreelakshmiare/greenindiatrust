@@ -30,7 +30,8 @@ class RazorpayController extends Controller
         $email = $request->input('email');
         $phone = $request->input('phone');           
         $pan = $request->input('pan');
-        $aadhar = $request->input('aadhar');        
+        $aadhar = $request->input('aadhar');
+        $nationality = $request->input('nationality');        
         $donation_amount = $request->input('donation_amount');
         $donation_for = $request->input('donation_for');
         $razorpay_payment_id = $request->input('razorpay_payment_id');
@@ -66,7 +67,8 @@ class RazorpayController extends Controller
                                     "aadhar"=> $aadhar,                              
                                     'payment_id'=> $razorpay_payment_id,
                                     'user_donation_id'=> $user_donation_id,
-                                    'created_at'=>$created_at);
+                                    'created_at'=>$created_at,
+                                    'nationality'=>$nationality);
             $created_donation = DB::table("user_donations")->insert($newOrderArray);
             $donation_id = DB::getPdo()->lastInsertId();
             Log::debug('donation_id created = '. $donation_id);

@@ -2,7 +2,6 @@
 
 namespace Illuminate\Foundation\Auth;
 
-use App\Role;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -15,21 +14,11 @@ trait RegistersUsers
     /**
      * Show the application registration form.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function showRegistrationForm()
     {
-        $roles = Role::where('active_ind','Y')
-                    ->whereNotIn('role_name',['AdminUser','Admin User'])->get();
-        $states = $this->getStates();
-        return view('auth.register',['states'=>$states,'roles'=>$roles]);
-    }
-
-    public function getStates(){
-        $path = storage_path() . "/json/statesanddistricts.json";
-
-        $states = json_decode(file_get_contents($path), true); 
-        return $states;        
+        return view('auth.register');
     }
 
     /**
