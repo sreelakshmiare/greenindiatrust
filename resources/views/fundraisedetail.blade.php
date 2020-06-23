@@ -17,8 +17,8 @@
         <div class="col"><img src="{{ asset('img/environment.jpg')}}" width="380px" height="300px"></div>
         <div class="col">
             <div class="card" style="max-width: 25rem;">
-                <div class="card-header bg-success text-white">
-                    <h5>Campaign Goal Rs. {{ $fundraise->campaign_amount}}</h5>
+                <div class="card-header">
+                    <h6><strong>Campaign Goal Rs. {{ $fundraise->campaign_amount}}</strong></h6>
                     @php
                         $remaining_amount =  $fundraise->campaign_amount - $fundraise->donation_raised_so_far;
                     @endphp
@@ -27,8 +27,8 @@
                     <div class="text-success">
                         <canvas data-bs-chart="{&quot;type&quot;:&quot;pie&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Raised So Far&quot;,&quot;Remaining&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Raised&quot;,&quot;backgroundColor&quot;:[&quot;#135e11&quot;,&quot;rgba(91,20,20,0.1)&quot;],&quot;borderColor&quot;:[&quot;#e1a407&quot;,&quot;#e1a407&quot;],&quot;data&quot;:[&quot;{{$fundraise->donation_raised_so_far}}&quot;,&quot;{{$remaining_amount}}&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:false,&quot;fontColor&quot;:&quot;#338836&quot;}}}"></canvas></div>
                 </div>
-                <div class="text-center card-footer bg-success text-white">
-                <h5>Raised So Far Rs. {{ $fundraise->donation_raised_so_far}} </h5>
+                <div class="text-center card-footer">
+                <h6><strong>Raised So Far Rs. {{ $fundraise->donation_raised_so_far}} </strong></h6>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             {{csrf_field()}}
             <div class="col">
                 <div class="card" style="max-width: 22rem;">
-                    <div class="card-header bg-success text-white">
+                    <div class="card-header">
                         <h6>Raised Funds can plant 100 trees</h6>
                     </div>
                     
@@ -98,8 +98,8 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="card">
-                <div class="card-header bg-success text-white">
-                    <h5>CAMPAIGN OVERVIEW</h5>
+                <div class="card-header">
+                    <h6><strong>CAMPAIGN OVERVIEW</strong></h6>
                 </div>
                 <div class="card-body">
                     <p class="text-justify">{{ $fundraise->campaign_desc}}<br><br></p>
@@ -108,8 +108,8 @@
         </div>
         <div class="col">
             <div class="card">
-                <div class="card-header bg-success text-white">
-                    <h5>CAMPAIGN DONORS</h5>
+                <div class="card-header">
+                    <h6><strong>CAMPAIGN DONORS</strong></h6>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled text-success">

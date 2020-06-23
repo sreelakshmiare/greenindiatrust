@@ -150,7 +150,8 @@ class DonationsController extends Controller
         return view("donate",['categories'=>$categories]);
     }
     public function personalDetail(Request $request) {
-        $donation_amount =  $request->input('donation_amount'); 
+        $donation_amount =  $request->input('donation_amount');
+        $health_other_amount = $request->input('health_other_amount'); 
         $donation_name =  $request->input('donation_name'); 
         $qty = $request->input('qty');
         $livamountkeepmother =  $request->input('livamountkeepmother');
@@ -184,6 +185,10 @@ class DonationsController extends Controller
 
         if ($educationscomputer !='') {            
             $donation_amount = $educationscomputer;
+        }
+
+        if($health_other_amount !='') {
+            $donation_amount = $health_other_amount;
         }
 
         $states = $this->getStates();    

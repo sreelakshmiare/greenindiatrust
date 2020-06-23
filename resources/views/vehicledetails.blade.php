@@ -4,17 +4,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h4 class="text-success">Be With Us For</h4>
-                <div>
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item tabitem"><a class="nav-link text-white bg-success border rounded border-white" role="tab" data-toggle="tab" href="#tab-1">Health Care</a></li>
-                        <li class="nav-item tabitem"><a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-2">Environment</a></li>
-                        <li class="nav-item tabitem"><a class="nav-link text-white bg-success border rounded border-white" role="tab" data-toggle="tab" href="#tab-3">Livlihood</a></li>
-                        <li class="nav-item tabitem"><a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-4">Education</a></li>
-                        <li class="nav-item tabitem"><a class="nav-link active text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-5">Equipment</a></li>
-                    </ul>
-                    <div class="tab-content"></div>
-                </div>
                 <p class="text-success"><strong>VEHICAL DETAILS:</strong></p>
             </div>
             <div class="col-lg-7 offset-lg-1">

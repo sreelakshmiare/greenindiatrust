@@ -5,7 +5,7 @@
 
     <div id="paymentDetail" class="container text-center" style="display: none;">
         <div class="card text-center" style="width: 50rem;">
-            <div class="card-header bg-success text-white">
+            <div class="card-header">
                 <h6 class="mb-0">Order Created Successfully - 
                     <strong>
                     <span id="user_donation_id"></span></strong> 
@@ -37,10 +37,10 @@
                 {{csrf_field()}}
                 <div class="form-row">
                     <div class="col-lg-5 offset-lg-1 form-group">
-                        <h4 class="text-justify text-success"><strong>Personal Information</strong></h4>
+                        <h5 class="text-justify text-success"><strong>Personal Information</strong></h5>
                     </div>
                     <div class="col-lg-5 form-group">
-                        <h6 class="text-justify text-success"><strong>Donation Amount :  {{$donation_amount }}</strong></h6>
+                        <h4 class="text-justify text-success"><strong>Donation Amount :  {{$donation_amount }}</strong></h4>
                         <input type="hidden" id="donationAmount" name="donationAmount" value="{{$donation_amount}}">
                         <input type="hidden" id="donationName" name="donationName" value="{{$donation_name}}">
                     </div>
@@ -53,10 +53,10 @@
 
                 <div class="row">
                     <div class="col offset-lg-1">
-                        <input type="checkbox" name="isindian" id="isindian" /> Indian Citizen
+                        <input type="radio" name="nationality" id="nationality" value="indian" checked/> Indian Citizen
                     </div>
                     <div class="col">
-                        <input type="checkbox" name="isforeign" id="isforeign" /> Foreign Citizen
+                        <input type="radio" name="nationality" id="nationality" value="foreign"/> Foreign Citizen
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                     <div class="col-lg-5 offset-lg-1 form-group">
                         <input type="email"  name="email" id="email" class="form-control" placeholder="Email" required/>
                     </div>
-                    <div class="col-lg-5 form-group">
+                    <div id="pan_div" class="col-lg-5 form-group">
                         <input type="text" name="pan" id="pan" class="form-control" placeholder="PAN" required/>
                     </div>
                 </div>
@@ -82,8 +82,11 @@
                     <div class="col-lg-5 offset-lg-1 form-group">
                         <textarea class="form-control" name="address" id="address" placeholder="Address" rows="5" required></textarea>
                     </div>
-                    <div class="col-lg-5 form-group">
+                    <!--<div class="col-lg-5 form-group">
                         <input type="text" class="form-control" name="aadhar" id="aadhar" placeholder="Aadhar" required>                       
+                    </div> -->
+                    <div id="passport_div" class="col-lg-5 form-group" style="display: none;">
+                        <input type="text" class="form-control" name="passport" id="passport" placeholder="Passport">                       
                     </div>
                 </div>
                 
@@ -91,13 +94,16 @@
                     <div class="col-lg-4 offset-lg-1 form-group">
                             <input type="text" class="form-control" name="city" id="city" placeholder="City" required/>
                     </div>
-                    <div class="col-lg-4 form-group">
-                        <select class="form-control" name="state" id="state" required>
+                    <div id="state_div" class="col-lg-4 form-group">
+                        <select class="form-control" name="state" id="state">
                             <option value="">Please Select</option> 
                             @foreach ($states['states'] as $state)
                                 <option value="{{$state['state']}}">{{ $state['state'] }}</option>
                             @endforeach
                         </select>
+                    </div>
+                    <div id="country_div" class="col-lg-4 form-group" style="display: none;">
+                        <input type="text" class="form-control" name="country" id="country" placeholder="Country"/>
                     </div>
                     <div class="col-lg-2 form-group">
                         <input type="text" class="form-control" name="pin" id="pin" placeholder="PinCode" required/>
@@ -125,6 +131,35 @@
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
+    $('#razorform input[name="nationality"]').change(function(e) { 
+        $('#razorform input[name="nationality"]:checked').each(function() {
+            var value = $(this).val();
+            //alert("value = "+value);
+            if(value=='indian'){
+                //alert('setting required');
+                $('#passport_div').attr('style', 'display: none;');
+                $('#razorform input[name="pan"]').attr("required", true);
+                $("#pan_div").removeAttr('style');  
+                $('#razorform input[name="passport"]').removeAttr('required');
+
+                $('#country_div').attr('style', 'display: none;');
+                $('#razorform input[name="state"]').attr("required", true);
+                $("#state_div").removeAttr('style');  
+                $('#razorform input[name="country"]').removeAttr('required');                          
+            } else {
+                $('#pan_div').attr('style', 'display: none;');
+                $('#razorform input[name="passport"]').attr("required", true);
+                $("#passport_div").removeAttr('style'); 
+                $('#razorform input[name="pan"]').removeAttr('required');
+                
+                $('#state_div').attr('style', 'display: none;');
+                $('#razorform input[name="country"]').attr("required", true);
+                $("#country_div").removeAttr('style'); 
+                $('#razorform input[name="state"]').removeAttr('required');
+            }
+        });
+    });
+
     $('#rzp-footer-form').submit(function (e) {
         var button = $(this).find('button');
         var parent = $(this);
@@ -160,19 +195,18 @@
         var pan = $('#pan').val();
         var pin = $('#pin').val();
         var aadhar = $('#aadhar').val();
+        var passport = $('#passport').val();
         var city = $('#city').val();
+        var country = $('#country').val();
         var state = $('#state').val();
         var donationAmt = $('#donationAmount').val();
         var donationName = $('#donationName').val();
-        var isindian = $('#isindian').is(':checked');
-        var isforeign = $('#isforeign').is(':checked');
+        //var isindian = $('#isindian').is(':checked');
+        //var isforeign = $('#isforeign').is(':checked');
+        var nationality = $("input[name='nationality']:checked").val();
         var name=firstname +" "+lastname;
-        var nationality = '';
-        if(isindian)
-            nationality = 'Indian';
-        else if(isforeign)
-            nationality = 'Foreigner';
-        //alert('name = ' +name);
+        //var nationality = '';        
+        console.log('nationality = ' +nationality);
         $('#paymentDate').text(
                 padStart(paymentDate.getDate()) + '.' + padStart(paymentDate.getMonth() + 1) + '.' + paymentDate.getFullYear() + ' ' + padStart(paymentDate.getHours()) + ':' + padStart(paymentDate.getMinutes())
                 );
@@ -190,8 +224,10 @@
                 "phone" : phone,
                 "pan" : pan,
                 "aadhar" : aadhar,
+                "passport": passport,
                 "city" : city,
                 "state" : state,
+                "country" : country,
                 "pin" : pin,
                 "nationality" : nationality,
                 "donation_amount" : donationAmt,
@@ -228,23 +264,45 @@
 <script>
     
     document.getElementById('paybtn').onclick = function () {
-        var firstname = $('#firstname').val();
-        var lastname = $('#lastname').val();
-        var address = $('#address').val();
-        var email = $('#email').val();
-        var phone = $('#phone').val();
-        var pan = $('#pan').val();
-        var pin = $('#pin').val();
-        var aadhar = $('#aadhar').val();
-        var city = $('#city').val();
-        var state = $('#state').val();
-        var isindian = $('#isindian').is(':checked');
-        var isforeign = $('#isforeign').is(':checked');
-        if(firstname == '' || lastname=='' || address=='' || email=='' || phone=='' ||
-            pan=='' || pin=='' || aadhar == '' || city=='' || state=='' || (!isindian && !isforeign)) {
-                alert('Please enter Required Fields..');
+        var firstname1 = $('#firstname').val();
+        var lastname1 = $('#lastname').val();
+        var address1 = $('#address').val();
+        var email1 = $('#email').val();
+        var phone1 = $('#phone').val();
+        var pan1 = $('#pan').val();
+        var pin1 = $('#pin').val();
+        //var aadhar = $('#aadhar').val();
+        var passport1 = $('#passport').val();
+        var city1 = $('#city').val();
+        var country1 = $('#country').val();
+        var state1 = $('#state').val();
+        var nationality = $("input[name='nationality']:checked").val();
+        //alert('nationalty = '+nationality);
+        //var isindian1 = $('#isindian').is(':checked');
+        //var isforeign1 = $('#isforeign').is(':checked');
+        //alert("isindian = "+isindian+",isforeign = "+isforeign);
+        //alert('fistname = '+firstname+',lastname = '+lastname+',address = '+address+',email='+email+',phone = '+phone);
+        //alert('pan1='+ pan1 +',pin = '+pin1+',passport = '+passport1+',city='+city1+',state='+state1);
+        if(firstname1 == '' || lastname1 =='' || address1 =='' || email1 =='' || phone1 =='' ||
+             pin1 =='' || city1 =='') {
+                alert('Please enter Required Fields...');
                 return;
             }
+        if(nationality =='indian' && pan1 =='') {
+            alert('Please enter Pan ');
+            return;
+        } else if(nationality=="foreign" && passport1=='') {
+            alert('Please enter Passport ');
+            return;
+        }
+
+        if(nationality =='indian' && state1 =='') {
+            alert('Please enter State');
+            return;
+        } else if(nationality=="foreign" && country1=='') {
+            alert('Please enter Country');
+            return;
+        }
 
         options = {
         key: "{{ env('RAZORPAY_KEY') }}",

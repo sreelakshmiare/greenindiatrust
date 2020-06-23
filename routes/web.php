@@ -140,6 +140,10 @@ Route::get('/smvolunteer', function () {
     return view('smvolunteer');
 })->name('smvolunteer');
 
+Route::get('/vehicledetails', function () {
+    return view('vehicledetails');
+})->name('vehicledetails');
+
 Route::get('/crowdfund', function () {
     return view('crowdfund');
 })->name('crowdfund');

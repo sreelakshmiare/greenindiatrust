@@ -51,15 +51,12 @@
                                                     </div>                                    
                                                     <div class="col-lg-4">                                        
                                                         <label class="col-form-label text-left text-success">Amount : Rs. <strong>{{ $donation->donation_amount }}</strong>
+                                                        <BR> 
+                                                       <input name="health_other_amount" id="health_other_amount" class="form-control-sm form-control" type="text" placeholder="Any other amount.">
+                                                        
                                                             <input type="hidden" value="{{ $donation->donation_amount }}" name="donation_amount">
                                                             <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
-                                                            <!-- <select>
-                                                                <optgroup label="This is a group">
-                                                                    <option value="12" selected="">Rs 20,000</option>
-                                                                    <option value="13">Enter Amount</option>
-                                                                    <option value="14">This is item 3</option>
-                                                                </optgroup>
-                                                            </select> -->
+                                                            
                                                         </label>
                                                     </div>
                                                     <div class="col-lg-2 text-left">
@@ -78,8 +75,14 @@
                             <p class="text-success para-tab">&nbsp;<strong>Environment Donations</strong></p>
                             <div class="card-deck">                                
                                 @foreach ($categories as $category)
-                                    @if($category->name == "Environment Donations")                                    
-                                        @foreach ($category->donations as $envdonation)                                    
+                                    @if($category->name == "Environment Donations") 
+                                        @php
+                                            $env_donation_names = '';
+                                        @endphp                                   
+                                        @foreach ($category->donations as $envdonation) 
+                                            @php
+                                                $env_donation_names .= $envdonation->donation_name . ',';
+                                            @endphp                            
                                                 <div class="card shadow">
                                                     <form id="{{ $envdonation->donation_name }}" name="{{ $envdonation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
                                                         {{csrf_field()}}
@@ -91,7 +94,7 @@
                                                             <label class = "text-muted">Contribution</label> 
                                                             Rs. <strong><span id="damt">{{ $envdonation->donation_amount }}</span></strong> <br/>
                                                             <label class="text-success">
-                                                                Quantity <input class="form-control form-control-lg" type="number" id="qty" name="qty" min="1" value="1" placeholder="1" >
+                                                                Quantity <input type="number" class="form-control form-control-lg" id="qty" name="qty" min="1" value="1" placeholder="1" >
                                                             </label>
                                                         </div>
                                                         <div class ="card-footer text-center bg-white">
@@ -101,6 +104,7 @@
                                                 </div>
                                             
                                         @endforeach
+                                        <input type="hidden" name="env_donation_names" id="env_donation_names" value="{{$env_donation_names}}">
                                         @break;
                                     @endif
                                 @endforeach
@@ -377,7 +381,7 @@
                                                 <p class="text-success"><strong>Cost of the equipment : Rs 19,90,886/-</strong></p>
                                                 <p class="text-success">
                                                     <strong>Cost Breakup :&nbsp;</strong>
-                                                    <a class="text-primary" href="vehicaldetails.html">Vehical Details</a>
+                                                    <a class="text-primary" href="{{ route('vehicledetails')}}">Vehical Details</a>
                                                 </p>
                                                 <input id="equipmentvehiclesubmit" type="submit" role="button" class="btn btn-success bg-success" value="Sponser Now">
                                             </div>
@@ -394,13 +398,34 @@
 </section>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script>
-    $("#qty").on("keyup keydown change",function(event){
-        var donation_amt = $('#donation_amount').val();
-        var qty = $("#qty").val();
+    //$("#qty").on("keyup keydown change",function(event){
+    $("input[type='number']").bind("input", function() {
+        var this_form_id = $(this).closest('form').attr('id');
+        var env_donation_names = $('#env_donation_names').val();
+        console.log('this form id = ' + this_form_id +", env_donation_names = "+ env_donation_names);
+        //$("#form2 input").val('Hello World!');
+        //var donation_amt = $('#donation_amount').val();
+        var donation_amt = $(this).closest('form').find('#donation_amount').val();
+        console.log('donation_amt = '+donation_amt);
+        //var qty = $("#qty").val();
+        var qty = $(this).closest('form').find("#qty").val();
+        console.log('qty = ' +qty);
         var totamt = parseInt(qty) * parseInt(donation_amt);
-        $('#damt').html(totamt);
-        $('#donation_amt').val(totamt);
+        //$('#damt').html(totamt);
+        //$('#donation_amt').val(totamt);
+        $(this).closest('form').find('#damt').html(totamt);
+        $(this).closest('form').find('#donation_amt').val(totamt);
     });
+    /*$("input[name='health_other_amount']").bind("input", function() {
+        var this_form_id = $(this).closest('form').attr('id');
+        var health_other_amount = $(this).closest('form').find('#health_other_amount').val();
+        if(health_other_amount !='')
+            $(this).closest('form').find('#donation_amount').val(totamt);
+    });*/
+    
+    /*$("input[type='number']").bind("input", function() {
+        alert("Value changed");
+    });*/
 
     /*var radiobtns = $('input[name="livamountkeepmother"]', this);
     $('input[name="livamountkeepmother"]').change(function(e) { 
@@ -409,6 +434,7 @@
         alert(radiobtns);
 
     });*/
+     
     $('#livlihoodkeepmotherform input[name="livamountkeepmother"]').change(function(e) { 
         $('#livlihoodkeepmotherform input[name="livamountkeepmother"]:checked').each(function() {
             var value = $(this).val();
@@ -454,12 +480,12 @@
     $('#educationscomputerform input[name="educationscomputer"]').change(function(e) { 
         $('#educationscomputerform input[name="educationscomputer"]:checked').each(function() {
             var value = $(this).val();
-            alert("value = "+value);
+            //alert("value = "+value);
             if(value==''){
-                alert('setting required');
+                //alert('setting required');
                 $('#educationscomputerform input[type="text"]').attr("required", true);
             } else {
-                alert('removing required');
+                //alert('removing required');
                 $('#educationscomputerform input[type="text"]').removeAttr('required');
             }
         });
@@ -479,7 +505,65 @@
         });
     });
 
-    
+    $( "#livlihoodkeepmotherform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            //var livlihoodkeepmother = ;
+            //console.log($("input[name='livamountkeepmother']:checked").val());
+            if ( (!$("input[name='livamountkeepmother']:checked").val()) && donation_amount == '') {
+            //if($('#livamountkeepmother').is(':checked') && donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
+
+        $( "#livlihoodorganicform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            //var livlihoodkeepmother = ;
+            //console.log($("input[name='livamountkeepmother']:checked").val());
+            if ( (!$("input[name='livlihoodorganic']:checked").val()) && donation_amount == '') {
+            //if($('#livamountkeepmother').is(':checked') && donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
+
+        $( "#livlihoodtailerform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            //var livlihoodkeepmother = ;
+            //console.log($("input[name='livamountkeepmother']:checked").val());
+            if ( (!$("input[name='livlihoodtailer']:checked").val()) && donation_amount == '') {
+            //if($('#livamountkeepmother').is(':checked') && donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
+
+        $( "#educationscomputerform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            //var livlihoodkeepmother = ;
+            //console.log($("input[name='livamountkeepmother']:checked").val());
+            if ( (!$("input[name='educationscomputer']:checked").val()) && donation_amount == '') {
+            //if($('#livamountkeepmother').is(':checked') && donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
+
+        $( "#educationsschoolform" ).submit(function( event ) {
+            //alert( "Handler for .submit() called." );
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            //var livlihoodkeepmother = ;
+            //console.log($("input[name='livamountkeepmother']:checked").val());
+            if ( (!$("input[name='educationsschool']:checked").val()) && donation_amount == '') {
+            //if($('#livamountkeepmother').is(':checked') && donation_amount == ''){
+                alert('Please select any Donation Amount or Enter Other Amount to Donate');
+                event.preventDefault();
+            }
+        });
     
 </script>
 
