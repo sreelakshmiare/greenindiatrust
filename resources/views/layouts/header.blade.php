@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('css/Projects-Horizontal.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Registration-Form-with-Photo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Team-Boxed.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/phonepe.css') }}">
+    
 </head>
 
 <body>

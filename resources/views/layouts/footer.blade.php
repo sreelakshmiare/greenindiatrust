@@ -1,3 +1,13 @@
+<button class="open-button" onclick="openForm()">Donate Using Phone Pe</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h6><strong>Donate using Phone Pe</strong></h6>
+	<img src="{{ asset('img/Green_India_Phone_Pe.png')}}">
+    
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 <div class="text-white bg-success footer-clean">
     <footer>
         <div class="container">
@@ -51,6 +61,7 @@
 <script src="{{ asset('js/lightbox.min.js')}}"></script>
 <script src="{{ asset('js/livereload.js')}}"></script>
 <script src="{{ asset('js/smart-forms.min.js')}}"></script>
+<script src="{{ asset('js/isotope.min.js')}}"></script>
 <script>
     const counters = document.querySelectorAll('.counter');
 	const speed = 200; // The lower the slower
@@ -73,6 +84,13 @@
 		};
 		updateCount();
 	});
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 </script>
 </body>
 

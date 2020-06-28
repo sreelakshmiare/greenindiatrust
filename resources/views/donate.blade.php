@@ -23,6 +23,9 @@
                         <li class="nav-item tabitem">
                             <a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-5">Equipment</a>
                         </li>
+                        <li class="nav-item tabitem">
+                            <a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-6">Phone Pe</a>
+                        </li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" role="tabpanel" id="tab-1">
@@ -70,7 +73,7 @@
                                 @endif
                             @endforeach
                                                       
-                        </div>
+                    </div>
                         <div class="tab-pane" role="tabpanel" id="tab-2">
                             <p class="text-success para-tab">&nbsp;<strong>Environment Donations</strong></p>
                             <div class="card-deck">                                
@@ -388,6 +391,25 @@
                                         </div>
                                     </form>
                                 </div>
+                            </div>
+
+                            <div class="tab-pane" role="tabpanel" id="tab-6">
+                                <p class="text-success para-tab">&nbsp;<strong>Donate Using Phone Pe</strong></p>
+                                <div class="bg-light border rounded-0 shadow div-livedonate">                                    
+                                            <div class="col-lg-3">
+                                                <img class="img-thumbnail img-fluid shadow" src="{{ asset('img/Green_India_Phone_Pe.png')}}">
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <h6 class="text-success"><strong>Donate For Green India Trust.</strong><br></h6>
+                                                <p class="text-success">For Environment</p>
+                                                <p class="text-success">For Healthcare</p>
+                                                <p class="text-success">For Livlihood</p>
+                                                <p class="text-success">For Education</p>
+                                                <p class="text-success">For Equipment</p> 
+                                            </div>
+                                        
+                                    
+                                </div>                                
                             </div>
                         </div>
                     </div>
