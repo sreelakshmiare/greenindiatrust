@@ -44,6 +44,38 @@
             <input type="file" class=""  name="gallery_image[]" id="gallery_image" placeholder="Gallery Image" value="{{$galleryimage->gallery_image}}" multiple>
         </div>
         <div class="form-group">
+            <label for="project">Project Name</label>
+        <input type="text" class="form-control" name="project" id="project" value="{{ $galleryimage->project}}">
+        </div>
+    
+        <div class="form-group">
+            <label for="location">Location Name</label>
+            <input type="text" class="form-control" name="location" id="location" value="{{ $galleryimage->location}}">
+        </div>
+    
+        <div class="form-group">
+            <label for="description">Project Description</label>
+            <input type="text" class="form-control" name="description" id="description" value="{{ $galleryimage->description}}">
+        </div>
+        <div class="form-group">
+            <label for="category_id">state</label>
+            <select class="form-control" name="state" id="state">
+                <option value="">Please Select</option> 
+                @foreach ($states['states'] as $state)
+                    <option value="{{$state['state']}}"
+                        @if ($state['state'] == $galleryimage->state)
+                            selected="selected"
+                        @endif
+                        >{{ $state['state'] }}</option>    
+                @endforeach        
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="activity_date">Activity Date</label>
+            <input id="activity_date" type="date" class="form-control" name="activity_date" id="activity_date"  value="{{ $galleryimage->activity_date}}">
+        
+        </div>
+        <div class="form-group">
             <button class="btn btn-primary" type="submit">Submit </button>
             <button class="btn btn-primary" type="reset">Reset </button>
             <a href="{{route('adminDisplayGalleryImages')}}" class="btn btn-primary">Cancel</a>
@@ -58,7 +90,9 @@
         @foreach($gallery_img_arr as $image)
             <img src="{{asset ('storage')}}/images/{{$image}}" width="100" height="100" style="max-height:220px" >
         @endforeach
-    </div>  
+    </div>
+    
+    
 </div>
 
 @endsection

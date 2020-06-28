@@ -16,22 +16,35 @@ class AdminGalleryImageController extends Controller
 {
     public function index() {
         $galleryimages = GalleryImage::paginate(10);
-        $categories = Category::all()->sortBy('name');
+        $categories = Category::where('type', 'Gallery')->get();
+        $states = $this->getStates();  
         return view("admin.displaygalleryimages",['galleryimages'=>$galleryimages,
-                                                'categories'=>$categories]);
+                                                'categories'=>$categories,
+                                                'states'=>$states]);
+    }
+    public function getStates(){
+        $path = storage_path() . "/json/statesanddistricts.json";
+
+        $states = json_decode(file_get_contents($path), true); 
+        return $states;        
     }
 
     public function editGalleryImageForm($id){
         $galleryimage = GalleryImage::find($id);
-        $categories = Category::all()->sortBy('name');
+        $categories = Category::where('type', 'Gallery')->get();
+        $states = $this->getStates();  
          return view('admin.editgalleryimageform',['galleryimage'=>$galleryimage,
-         'categories'=>$categories]);
+         'categories'=>$categories,'states'=>$states]);
     }
 
     public function updateGalleryImage(Request $request,$id){
         Validator::make($request->all(),
             ['images.*'=>"required|file|image|mimes:jpg,png,jpeg|max:5000"])->validate();
-
+            $project = $request->input('project');
+            $description = $request->input('description');
+            $activity_date = $request->input('activity_date');
+            $state = $request->input('state');
+            $location = $request->input('location');
         $images=array();
         if ($files=$request->file('gallery_image')) {
             $gallery_image = GalleryImage::find($id);
@@ -55,13 +68,19 @@ class AdminGalleryImageController extends Controller
 
             $gallery_year = $request->input('gallery_year');
             $category_id = $request->input('category_id');
+            
             $updated_at = now(); 
             $newGalleryImageArray = array(
                 //"gallery_image"=> $stringImageReFormat,
                 'gallery_year'=> $gallery_year,
                 'category_id'=> $category_id,
                 'gallery_image'=>  implode("|",$images),
-                "updated_at"=>$updated_at);
+                "updated_at"=>$updated_at,
+                "project"=>$project,
+                "description"=>$description,
+                "activity_date"=>$activity_date,
+                "state"=>$state,
+                "location"=>$location);
 
         } else {
             $gallery_year = $request->input('gallery_year');
@@ -71,7 +90,12 @@ class AdminGalleryImageController extends Controller
                 //"gallery_image"=> $stringImageReFormat,
                 'gallery_year'=> $gallery_year,
                 'category_id'=> $category_id,                
-                "updated_at"=>$updated_at);
+                "updated_at"=>$updated_at,
+                "project"=>$project,
+                "description"=>$description,
+                "activity_date"=>$activity_date,
+                "state"=>$state,
+                "location"=>$location);
             
         }
         DB::table('gallery_images')->where('id', $id)->update($newGalleryImageArray);
@@ -102,8 +126,9 @@ class AdminGalleryImageController extends Controller
 
     //display create product form
     public function createGalleryImageForm(){
-        $categories = Category::all()->sortBy('name');
-        return view("admin.creategalleryimageform",['categories'=>$categories]);
+        $categories = Category::where('type', 'Gallery')->get();
+        $states = $this->getStates();  
+        return view("admin.creategalleryimageform",['categories'=>$categories,'states'=>$states]);
     }
 
     //store new brand to database
@@ -127,13 +152,23 @@ class AdminGalleryImageController extends Controller
         $created_at = now();
         $gallery_year = $request->input('gallery_year');
         $category_id = $request->input('category_id');
+        $project = $request->input('project');
+            $description = $request->input('description');
+            $activity_date = $request->input('activity_date');
+            $state = $request->input('state');
+            $location = $request->input('location');
         
         $newGalleryImageArray = array(
             //"gallery_image"=> $stringImageReFormat,
             'gallery_year'=> $gallery_year,
             'category_id'=> $category_id,
             'gallery_image'=>  implode("|",$images),
-            "created_at"=>$created_at);
+            "created_at"=>$created_at,
+            "project"=>$project,
+                "description"=>$description,
+                "activity_date"=>$activity_date,
+                "state"=>$state,
+                "location"=>$location);
 
         $created = DB::table("gallery_images")->insert($newGalleryImageArray);
 
