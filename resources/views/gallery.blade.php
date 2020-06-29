@@ -12,18 +12,21 @@
                             <label> Select Year </label>
                             <select class="form-control col-4 filters-select button-group js-radio-button-group" data-filter-group="year">
                                 <option value="*">show all</option>
-                                <option value=".2020">2020</option>
-                                <option value=".2019">2019</option>
-                                <option value=".2018">2018</option>
-                                <option value=".2017">2017</option>
-                                <option value=".2016">2016</option>
-                                <option value=".2015">2015</option>
-                                <option value=".2014">2014</option>
-                                <option value=".2013">2013</option>
-                                <option value=".2012">2012</option>
+                                @foreach ($years as $year)
+                                    <option value=".{{$year->gallery_year}}">{{$year->gallery_year}}</option>
+                                @endforeach                                
                             </select>
                         </div>
                         <div class="col-lg-8"> 
+                            <label> Select Cateogory </label>                       
+                            <select class="form-control col-4 filters-select button-group js-radio-button-group" data-filter-group="category">
+                                <option value="*">show all</option>
+                                @foreach ($categories as $category)
+                                    <option value=".{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
+                            </select> 
+                        </div>
+                        {{-- <div class="col-lg-8"> 
                             <label> Select Area </label>                       
                             <select class="form-control col-4 filters-select button-group js-radio-button-group" data-filter-group="place">
                                 <option value="*">show all</option>
@@ -31,7 +34,7 @@
                                 <option value=".tamilnadu">TamilNadu</option>
                                 <option value=".karnataka">Karnataka</option>
                             </select> 
-                        </div>
+                        </div> --}}
                     </div>
                     <!--<ul class="filters text-center" data-filter-group="year">
                         <li data-filter=".2020"><a href="#!">2020</a></li>
@@ -52,7 +55,26 @@
                     </ul>-->
                     <div class="projects">
                         <div class="row">
-                            <div class="col-lg-4 item 2020 andhrapradesh">                        
+                            @foreach ($galleryimages as $gallery)
+                                @php
+                                    $images = $gallery->images;
+                                @endphp
+                                @foreach($images as $image)
+                                    <div class="col-lg-4 item {{$gallery->gallery_year}} {{$gallery->category_id}}">                        
+                                        <div class="mycard">
+                                            <div class="mycard-head">
+                                                <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">                                    
+                                            </div>
+
+                                            <div class="mycard-body text-center">
+                                                <h6 class="title">{{$gallery->location}} - {{$gallery->activity_date}}</h6>
+                                                <a href="#!" class="btn btn-lg mycard-btn">{{$gallery->project}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endforeach
+                            {{--<div class="col-lg-4 item 2020 andhrapradesh">                        
                                 <div class="mycard">
                                     <div class="mycard-head">
                                         <img src="{{ asset('img/comptraining.jpg')}}" alt="" class="img-fluid card-img">                                    
@@ -120,7 +142,7 @@
                                         <h4 class="title">Naidu Peta</h4>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>

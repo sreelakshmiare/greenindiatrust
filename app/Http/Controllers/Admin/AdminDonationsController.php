@@ -79,7 +79,7 @@ class AdminDonationsController extends Controller
         }
         return redirect()->route("adminDisplayDonations"); 
      }
-
+ 
      public function deleteDonations($id){ 
         $donations = Donations::find($id);
         $exists =  Storage::disk("local")->exists("public/images/".$donations->donation_image);

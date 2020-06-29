@@ -396,17 +396,9 @@
                             <div class="tab-pane" role="tabpanel" id="tab-6">
                                 <p class="text-success para-tab">&nbsp;<strong>Donate Using Phone Pe</strong></p>
                                 <div class="bg-light border rounded-0 shadow div-livedonate">                                    
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-12">
                                                 <img class="img-thumbnail img-fluid shadow" src="{{ asset('img/Green_India_Phone_Pe.png')}}">
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <h6 class="text-success"><strong>Donate For Green India Trust.</strong><br></h6>
-                                                <p class="text-success">For Environment</p>
-                                                <p class="text-success">For Healthcare</p>
-                                                <p class="text-success">For Livlihood</p>
-                                                <p class="text-success">For Education</p>
-                                                <p class="text-success">For Equipment</p> 
-                                            </div>
+                                            </div>                                
                                         
                                     
                                 </div>                                

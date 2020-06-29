@@ -160,9 +160,9 @@ Route::get('/reports', function () {
     return view('reports');
 })->name('reports');
 
-Route::get('/gallery', function () {
-    return view('gallery');
-})->name('gallery');
+Route::get('/gallery', ["uses"=>"GalleryImagesController@index", 
+"as"=> "gallery"]
+);
 
 Route::get('findFundraise/{id}', 
         ["uses"=>"DonationsController@findFundraise", 
