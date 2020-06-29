@@ -98,7 +98,7 @@ class DonationsController extends Controller
         $active_ind =  $request->input('active_ind');
 
         Validator::make($request->all(),
-            ['images.*'=>"required|file|image|mimes:jpg,png,jpeg,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:15000"])->validate();
+            ['images.*'=>"required|file|image|mimes:jpg,png,jpeg,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:25000"])->validate();
         $stringImageName='';
         if ($request->hasFile("campaign_image")) {
             $stringImageName = $request->file("campaign_image")->getClientOriginalName();

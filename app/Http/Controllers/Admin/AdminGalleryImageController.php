@@ -39,7 +39,7 @@ class AdminGalleryImageController extends Controller
 
     public function updateGalleryImage(Request $request,$id){
         Validator::make($request->all(),
-            ['images.*'=>"required|file|image|mimes:jpg,png,jpeg|max:5000"])->validate();
+            ['images.*'=>"required|file|image|mimes:jpg,png,jpeg,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:50000"])->validate();
             $project = $request->input('project');
             $description = $request->input('description');
             $activity_date = $request->input('activity_date');
@@ -134,7 +134,7 @@ class AdminGalleryImageController extends Controller
     //store new brand to database
     public function sendCreateGalleryImageForm(Request $request){
 
-        Validator::make($request->all(),['images.*'=>"required|file|image|mimes:jpg,png,jpeg|max:5000"])->validate();
+        Validator::make($request->all(),['images.*'=>"required|file|image|mimes:jpg,png,jpeg,mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:50000"])->validate();
         //$ext =  $request->file("gallery_image")->getClientOriginalExtension(); 
         $images=array();
         if($files=$request->file('gallery_image')){
