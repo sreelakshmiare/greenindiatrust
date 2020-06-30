@@ -527,6 +527,7 @@ class ComposerStaticInit56050de90a2889c1ed91ea7ce65b143f
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DonationsController' => __DIR__ . '/../..' . '/app/Http/Controllers/DonationsController.php',
         'App\\Http\\Controllers\\FacebookController' => __DIR__ . '/../..' . '/app/Http/Controllers/FacebookController.php',
+        'App\\Http\\Controllers\\GalleryImagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/GalleryImagesController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\RazorpayController' => __DIR__ . '/../..' . '/app/Http/Controllers/RazorpayController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

@@ -7,6 +7,7 @@ use App\Category;
 use App\Donations;
 use App\Fundraise;
 use App\Http\Controllers\Controller;
+use App\NewsAndEvents;
 use App\UserDonations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,8 +17,15 @@ use Illuminate\Support\Facades\Validator;
 class DonationsController extends Controller
 {
     public function index() {
-        $achievements = Achievements::where('active_ind','Y')->get();        
-        return view("welcome",['achievements'=>$achievements]);
+        $achievements = Achievements::where('active_ind','Y')->get();  
+        $newsandevents = NewsAndEvents::where('active_ind','Y')->get();      
+        return view("welcome",['achievements'=>$achievements,
+                                'newsandevents'=>$newsandevents]);
+    } 
+    
+    public function news() {
+        $newsandevents = NewsAndEvents::where('active_ind','Y')->get();      
+        return view("news",['newsandevents'=>$newsandevents]);
     }
 
     public function findFundraise($id) {

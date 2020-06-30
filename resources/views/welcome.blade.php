@@ -249,10 +249,9 @@
                                 </div>
                                 <div class="card-img-top">
                                     <marquee behavior="scroll" direction="up" style="margin: 1px 5px 1px 5px; height:200px;">
-                                        <p class="text-center"> Green India trust news and events.</p>
-                                        <p class="text-center"> Green India trust news and events.</p>
-                                        <p class="text-center"> Green India trust news and events.</p>
-                                        <p class="text-center"> Green India trust news and events.</p>
+                                        @foreach ($newsandevents as $item)
+                                            <p class="text-center">{{ $item->news_events}}</p> 
+                                        @endforeach                                        
                                     </marquee>
                                 </div>
                             </div>

@@ -35,6 +35,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DonationsController' => $baseDir . '/app/Http/Controllers/DonationsController.php',
     'App\\Http\\Controllers\\FacebookController' => $baseDir . '/app/Http/Controllers/FacebookController.php',
+    'App\\Http\\Controllers\\GalleryImagesController' => $baseDir . '/app/Http/Controllers/GalleryImagesController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\RazorpayController' => $baseDir . '/app/Http/Controllers/RazorpayController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

@@ -169,9 +169,10 @@ Route::get('findFundraise/{id}',
         "as"=> "findFundraise"]
     );
 
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+Route::get('/news', 
+            ["uses"=>"DonationsController@news", 
+            "as"=> "news"]
+);
 
 Route::get('/contact', function () {
     return view('contact');
@@ -292,6 +293,43 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
         "as"=> "adminSendCreateRoleForm"]
     );
     // end Roles
+
+
+
+    // NewsAndEvents
+    // get all NewsAndEvents
+    Route::get('admin/newsandevents', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@index",'as'=>'adminDisplayNewsAndEvents']
+    );
+    // edit NewsAndEvents
+    Route::get('admin/editNewsAndEventsForm/{id}', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@editNewsAndEventsForm", 
+        "as"=> "adminEditNewsAndEventsForm"]
+    );
+    // Update NewsAndEvents
+    Route::post('admin/updateNewsAndEvents/{id}', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@updateNewsAndEvents", 
+        "as"=> "adminUpdateNewsAndEvents"]
+    );
+    // Delete NewsAndEvents
+    Route::get('admin/deleteNewsAndEvents/{id}', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@deleteNewsAndEvents", 
+        "as"=> "adminDeleteNewsAndEvents"]
+    );
+
+    //display create NewsAndEvents form
+    Route::get('admin/createNewsAndEventsForm', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@createNewsAndEventsForm", 
+        "as"=> "adminCreateNewsAndEventsForm"]
+    );
+
+    //send new NewsAndEvents data to database
+    Route::post('admin/sendCreateNewsAndEventsForm/', 
+        ["uses"=>"Admin\AdminNewsAndEventsController@sendCreateNewsAndEventsForm", 
+        "as"=> "adminSendCreateNewsAndEventsForm"]
+    );
+    // end NewsAndEvents
+
 
     // Menus
     // get all Menus
