@@ -22,7 +22,7 @@
                 <div class="col-lg-3"  style="margin-top: 15px">
                     <div class="card">
                         <!--<div class="card-header"><small>Text</small></div> -->
-                        <img class="card-img-top" src="{{ asset('img/home-womenpower.jpg')}}" />
+                        <img class="card-img-top" src="{{asset ('storage')}}/images/{{$fundraise->campaign_image}}" />
                         <div class="card-body">
                             <h5 class="card-title">{{$fundraise->campaign_name}}</h5>
                             <p class="card-text">By <strong>{{$fundraise->first_name .' '. $fundraise->last_name}}</strong> on {{$fundraise->created_at}}</p>

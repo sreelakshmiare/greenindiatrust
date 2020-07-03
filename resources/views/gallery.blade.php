@@ -63,7 +63,26 @@
                                     <div class="col-lg-4 item {{$gallery->gallery_year}} {{$gallery->category_id}}">                        
                                         <div class="mycard">
                                             <div class="mycard-head">
-                                                <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">                                    
+                                                @php
+                                                    $token = strtok($image, ".");
+                                                    $image_type = '';
+                                                    while ($token !== false) {
+                                                        $image_type = $token;
+                                                        $token = strtok(".");
+                                                    }                                                    
+                                                @endphp
+                                                @if($image_type == 'jpg' || $image_type == 'jpeg' ||
+                                                    $image_type == 'png')
+                                                    <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">                                    
+                                                @elseif($image_type == 'mp4' || $image_type == 'ogg' ||
+                                                    $image_type == 'webm')
+                                                    <video width="350" height="400" controls muted>
+                                                        <source src="{{asset ('storage')}}/images/{{$image}}" type="video/mp4"/>
+                                                        <source src="{{asset ('storage')}}/images/{{$image}}" type="video/webm"/>
+                                                        <source src="{{asset ('storage')}}/images/{{$image}}" type="video/ogg"/>
+                                                    </video>
+                                                @endif
+
                                             </div>
 
                                             <div class="mycard-body text-center">

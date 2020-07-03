@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col"><img src="{{ asset('img/environment.jpg')}}" width="380px" height="300px"></div>
+        <div class="col"><img src="{{asset ('storage')}}/images/{{$fundraise->campaign_image}}" width="380px" height="300px"></div>
         <div class="col">
             <div class="card" style="max-width: 25rem;">
                 <div class="card-header">
@@ -59,16 +59,16 @@
                             
                             <div class="row">
                                 <div class="col-3">
+                                    <button id="250" name="250" class="btn btn-success bg-success" type="button">250</button>
+                                </div>
+                                <div class="col-3">
+                                    <button id="500" name="500" class="btn btn-success bg-success" type="button">500</button>
+                                </div>
+                                <div class="col-3">
                                     <button id="1000" name="1000" class="btn btn-success bg-success" type="button">1000</button>
                                 </div>
                                 <div class="col-3">
-                                    <button id="3000" name="3000" class="btn btn-success bg-success" type="button">3000</button>
-                                </div>
-                                <div class="col-3">
-                                    <button id="6000" name="6000" class="btn btn-success bg-success" type="button">6000</button>
-                                </div>
-                                <div class="col-3">
-                                    <button id="10000" name="10000" class="btn btn-success bg-success" type="button">10000</button>
+                                    <button id="1500" name="1500" class="btn btn-success bg-success" type="button">1500</button>
                                 </div>
                             </div>
                         </div>
@@ -133,44 +133,44 @@
 <script src="{{ asset('js/chart.min.js')}}"></script>
 <script>
     $(document).ready(function(){
-        $( "#1000" ).click(function() {
+        $( "#250" ).click(function() {
             $(this).removeClass( "bg-success" ).addClass( "bg-primary" ); 
-            $("#3000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#6000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#10000").removeClass( "bg-primary" ).addClass( "bg-success" );
-            $('#donation_amount').val('1000'); 
+            $("#500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#1500").removeClass( "bg-primary" ).addClass( "bg-success" );
+            $('#donation_amount').val('250'); 
             $('#otheramount').val('');         
         });
-        $( "#3000" ).click(function() {
+        $( "#500" ).click(function() {
             $(this).removeClass( "bg-success" ).addClass( "bg-primary" ); 
+            $("#250").removeClass( "bg-primary" ).addClass( "bg-success" ); 
             $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#6000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#10000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $('#donation_amount').val('3000'); 
+            $("#1500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $('#donation_amount').val('500'); 
             $('#otheramount').val('');           
         });
-        $( "#6000" ).click(function() {
+        $( "#1000" ).click(function() {
             $(this).removeClass( "bg-success" ).addClass( "bg-primary" ); 
-            $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#3000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#10000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $('#donation_amount').val('6000'); 
+            $("#250").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#1500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $('#donation_amount').val('1000'); 
             $('#otheramount').val('');           
         });
-        $( "#10000" ).click(function() {
+        $( "#1500" ).click(function() {
             $(this).removeClass( "bg-success" ).addClass( "bg-primary" ); 
-            $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#3000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#6000").removeClass( "bg-primary" ).addClass( "bg-success" );  
-            $('#donation_amount').val('10000');   
+            $("#250").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" );  
+            $('#donation_amount').val('1500');   
             $('#otheramount').val('');        
         });
         $( "#otheramount" ).change(function() {
             $('#donation_amount').val(this.value);
+            $("#250").removeClass( "bg-primary" ).addClass( "bg-success" ); 
+            $("#500").removeClass( "bg-primary" ).addClass( "bg-success" ); 
             $("#1000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#3000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#6000").removeClass( "bg-primary" ).addClass( "bg-success" ); 
-            $("#10000").removeClass( "bg-primary" ).addClass( "bg-success" );  
+            $("#1500").removeClass( "bg-primary" ).addClass( "bg-success" );  
         });
         $( "#equipmentultraform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
