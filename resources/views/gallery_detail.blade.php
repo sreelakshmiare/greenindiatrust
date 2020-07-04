@@ -6,7 +6,7 @@
 <div class="container">
     <div class="filters">      
         <div class="row">
-            <div class="col-8 text-center">
+            <div class="col-8 text-left">
                 <div class="myui-group"> 
                     <!--<h3>Year :</h3> -->
                     <div class="mybutton-group js-radio-button-group" data-filter-group="year">
@@ -74,8 +74,8 @@
                                 @endforeach                            
                         </div>
                     </div>
-                <!--</div>
-            </div>  -->                     
+                <!--</div>--> 
+            </div>                      
         </div>
     </div>
 </div>
@@ -86,5 +86,4 @@
     
 <script src="{{ asset('js/jquery.min.js')}}"></script>
 <script src="{{ asset('js/gallery-script-buttons.js')}}"></script>
-<script src="{{ asset('js/lightbox.min.js')}}"></script>
 @endsection
