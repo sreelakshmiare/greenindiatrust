@@ -24,4 +24,14 @@ class GalleryImagesController extends Controller
                                 'years'=>$years,
                                 'categories'=>$categories]);
     }
+
+    public function getGalleryImagesById($id){
+        $galleryimage = GalleryImage::find($id);
+        $category = Category::find($galleryimage->category_id);
+        $image_str = $galleryimage->gallery_image;
+        $images = explode('|',$image_str);
+        $galleryimage['images'] = $images;        
+        
+        return view("gallery_detail",['galleryimage'=>$galleryimage,'category'=>$category]);
+    }
 }

@@ -1,0 +1,110 @@
+.mybutton {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: #EEE;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+    color: #222;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-shadow: 0 1px white;
+    cursor: pointer;
+  }
+  
+  .mybutton:hover {
+    background-color: #8CF;
+    text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+    color: #222;
+  }
+  
+  .mybutton:active,
+  .mybutton.is-checked {
+    background-color: #28F;
+  }
+  
+  .mybutton.is-checked {
+    color: white;
+    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  }
+  
+  .mybutton:active {
+    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+  }
+  
+  /* ---- button-group ---- */
+  
+  .mybutton-group:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .mybutton-group .mybutton {
+    float: left;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 1px;
+  }
+  
+  .mybutton-group .mybutton:first-child { border-radius: 0.5em 0 0 0.5em; }
+  .mybutton-group .mybutton:last-child { border-radius: 0 0.5em 0.5em 0; }
+  
+ /* ui group */
+  
+.myui-group {
+    display: inline-block;
+  }
+  
+.myui-group h3 {
+    display: inline-block;
+    margin-right: 0.2em;
+    font-size: 16px;
+}
+  
+.myui-group .mybutton-group {
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+.mycard{
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+}
+
+.mycard-head{
+    position: relative;
+    overflow: hidden;
+}
+
+.mycard-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title{
+    color: #434e5e;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.mycard-btn{
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mycard-btn:hover{
+    background-color: #28bea8;
+    color: #fff;
+}

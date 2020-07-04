@@ -164,6 +164,11 @@ Route::get('/gallery', ["uses"=>"GalleryImagesController@index",
 "as"=> "gallery"]
 );
 
+Route::get('getGalleryImagesById/{id}', 
+        ["uses"=>"GalleryImagesController@getGalleryImagesById", 
+        "as"=> "getGalleryImagesById"]
+    );
+
 Route::get('findFundraise/{id}', 
         ["uses"=>"DonationsController@findFundraise", 
         "as"=> "findFundraise"]

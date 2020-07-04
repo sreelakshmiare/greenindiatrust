@@ -55,9 +55,7 @@
                                                 @endphp
                                                 @if($image_type == 'jpg' || $image_type == 'jpeg' || $image_type == 'JPG' ||
                                                     $image_type == 'png' || $image_type == 'JPEG' || $image_type == 'PNG')
-                                                    <a href="{{ route('getGalleryImagesById',['id' => $gallery->id])}}">
-                                                        <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">
-                                                    </a>
+                                                    <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">                                    
                                                 @elseif($image_type == 'mp4' || $image_type == 'ogg' ||
                                                     $image_type == 'webm')
                                                     <video width="350" height="400" controls muted>
@@ -71,11 +69,10 @@
 
                                             <div class="mycard-body text-center">
                                                 <h6 class="title">{{$gallery->location}} - {{$gallery->activity_date}}</h6>
-                                                <a href="{{ route('getGalleryImagesById',['id' => $gallery->id])}}" class="btn btn-lg mycard-btn">{{$gallery->project}}</a>
+                                                <a href="#!" class="btn btn-lg mycard-btn">{{$gallery->project}}</a>
                                             </div>
                                         </div>
                                     </div>
-                                    @break
                                 @endforeach
                             @endforeach                            
                         </div>
