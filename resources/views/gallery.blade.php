@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col text-center">
                 <div class="myui-group">
-                    <h3>Year</h3>
+                    <h3><strong>Year</strong></h3>
                     <div class="mybutton-group js-radio-button-group" data-filter-group="year">
                         <button class="mybutton is-checked" data-filter="">All</button>
                         @foreach ($years as $year)
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col text-center">
                 <div class="myui-group">
-                    <h3>Category</h3>
+                    <h3><strong>Category</strong></h3>
                     <div class="mybutton-group js-radio-button-group" data-filter-group="category">
                     <button class="mybutton is-checked" data-filter="">All</button>
                     @foreach ($categories as $category)
@@ -70,8 +70,8 @@
                                             </div>
 
                                             <div class="mycard-body text-center">
-                                                <h6 class="title">{{$gallery->location}} - {{$gallery->activity_date}}</h6>
-                                                <a href="{{ route('getGalleryImagesById',['id' => $gallery->id])}}" class="btn btn-lg mycard-btn">{{$gallery->project}}</a>
+                                                <h6 class="title"><strong>{{$gallery->location}} - {{$gallery->activity_date}}</strong></h6>
+                                                <a href="{{ route('getGalleryImagesById',['id' => $gallery->id])}}" class="btn btn-lg mycard-btn"><strong>{{$gallery->project}}</strong></a>
                                             </div>
                                         </div>
                                     </div>

@@ -21,7 +21,7 @@
             </div>
             <div class="col-4 text-right">
                 <div class="myui-group"> 
-                    <a href="{{route('gallery')}}" class="btn btn-md">Go Back</a>                    
+                    <a href="{{route('gallery')}}" class="btn btn-md"><strong>Go Back</strong></a>                    
                 </div>                
             </div>            
         </div>        
@@ -62,8 +62,8 @@
                                             </div>
 
                                             <div class="mycard-body text-center">
-                                                <h6 class="title">{{$galleryimage->location}} - {{$galleryimage->activity_date}}</h6>
-                                                <a href="#!" class="btn btn-lg mycard-btn">{{$galleryimage->project}}</a>
+                                                <h6 class="title"><strong>{{$galleryimage->location}} - {{$galleryimage->activity_date}}</strong></h6>
+                                                <a href="#!" class="btn btn-lg mycard-btn"><strong>{{$galleryimage->project}}</strong></a>
                                             </div>
                                         </div>
                                     </div>
