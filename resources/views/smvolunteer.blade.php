@@ -20,7 +20,7 @@
 				<div class="row social-networks">
                   <div class="col"><a class="facebook" href="http://www.facebook.com/greenindiatrust" target="_blank">
 										<i class="fa fa-facebook" style="height: 50px;width: 20px;font-size: 20px;margin: 4px;padding: 6px;"></i></a>
-									<a class="twitter" href="http://www.twitter.com/greenindiatrust" target="_blank">
+									<a class="twitter" href="http://www.twitter.com/gnitrust" target="_blank">
 										<i class="fa fa-twitter" style="width: 20px;height: 50px;margin: 5px;padding: 5px;"></i></a>
 																																																						<a class="google" href="https://plus.google.com/" target="_blank">
 																																																							<i class="fa fa-google-plus" style="height: 50px;margin: 7px;padding: 2px;"></i></a>

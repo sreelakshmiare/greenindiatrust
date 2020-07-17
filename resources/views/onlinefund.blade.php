@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-md-12"><p class="text-justify" style="color: rgb(16,136,46);">For Online Fund Raising, CONTACT here: <a href="mailto:chairman@gitrust.org?Subject=Interested%20to%20Contribute"><em>chairman@gitrust.org</em></a></p>
                         <p class="text-justify" style="color: rgb(16,136,46);">Or Leave a single line here, we will contact you:&nbsp;<a class="btn btn-success" role="button" href="{{route('contact')}}">Contact us</a></p>
-                        <p class="text-justify" style="color: rgb(16,136,46);">Raise a Online Fundraising request in collaboration with &nbsp;<a href="https://www.ketto.org/"><img src="{{ asset('img/Ketto_logo.jpg')}}" style="width: 70px;height: 25px;"></a></p>
+                        <p class="text-justify" style="color: rgb(16,136,46);">Raise a Online Fundraising request &nbsp;<a class="btn btn-success" role="button" href="{{route('fundraise')}}">Create Fundraise</a></p>
                     </div>
                 </div>
             </div>

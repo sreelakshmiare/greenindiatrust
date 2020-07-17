@@ -27,7 +27,7 @@
 					 to browse and use this website you are agreeing to comply with and be bound by the following terms and
 					  conditions of use, which together with our privacy policy govern GIT's relationship with you in relation
 					   to this website. The term 'GIT' or 'us' or 'we' refers to the owner of the website whose registered office 
-					   is 16/2/51, Beside S2 Cinema Hall Pogathota, Nellore-524001. Our NGO registration number is AP/2012/0055892
+					   is 16/2/51, Beside S2 Cinema Hall Pogathota, Nellore-524001. Our NGO registration number is 92 bk IV and years of 2008
 					    and is registered in Nellore, AP, India. The term 'you' refers to the user or viewer of our website. 
 				
 					</p>
@@ -110,7 +110,7 @@
 					 	Few of these components are pending for patent; therefore, 
 						adherence to our user license policy is of utmost importance.</p>
 
-						1. Permission is granted to temporarily download one copy of the materials (information or software) on GIT’s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+					<p class="text-justify text-success">1. Permission is granted to temporarily download one copy of the materials (information or software) on GIT’s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
     					<ol type = "circle" class="text-justify text-success">
         					<li> Modify or copy the materials</li>
         					<li>Use the materials for any commercial purpose, or for any public display (other than non-commercial)</li>

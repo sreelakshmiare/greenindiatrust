@@ -46,7 +46,7 @@
                         
                     </ul>
                 </div>
-                <div class="col-lg-3 item social"><a href="http://www.facebook.com/greenindiatrust"><i class="icon ion-social-facebook"></i></a><a href="http://www.twitter.com/greenindiatrust"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/gnitrust"><i class="icon ion-social-instagram"></i></a>
+                <div class="col-lg-3 item social"><a href="http://www.facebook.com/greenindiatrust"><i class="icon ion-social-facebook"></i></a><a href="http://www.twitter.com/gnitrust"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/gnitrust"><i class="icon ion-social-instagram"></i></a>
                     <p
                         class="copyright">Green India Trust © 2020</p>
                 </div>
