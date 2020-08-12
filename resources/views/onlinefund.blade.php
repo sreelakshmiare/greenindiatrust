@@ -11,7 +11,9 @@
 
 					</p>
 
-					<p class="text-justify text-success">You may be willing to help and save or contribute to the Climate Change mitigation/adaptation measures, but no chance and opportunity to bodily come down to the needy areas and directly involve with the team, and so HERE is the unique, genuine and transparent work that YOU CAN SATISFACTORILY DO as yourself directly do – Raise Funds for GIT’s activities and directly know how we do what you want your money to be spent!
+					<p class="text-justify text-success">You may be willing to help and save or contribute to the Climate Change mitigation/adaptation measures, but no chance and opportunity to bodily come down to the needy areas 
+                    and directly involve with the team, and so HERE is the unique, genuine and transparent work that YOU CAN SATISFACTORILY DO as yourself directly do – Raise Funds for GIT’s activities and 
+                    directly know how we do what you want your money to be spent!
 					</p>
 						
 
