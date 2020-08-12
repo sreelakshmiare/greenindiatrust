@@ -98,7 +98,7 @@
                         <li><a class="dropdown-item" href="{{route('livlihood')}}">Livlihood</a></li>
                         <li><a class="dropdown-item" href="{{route('education')}}">Education</a></li>
 					</ul>
-				</li>
+				</li> 
                 
                 <li class="nav-item dropdown ">
 					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
