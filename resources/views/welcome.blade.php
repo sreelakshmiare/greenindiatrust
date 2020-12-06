@@ -112,7 +112,7 @@
                             role="button" href="{{route('livlihood')}}">Read More</a><br><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" 
-                src="{{ asset('img/home-enivironment.jpg')}}" width="400" style="/*padding: 15px;*/"></div>
+                src="{{ asset('img/home-livlihood.jpg')}}" width="400" style="/*padding: 15px;*/"></div>
             </div>
         </div>
     </div>

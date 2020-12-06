@@ -4,7 +4,7 @@
     <div class="container">
         <section class="bg-light section-about">
             <div class="container text-center">
-                <h4 class="text-center text-success div-head"><b>NEWS AND AWARDS</b></h4>
+                <h4 class="text-center text-success div-head"><b>NEWS AND EVENTS</b></h4>
             </div>      
             <hr>
             <div class = "container">

@@ -83,8 +83,8 @@
    <div class = "container">
     <div class = "row">
      <div class = "col-md-8 offset-md-2">
-       <div class = "table-responsive table-bordered text-success border rounded-0 border-success shadow">
-        <table class = "table table-striped table-bordered table-sm">
+       <div class = "table-responsive table-bordered text-center border rounded-0 border-success shadow">
+        <table class = "table table-striped table-bordered table-md">
           <thead>
              <tr class="table-success">
                 <th>S.No.</th>
@@ -145,8 +145,9 @@
       <tr>
         <td>9</td>
         <td>2017-2019</td>
-        <td>In this survey,all the volunteers from 83 villages
-         participated that includes entire coastal belt of Bay of Bengal</td>
+        <td>In this survey,all the volunteers from 83<br/> 
+            villages participated that includes entire <br/>
+            coastal belt of Bay of Bengal</td>
          <td></td>
       </tr>
       <tr>
