@@ -2,9 +2,9 @@
 
 <div class="chat-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
-    <h6><strong>Donate using Phone Pe</strong></h6>
+    <h6><strong data-bs-hover-animate="pulse">Donate using Phone Pe</strong></h6>
 	<img src="{{ asset('img/Green_India_Phone_Pe.png')}}">
-    
+
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
@@ -43,7 +43,7 @@
                         <li><a href="{{ route('smvolunteer') }}">SM Voluteering</a></li>
                         <li><a href="{{ route('crowdfund') }}">Crowd Fundraising</a></li>
                         <li><a href="{{ route('termsandconditions') }}">Terms and Conditions</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="col-lg-3 item social"><a href="http://www.facebook.com/greenindiatrust"><i class="icon ion-social-facebook"></i></a><a href="http://www.twitter.com/gnitrust"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/gnitrust"><i class="icon ion-social-instagram"></i></a>
@@ -75,7 +75,7 @@
 			const inc = target / speed;
 
 			//console.log("inc = "+inc);
-	    	if (count < target) {					
+	    	if (count < target) {
 				counter.innerText = count + inc;
 				setTimeout(updateCount, 1);
 			} else {

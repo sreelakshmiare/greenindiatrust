@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/gallery-istope-tablet-buttons.css') }}">
 <BR>
 <div class="container">
-    <div class="filters">      
+    <div class="filters">
         <div class="row">
             <div class="col text-center">
                 <div class="myui-group">
@@ -12,7 +12,7 @@
                         <button class="mybutton is-checked" data-filter="">All</button>
                         @foreach ($years as $year)
                             <button class="mybutton" data-filter=".{{$year->gallery_year}}">{{$year->gallery_year}}</button>
-                        @endforeach                        
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <button class="mybutton is-checked" data-filter="">All</button>
                     @foreach ($categories as $category)
                         <button class="mybutton" data-filter=".{{$category->id}}">{{$category->name}}</button>
-                    @endforeach                    
+                    @endforeach
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-lg-12">
             <!--<div class="filters">
-                <div class="ui-group">     -->                
+                <div class="ui-group">     -->
                     <div class="projects">
                         <div class="row">
                             @foreach ($galleryimages as $gallery)
@@ -42,7 +42,7 @@
                                     $images = $gallery->images;
                                 @endphp
                                 @foreach($images as $image)
-                                    <div class="col-lg-4 item {{$gallery->gallery_year}} {{$gallery->category_id}}">                        
+                                    <div class="col-lg-4 item {{$gallery->gallery_year}} {{$gallery->category_id}}">
                                         <div class="mycard">
                                             <div class="mycard-head">
                                                 @php
@@ -51,12 +51,12 @@
                                                     while ($token !== false) {
                                                         $image_type = $token;
                                                         $token = strtok(".");
-                                                    }                                                    
+                                                    }
                                                 @endphp
                                                 @if($image_type == 'jpg' || $image_type == 'jpeg' || $image_type == 'JPG' ||
                                                     $image_type == 'png' || $image_type == 'JPEG' || $image_type == 'PNG')
                                                     <a href="{{ route('getGalleryImagesById',['id' => $gallery->id])}}">
-                                                        <img src="{{asset ('storage')}}/images/{{$image}}" alt="" class="img-fluid card-img">
+                                                        <img src="{{asset ('storage')}}/images/{{$image}}" alt="" width="500" height="400">
                                                     </a>
                                                 @elseif($image_type == 'mp4' || $image_type == 'ogg' ||
                                                     $image_type == 'webm')
@@ -77,11 +77,11 @@
                                     </div>
                                     @break
                                 @endforeach
-                            @endforeach                            
+                            @endforeach
                         </div>
                     </div>
                 <!--</div>
-            </div>  -->                     
+            </div>  -->
         </div>
     </div>
 </div>
