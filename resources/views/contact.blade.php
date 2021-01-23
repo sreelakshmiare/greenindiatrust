@@ -115,8 +115,8 @@
                                     <div class="form-group"><label for="from-comments">Comments</label><textarea class="form-control" id="from-comments" name="comments" placeholder="Enter Comments" rows="5"></textarea></div>
                                     <div class="form-group">
                                         <div class="form-row">
-                                            <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i> Reset</button></div>
-                                            <div class="col"><button class="btn btn-primary btn-block" type="submit">Submit <i class="fa fa-chevron-circle-right"></i></button></div>
+                                            <div class="col"><button class="btn btn-primary btn-lg" type="reset"><i class="fa fa-undo"></i> Reset</button></div>
+                                            <div class="col"><button class="btn btn-primary btn-lg" type="submit">Submit <i class="fa fa-chevron-circle-right"></i></button></div>
                                         </div>
                                     </div>
                                     <hr class="d-flex d-md-none">

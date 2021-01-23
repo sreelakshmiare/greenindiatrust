@@ -16,7 +16,7 @@
 </p></div>
             <div class="col-lg-4 offset-lg-0">
                 <img class="para_img" src="{{ asset('img/fundraising.jpg')}}">
-                <a class="btn btn-success btn-sm text-white border rounded-0 fund-button" role="button" href="{{route('fundraise')}}">Start Fundraising</a></div>
+                <a class="btn btn-success btn-lg text-white border rounded-0 fund-button" role="button" href="{{route('fundraise')}}">Start Fundraising</a></div>
         </div>
     </div>
 </section>

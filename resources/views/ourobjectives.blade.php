@@ -14,7 +14,13 @@
 					<br/>
 					<br/>
 
-					<p class="text-justify text-success"><strong>Our Board Objectives </strong><a class="btn btn-success" href="{{route('boardobjectives')}}">Click Here</a>
+					<p class="text-justify text-success"><strong>Our Board Objectives </strong>
+                    <!--<a class="btn btn-success" href="{{route('boardobjectives')}}">Click Here</a>-->
+
+                    <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('boardobjectives')}}">Click Here</a>&nbsp; &nbsp;<br>
+                      
 
 					</p>
 							

@@ -38,7 +38,14 @@
 			        <h4 class="text-justify text-success">Our Publications...</h4>
 					
 					<p class="text-justify text-success">Basic Data of Eastern Ghats and Southern Coastal India
-                                    An Outcome of GIT's Studies ISBN-16/17-GIT-0021/5-8 <a href = "#" class = "btn btn-success"> Read Me</a></p>
+                                    An Outcome of GIT's Studies ISBN-16/17-GIT-0021/5-8 
+                                    
+                     <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="#">Read Me</a>&nbsp; &nbsp;<br>
+                                  
+                                    <!--<a href = "#" class = "btn btn-success btn-lg"> Read Me</a>-->
+                    </p>
 						
 			
 		</div>

@@ -32,11 +32,11 @@
                 <div class="col-md-4 col-lg-2"><img class="logo_img" src="{{ asset('img/Green_India_Logo.jpg') }}"></div>
                 <div class="col-md-4 col-lg-3 offset-lg-7">
                     <div class="row" style="margin: 25px 0px 0px 0px;">
-                        <div class="col-lg-5 text-left"><a class="btn btn-primary text-left bg-success" role="button" href="{{route('donate')}}">Donate</a></div>
+                        <div class="col-lg-5 text-left"><a class="btn btn-primary btn-lg text-left bg-success" role="button" href="{{route('donate')}}">Donate</a></div>
                         @if(Auth::check())                       
-                            <div class="col-lg-4 text-right"><a href="{{ url('/home') }}" class="btn btn-primary bg-success" type="button">Profile</a></div>                            
+                            <div class="col-lg-4 text-right"><a href="{{ url('/home') }}" class="btn btn-primary btn-lg bg-success" type="button">Profile</a></div>                            
                         @else
-                            <div class="col-lg-4 text-right"><a href="{{ route('login') }}" class="btn btn-primary bg-success" type="button">Login</a></div>
+                            <div class="col-lg-4 text-right"><a href="{{ route('login') }}" class="btn btn-primary btn-lg bg-success" type="button">Login</a></div>
                         @endif
                         
                     </div>
@@ -110,6 +110,7 @@
                         <li><a class="dropdown-item" href="{{route('smvolunteer')}}">SM Voluntering</a></li>
                         <li><a class="dropdown-item" href="{{route('crowdfund')}}">Crowd Fundraising</a></li>
                         <li><a class="dropdown-item" href="{{route('getActiveFundraiseList')}}">Active Crowd Fundraising</a></li>
+                        <li><a class="dropdown-item" href="{{route('csr')}}">CSR Opportunity</a></li>
 					</ul>
 				</li>
                 
@@ -117,18 +118,37 @@
                 <li class="nav-item ">
 					<a class="nav-link text-white" href="{{route('awards')}}">Awards</a>
 				</li>
-				<li class="nav-item ">
-					<a class="nav-link text-white" href="{{route('csr')}}">CSR Opportunity</a>
+
+
+                <li class="nav-item dropdown ">
+					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Media Room
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="{{route('news')}}">News and Events</a></li>
+						<li><a class="dropdown-item" href="{{route('reports')}}">Reports and Publications</a></li>
+                        
+					</ul>
 				</li>
-                <li class="nav-item ">
-					<a class="nav-link text-white" href="{{route('reports')}}">Reports & Publications</a>
+               
+				
+
+                <li class="nav-item dropdown ">
+					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gallery
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="{{route('gallery')}}">Photos</a></li>
+						<li><a class="dropdown-item" href="{{route('gallery')}}">Videos</a></li>
+                        
+					</ul>
 				</li>
-                <li class="nav-item ">
+
+               
+              <!--  <li class="nav-item ">
 					<a class="nav-link text-white" href="{{route('gallery')}}">Gallery</a>
 				</li>
-                <li class="nav-item">
-					<a class="nav-link text-white" href="{{route('news')}}">News and Events</a>
-				</li>
+               -->
                 <li class="nav-item">
 					<a class="nav-link text-white" href="{{route('contact')}}">Contact Us</a>
 				</li>

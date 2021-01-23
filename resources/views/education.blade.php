@@ -27,7 +27,13 @@
             <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/education2.jpg')}}"></div>
             <div class="col-lg-4 offset-lg-0"><img class="para_img" src="{{ asset('img/education3.jpg')}}"></div>
         </div>
-    </div>
+
+ 
+            <body class="text-right">
+                <a class="btn btn-outline-success active btn-lg text-right bg-success border-success shadow-lg" 
+                        role="button" data-bs-hover-animate="pulse">Read More</a>
+         </div>
+
 </section>
 
 @endsection

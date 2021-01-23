@@ -37,8 +37,12 @@
                      partnership and accordance towards development, empowerment and conservation in &nbsp;
                      livelihood, rural communities, rural infrastructure, NRM and health.
                      
-                     <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
+                     <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
                         href="{{route('about')}}">Read More</a>&nbsp; &nbsp;<br>
+
+       <!--  <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
+                        href="{{route('about')}}">Read More</a>&nbsp; &nbsp;<br>-->
                     
                   
                       <br></p>
@@ -63,9 +67,13 @@
                              environmental awareness is an easy way to become an environmental steward and participate 
                              in creating a brighter future for our children.&nbsp; <br>
                              
-                            <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
-                              href="{{route('billiontree')}}">Read More</a>
-                              
+                          <!--  <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
+                              href="{{route('billiontree')}}">Read More</a>-->
+
+                              <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('billiontree')}}">Read More</a>&nbsp; &nbsp;<br>
+                      
                               <br><br></p>
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" 
@@ -87,9 +95,12 @@
                          it designs, plans, and works and responding to the civic need and&nbsp;concerns, GIT works
                           on few cross-cutting the matic areas also as when such emergency and need arise.&nbsp;<br>
                         
-                    
-                        <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
-                        href="{{route('healthcare') }}">Read More</a><br></p>
+                          <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('healthcare')}}">Read More</a>&nbsp; &nbsp;<br>
+
+                       <!-- <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
+                        href="{{route('healthcare') }}">Read More</a><br></p>-->
                 </div>
             </div>
         </div>
@@ -108,8 +119,13 @@
                         with government development programmes and facilitate linkages to public services and 
                         schemes for the project beneficiaries.&nbsp;<br>
                         
-                        <a class="btn btn-light btn-sm text-success bg-white shadow-sm"
-                            role="button" href="{{route('livlihood')}}">Read More</a><br><br></p>
+                        <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('livlihood')}}">Read More</a>&nbsp; &nbsp;<br>
+
+                        
+                        <!--<a class="btn btn-light btn-sm text-success bg-white shadow-sm"
+                            role="button" href="{{route('livlihood')}}">Read More</a><br><br></p>-->
                 </div>
                 <div class="col-lg-5 offset-lg-0"><img class="img-thumbnail img-fluid float-right about-img" 
                 src="{{ asset('img/home-livlihood.jpg')}}" width="400" style="/*padding: 15px;*/"></div>
@@ -128,8 +144,13 @@
                          designs, plans, and works and responding to the civic need and&nbsp;concerns, GIT works on few 
                          cross-cutting the matic areas also as when such emergency and need arise.&nbsp;<br>
                         
-                        <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
-                        href="{{ route('livlihood') }}">Read More</a><br></p>
+                         <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('livlihood')}}">Read More</a>&nbsp; &nbsp;<br>
+
+                      
+                        <!--<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button" 
+                        href="{{ route('livlihood') }}">Read More</a><br></p>-->
                 </div>
             </div>
         </div>
@@ -146,8 +167,13 @@
                            up domestic tasks or help in labor, instead of helping them attain an education.&nbsp;<br>
                 
                         
-                        <a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
-                         href="{{route('education')}}">Read More</a><br><br></p>
+                           <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="{{route('education')}}">Read More</a>&nbsp; &nbsp;<br>
+
+                        
+                        <!--<a class="btn btn-light btn-sm text-success bg-white shadow-sm" role="button"
+                         href="{{route('education')}}">Read More</a><br><br></p>-->
                 </div>
                 <div class="col-lg-5"><img class="img-thumbnail img-fluid float-right about-img" 
                 src="{{ asset('img/home-education.jpg')}}"></div>

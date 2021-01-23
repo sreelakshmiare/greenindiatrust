@@ -65,7 +65,15 @@
 
              <p class="text-justify text-success">For more details, please contact us at <a href ="#">greenindia@gitrust.org</a> or <a href ="#"> chairman@gitrust.org</a> </p>
            
-             <p class="text-justify"> <a class=" text-success" href = "withgit.blade.php">Read More</a>  </p>  
+             <p class="text-justify">
+             
+                <a class="btn btn-outline-success active btn-lg bg-success border-success shadow-lg" 
+                        data-bs-hover-animate="pulse" type="button" 
+                        href="">Click Here</a>&nbsp; &nbsp;<br>
+             
+              <!--<a class=" text-success" href = "withgit.blade.php">Read More</a> -->
+              
+               </p>  
 						
 			 </div>
             
