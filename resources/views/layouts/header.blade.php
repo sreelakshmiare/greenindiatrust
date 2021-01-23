@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/Registration-Form-with-Photo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Team-Boxed.css') }}">
     <link rel="stylesheet" href="{{ asset('css/phonepe.css') }}">
-    
+
 </head>
 
 <body>
@@ -32,30 +32,33 @@
                 <div class="col-md-4 col-lg-2"><img class="logo_img" src="{{ asset('img/Green_India_Logo.jpg') }}"></div>
                 <div class="col-md-4 col-lg-3 offset-lg-7">
                     <div class="row" style="margin: 25px 0px 0px 0px;">
-                        <div class="col-lg-5 text-left"><a class="btn btn-primary btn-lg text-left bg-success" role="button" href="{{route('donate')}}">Donate</a></div>
-                        @if(Auth::check())                       
-                            <div class="col-lg-4 text-right"><a href="{{ url('/home') }}" class="btn btn-primary btn-lg bg-success" type="button">Profile</a></div>                            
+                        <div class="col-lg-5 text-left">
+                            <a class="btn btn-primary btn-lg text-left bg-success" role="button" data-bs-hover-animate="pulse" href="{{route('donate')}}">Donate</a>
+                        </div>
+                        @if(Auth::check())
+                            <div class="col-lg-4 text-right">
+                                <a href="{{ url('/home') }}" class="btn btn-primary btn-lg bg-success" type="button" data-bs-hover-animate="pulse">Profile</a></div>
                         @else
-                            <div class="col-lg-4 text-right"><a href="{{ route('login') }}" class="btn btn-primary btn-lg bg-success" type="button">Login</a></div>
+                            <div class="col-lg-4 text-right"><a href="{{ route('login') }}" class="btn btn-primary btn-lg bg-success" data-bs-hover-animate="pulse" type="button">Login</a></div>
                         @endif
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
-    <nav class="navbar navbar-expand-md navbar-light navbar-hover w-100 py-0 nav-color">		
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light navbar-hover w-100 py-0 nav-color">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHover" aria-controls="navbarDD" aria-expanded="false" aria-label="Navigation">
         <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarHover">
 			<ul class="navbar-nav flex-grow-1 justify-content-center mr-auto">
-				
-				<li class="nav-item active">
-					<a class="nav-link" href="/"><i class="fa fa-home fa-lg text-white"></i> 
+
+				<li class="nav-item active" >
+					<a class="nav-link" href="/"><i class="fa fa-home fa-lg text-white"></i>
 						</a>
-				</li>	
+				</li>
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,14 +82,14 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('healthcare')}}">Health Care</a></li>
-						
+
 						<li><a class="dropdown-item dropdown-toggle" href="#">Environment</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{{route('billiontree')}}">One Billion Tree Plantation</a></li>
 								<li><a class="dropdown-item" href="{{route('greenwall')}}">Green Wall Research</a></li>
                                 <li><a class="dropdown-item" href="{{route('nursery')}}">Green India Nursery</a></li>
                                 <li><a class="dropdown-item" href="{{route('environment')}}"> Environment Aware</a></li>
-                               
+
                                 <li><a class="dropdown-item" href="{{route('smokefree')}}">Smoke Free</a></li>
                                 <li><a class="dropdown-item" href="{{route('apbio')}}">AP Bio-Diversity</a></li>
                                 <li><a class="dropdown-item" href="{{route('campaign')}}">Campaigning 2024</a></li>
@@ -94,12 +97,12 @@
                                 <li><a class="dropdown-item" href="{{route('organic')}}">Organic Farming</a></li>
 							</ul>
 						</li>
-						
+
                         <li><a class="dropdown-item" href="{{route('livlihood')}}">Livlihood</a></li>
                         <li><a class="dropdown-item" href="{{route('education')}}">Education</a></li>
 					</ul>
-				</li> 
-                
+				</li>
+
                 <li class="nav-item dropdown ">
 					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Get Involved
@@ -113,9 +116,9 @@
                         <li><a class="dropdown-item" href="{{route('csr')}}">CSR Opportunity</a></li>
 					</ul>
 				</li>
-                
-                
-                <li class="nav-item ">
+
+
+                <li class="nav-item " style="padding: 0px 15px 0px 15px;">
 					<a class="nav-link text-white" href="{{route('awards')}}">Awards</a>
 				</li>
 
@@ -127,11 +130,11 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('news')}}">News and Events</a></li>
 						<li><a class="dropdown-item" href="{{route('reports')}}">Reports and Publications</a></li>
-                        
+
 					</ul>
 				</li>
-               
-				
+
+
 
                 <li class="nav-item dropdown ">
 					<a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,11 +143,11 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('gallery')}}">Photos</a></li>
 						<li><a class="dropdown-item" href="{{route('gallery')}}">Videos</a></li>
-                        
+
 					</ul>
 				</li>
 
-               
+
               <!--  <li class="nav-item ">
 					<a class="nav-link text-white" href="{{route('gallery')}}">Gallery</a>
 				</li>
@@ -153,5 +156,5 @@
 					<a class="nav-link text-white" href="{{route('contact')}}">Contact Us</a>
 				</li>
 			</ul>
-		</div>						
-	</nav>   
+		</div>
+	</nav>

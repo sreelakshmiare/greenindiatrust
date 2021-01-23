@@ -9,10 +9,10 @@
                 <div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item tabitem">
-                            <a class="nav-link active text-white bg-success border rounded border-white" role="tab" data-toggle="tab" href="#tab-1">Health Care</a>
+                            <a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-2">Environment</a>
                         </li>
                         <li class="nav-item tabitem">
-                            <a class="nav-link text-white bg-success border rounded border-white para-tab" role="tab" data-toggle="tab" href="#tab-2">Environment</a>
+                            <a class="nav-link active text-white bg-success border rounded border-white" role="tab" data-toggle="tab" href="#tab-1">Health Care</a>
                         </li>
                         <li class="nav-item tabitem">
                             <a class="nav-link text-white bg-success border rounded border-white" role="tab" data-toggle="tab" href="#tab-3">Livlihood</a>
@@ -36,7 +36,7 @@
                                 $donations;
                             @endphp
                             @foreach ($categories as $category)
-                                @if($category->name == "Healthcare Donations")                                    
+                                @if($category->name == "Healthcare Donations")
                                         @foreach ($category->donations as $donation)
                                         <div class="bg-light border rounded-0 shadow div-livedonate">
                                             <form id="{{ $donation->donation_name }}" name="{{ $donation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
@@ -51,41 +51,41 @@
                                                         <p class="text-success description">{{ $donation->donation_description}}</p>
                                                         <h6 class="text-success">Tax Benefit 50%</h6>
                                                         <a href="#">More</a>
-                                                    </div>                                    
-                                                    <div class="col-lg-4">                                        
+                                                    </div>
+                                                    <div class="col-lg-4">
                                                         <label class="col-form-label text-left text-success">Amount : Rs. <strong>{{ $donation->donation_amount }}</strong>
-                                                        <BR> 
+                                                        <BR>
                                                        <input name="health_other_amount" id="health_other_amount" class="form-control-sm form-control" type="text" placeholder="Any other amount.">
-                                                        
+
                                                             <input type="hidden" value="{{ $donation->donation_amount }}" name="donation_amount">
                                                             <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
-                                                            
+
                                                         </label>
                                                     </div>
                                                     <div class="col-lg-2 text-left">
                                                         <input type="submit" role="button" class="btn btn-success bg-success" value="Contribute">
-                                                    </div>                                        
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
-                                    @endforeach  
+                                    @endforeach
                                     @break;
                                 @endif
                             @endforeach
-                                                      
+
                     </div>
                         <div class="tab-pane" role="tabpanel" id="tab-2">
                             <p class="text-success para-tab">&nbsp;<strong>Environment Donations</strong></p>
-                            <div class="card-deck">                                
+                            <div class="card-deck">
                                 @foreach ($categories as $category)
-                                    @if($category->name == "Environment Donations") 
+                                    @if($category->name == "Environment Donations")
                                         @php
                                             $env_donation_names = '';
-                                        @endphp                                   
-                                        @foreach ($category->donations as $envdonation) 
+                                        @endphp
+                                        @foreach ($category->donations as $envdonation)
                                             @php
                                                 $env_donation_names .= $envdonation->donation_name . ',';
-                                            @endphp                            
+                                            @endphp
                                                 <div class="card shadow">
                                                     <form id="{{ $envdonation->donation_name }}" name="{{ $envdonation->donation_name }}" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
                                                         {{csrf_field()}}
@@ -93,8 +93,8 @@
                                                         <input type="hidden" value="{{ $donation->donation_name }}" name="donation_name">
                                                         <img class="card-img-top img-gal w-100" src="{{ asset('img/'.$envdonation->donation_image)}}" alt="Card image cap">
                                                         <div class="card-body">
-                                                            <p class="card-text text-success">{{ $envdonation->donation_description}}</p>                            
-                                                            <label class = "text-muted">Contribution</label> 
+                                                            <p class="card-text text-success">{{ $envdonation->donation_description}}</p>
+                                                            <label class = "text-muted">Contribution</label>
                                                             Rs. <strong><span id="damt">{{ $envdonation->donation_amount }}</span></strong> <br/>
                                                             <label class="text-success">
                                                                 Quantity <input type="number" class="form-control form-control-lg" id="qty" name="qty" min="1" value="1" placeholder="1" >
@@ -105,21 +105,21 @@
                                                         </div>
                                                     </form>
                                                 </div>
-                                            
+
                                         @endforeach
                                         <input type="hidden" name="env_donation_names" id="env_donation_names" value="{{$env_donation_names}}">
                                         @break;
                                     @endif
                                 @endforeach
-                                                                
+
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-3">
                             <p class="text-success para-tab"><strong>Livlihood</strong>&nbsp;<strong>Donations</strong></p>
                                 <div class="bg-light border rounded-0 shadow div-livedonate">
                                     <form id="livlihoodkeepmotherform" name="livlihoodkeepmotherform" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
-                                        {{csrf_field()}}                                        
-                                        
+                                        {{csrf_field()}}
+
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <img class="img-thumbnail img-fluid img-health" src="{{ asset('img/savemother.jpg')}}">
@@ -152,7 +152,7 @@
                                         </div>
                                     </form>
                             </div>
-                            
+
                             <div class="bg-light border rounded-0 shadow div-livedonate">
                                 <form id="livlihoodorganicform" name="livlihoodorganicform" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
@@ -227,7 +227,7 @@
                             </div>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="tab-4">
-                            
+
                             <p class="text-success para-tab">&nbsp;<strong>Education Donations</strong></p>
                             <div class="bg-light border rounded-0 shadow div-livedonate">
                                 <form id="educationscomputerform" name="educationscomputerform" action="{{ route('personalDetail')}}" method="post" enctype="multipart/form-data">
@@ -243,7 +243,7 @@
                                                 <input class="form-check-input" type="radio" id="educationscomputer" name="educationscomputer" value="15000">
                                                 <label class="form-check-label" for="educationscomputer">
                                                     <span >INR 15,000/-</span>
-                                                    
+
                                                     <span >&nbsp;will computer train 15 school children for rural areas.</span><br>
                                                 </label>
                                             </div>
@@ -395,13 +395,13 @@
 
                             <div class="tab-pane" role="tabpanel" id="tab-6">
                                 <p class="text-success para-tab">&nbsp;<strong>Donate Using Phone Pe</strong></p>
-                                <div class="bg-light border rounded-0 shadow div-livedonate">                                    
+                                <div class="bg-light border rounded-0 shadow div-livedonate">
                                             <div class="col-lg-12">
                                                 <img class="img-thumbnail img-fluid shadow" src="{{ asset('img/Green_India_Phone_Pe.png')}}">
-                                            </div>                                
-                                        
-                                    
-                                </div>                                
+                                            </div>
+
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -436,20 +436,20 @@
         if(health_other_amount !='')
             $(this).closest('form').find('#donation_amount').val(totamt);
     });*/
-    
+
     /*$("input[type='number']").bind("input", function() {
         alert("Value changed");
     });*/
 
     /*var radiobtns = $('input[name="livamountkeepmother"]', this);
-    $('input[name="livamountkeepmother"]').change(function(e) { 
+    $('input[name="livamountkeepmother"]').change(function(e) {
         alert($('input[name="livamountkeepmother"]').val());
         var radiobtns = $('input[name="livamountkeepmother"]');
         alert(radiobtns);
 
     });*/
-     
-    $('#livlihoodkeepmotherform input[name="livamountkeepmother"]').change(function(e) { 
+
+    $('#livlihoodkeepmotherform input[name="livamountkeepmother"]').change(function(e) {
         $('#livlihoodkeepmotherform input[name="livamountkeepmother"]:checked').each(function() {
             var value = $(this).val();
             //alert("value = "+value);
@@ -463,7 +463,7 @@
         });
     });
 
-    $('#livlihoodorganicform input[name="livlihoodorganic"]').change(function(e) { 
+    $('#livlihoodorganicform input[name="livlihoodorganic"]').change(function(e) {
         $('#livlihoodorganicform input[name="livlihoodorganic"]:checked').each(function() {
             var value = $(this).val();
             //alert("value = "+value);
@@ -477,7 +477,7 @@
         });
     });
 
-    $('#livlihoodtailerform input[name="livlihoodtailer"]').change(function(e) { 
+    $('#livlihoodtailerform input[name="livlihoodtailer"]').change(function(e) {
         $('#livlihoodtailerform input[name="livlihoodtailer"]:checked').each(function() {
             var value = $(this).val();
             //alert("value = "+value);
@@ -491,7 +491,7 @@
         });
     });
 
-    $('#educationscomputerform input[name="educationscomputer"]').change(function(e) { 
+    $('#educationscomputerform input[name="educationscomputer"]').change(function(e) {
         $('#educationscomputerform input[name="educationscomputer"]:checked').each(function() {
             var value = $(this).val();
             //alert("value = "+value);
@@ -505,7 +505,7 @@
         });
     });
 
-    $('#educationsschoolform input[name="educationsschool"]').change(function(e) { 
+    $('#educationsschoolform input[name="educationsschool"]').change(function(e) {
         $('#educationsschoolform input[name="educationsschool"]:checked').each(function() {
             var value = $(this).val();
             //alert("value = "+value);
@@ -521,7 +521,7 @@
 
     $( "#livlihoodkeepmotherform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
-            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();
             //var livlihoodkeepmother = ;
             //console.log($("input[name='livamountkeepmother']:checked").val());
             if ( (!$("input[name='livamountkeepmother']:checked").val()) && donation_amount == '') {
@@ -533,7 +533,7 @@
 
         $( "#livlihoodorganicform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
-            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();
             //var livlihoodkeepmother = ;
             //console.log($("input[name='livamountkeepmother']:checked").val());
             if ( (!$("input[name='livlihoodorganic']:checked").val()) && donation_amount == '') {
@@ -545,7 +545,7 @@
 
         $( "#livlihoodtailerform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
-            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();
             //var livlihoodkeepmother = ;
             //console.log($("input[name='livamountkeepmother']:checked").val());
             if ( (!$("input[name='livlihoodtailer']:checked").val()) && donation_amount == '') {
@@ -557,7 +557,7 @@
 
         $( "#educationscomputerform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
-            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();
             //var livlihoodkeepmother = ;
             //console.log($("input[name='livamountkeepmother']:checked").val());
             if ( (!$("input[name='educationscomputer']:checked").val()) && donation_amount == '') {
@@ -569,7 +569,7 @@
 
         $( "#educationsschoolform" ).submit(function( event ) {
             //alert( "Handler for .submit() called." );
-            var donation_amount = $(this).closest('form').find('#donation_amount').val();  
+            var donation_amount = $(this).closest('form').find('#donation_amount').val();
             //var livlihoodkeepmother = ;
             //console.log($("input[name='livamountkeepmother']:checked").val());
             if ( (!$("input[name='educationsschool']:checked").val()) && donation_amount == '') {
@@ -578,7 +578,7 @@
                 event.preventDefault();
             }
         });
-    
+
 </script>
 
 @endsection

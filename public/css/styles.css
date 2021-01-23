@@ -183,7 +183,9 @@ form.example::after {
 }
 
 .nav-item {
-    padding-right: 4px;
+    padding: 0px 15px 0px 15px;
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .about-img {
