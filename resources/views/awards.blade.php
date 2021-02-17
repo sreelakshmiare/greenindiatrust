@@ -44,7 +44,7 @@
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award9.png')}}" />
+                                src="{{ asset('img/award10.jpg')}}" />
                         </div>
                     </a>
 
@@ -273,7 +273,7 @@
         </div>
     </div>
 
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
+    <!--<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
@@ -285,7 +285,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG33" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">

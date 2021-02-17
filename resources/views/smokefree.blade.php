@@ -66,10 +66,31 @@
 </div>
         </div>
     </section>
+
     <div class="container">
-        <div class="row">
-            <div class="col offset-lg-3"><img class="img-thumbnail" src="{{ asset('img/smokefree.jpg') }} " width="500" height="650"></div>
+		<!--<div class = "row">
+
+			<div class="col-lg-3">
+                <a href="#" data-target="#modalIMG1" data-toggle="modal" class="color-gray-darker c6 td-hover-none">
+					<div class="ba-0 ds-1">
+                        <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
+                        src="{{ asset('img/news1.jpg')}}" />
+					</div>
+                </a>
+            </div>
+
+		</div>
+-->
+     <div class="row">
+            <div class="col offset-lg-3">
+				<a href="#" data-target="#modalIMG1" data-toggle="modal" class="color-gray-darker c6 td-hover-none">
+					<div class="ba-0 ds-1">
+						<img class="img-thumbnail img-fluid shadow smokefree" data-bs-hover-animate="pulse"
+						 src="{{ asset('img/smokefree.jpg') }} "
+			 width="500" height="650">
+			</div>
         </div>
+		
     </div><section class = "section-about">
     <div class="container text-center">
         <div class="row">

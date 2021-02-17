@@ -9,7 +9,7 @@
                     <h4 class="text-justify text-success">Brillion Tree Plantation Project Profile</h4>
                     
 				<p class="text-justify text-success"><img class = "para_img float-right" 
-                src="{{ asset('img/billiontree.jpg')}}" >
+                src="{{ asset('img/newbilliontree.jpeg')}}" >
 				The “Billion Tree Plantation” Project of Green India Trust development strategy
                  strives to significantly improve plant production, well-being and income while
                   strengthening the ecological resilience and integrity of the planting environment 

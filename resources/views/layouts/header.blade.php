@@ -67,13 +67,20 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('about')}}">About Us</a></li>
 						<li><a class="dropdown-item" href="{{route('mission')}}">Mission and Vision</a></li>
-                        <li><a class="dropdown-item" href="{{route('ourfounder')}}">Our Founder</a></li>
+                     
+                      <!--  <li><a class="dropdown-item" href="{{route('ourfounder')}}">Our Founder</a></li>-->
+                       
                         <li><a class="dropdown-item" href="{{route('ourvalues')}}">Our Values</a></li>
-                        <li><a class="dropdown-item" href="{{route('ourteam')}}">Our Team</a></li>
+                     
+                     <!--   <li><a class="dropdown-item" href="{{route('ourteam')}}">Our Team</a></li>-->
+                        
                         <li><a class="dropdown-item" href="{{route('ourobjectives')}}">Our Objectives</a></li>
-                        <li><a class="dropdown-item" href="{{route('gitaccount')}}">GIT Accounting System</a></li>
+                   
+                    <!--    <li><a class="dropdown-item" href="{{route('gitaccount')}}">GIT Accounting System</a></li>
                         <li><a class="dropdown-item" href="{{route('gitfinancials')}}">GIT Financials</a></li>
                         <li><a class="dropdown-item" href="{{route('gitfy')}}">GIT FY 2020-21</a></li>
+                        
+                    -->
 					</ul>
 				</li>
                 <li class="nav-item dropdown">
@@ -109,10 +116,10 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('volunteer')}}">Volunteering</a></li>
-						<li><a class="dropdown-item" href="{{route('onlinefund')}}">Online Fundraising</a></li>
-                        <li><a class="dropdown-item" href="{{route('smvolunteer')}}">SM Voluntering</a></li>
+						<li><a class="dropdown-item" href="{{route('onlinefund')}}">Online Crowd Fundraising</a></li>
+                      <!--  <li><a class="dropdown-item" href="{{route('smvolunteer')}}">SM Voluntering</a></li>
                         <li><a class="dropdown-item" href="{{route('crowdfund')}}">Crowd Fundraising</a></li>
-                        <li><a class="dropdown-item" href="{{route('getActiveFundraiseList')}}">Active Crowd Fundraising</a></li>
+                        <li><a class="dropdown-item" href="{{route('getActiveFundraiseList')}}">Active Crowd Fundraising</a></li>-->
                         <li><a class="dropdown-item" href="{{route('csr')}}">CSR Opportunity</a></li>
 					</ul>
 				</li>
@@ -143,6 +150,7 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{{route('gallery')}}">Photos</a></li>
 						<li><a class="dropdown-item" href="{{route('gallery')}}">Videos</a></li>
+                        <li><a class="dropdown-item" href="{{route('gallery')}}">Print Media</a></li>
 
 					</ul>
 				</li>

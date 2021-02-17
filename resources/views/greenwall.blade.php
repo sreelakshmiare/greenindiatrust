@@ -22,11 +22,34 @@
     </div>
 </section>
     <section>
-        <div class="container">
+<!--
+    <div class="col offset-lg-3">
+                    <a href="#" data-target="#modalIMG11" data-toggle="modal"
+                        class="color-gray-darker c6 td-hover-none">
+                        <div class="ba-0 ds-1">
+                            <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
+                                src="{{ asset('img/greenwall.jpg')}}" />
+                        </div>
+                    </a>
+                </div>
+-->
+     <div class="container">
             <div class="row">
-                <div class="col offset-lg-3"><img class="img-fluid border rounded-0" src="{{ asset('img/map.jpg')}}" width="400" height="300"></div>
+                <div class="col offset-lg-3">
+
+                <a href="#" data-target="#modalIMG11" data-toggle="modal"
+                        class="color-gray-darker c6 td-hover-none">
+                        <div class="ba-0 ds-1">
+
+                        <img class="img-thumbnail img-fluid shadow greenwall" data-bs-hover-animate="pulse"
+                                src="{{ asset('img/greenwall.jpg')}}"  width="400" height="300" />
+
+                   <!-- <img class="img-fluid border rounded-0" src="{{ asset('img/greenwall.jpg')}}" 
+                    width="400" height="300">-->
+                </div>
             </div>
         </div>
+        
         <section>
             <div class="container">
                 <div class="row"> 
