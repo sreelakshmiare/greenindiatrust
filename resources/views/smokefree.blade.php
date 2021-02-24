@@ -66,7 +66,7 @@
 </div>
         </div>
     </section>
-
+<section class="section-about">
     <div class="container">
 		<!--<div class = "row">
 
@@ -91,7 +91,25 @@
 			</div>
         </div>
 		
-    </div><section class = "section-about">
+    </div>
+
+	<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG1" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body mb-0 p-0">
+                <img src="{{ asset('img/smokefree.jpg')}}" alt="" style="width:100%">
+            </div>
+            <div class="modal-footer">
+                <div><a href="{{ asset('img/smokefree.jpg')}}" target="_blank">Download</a></div>
+                <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>	
+	<section class = "section-about">
     <div class="container text-center">
         <div class="row">
             <div class="col-md-12">
@@ -135,5 +153,11 @@
         </div>
     </div>
 </section>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script>
+    $( 'a a' ).remove();
+		document.documentElement.setAttribute("lang", "en");
+		document.documentElement.removeAttribute("class");
+	</script>
 
 @endsection

@@ -29,99 +29,124 @@
         <div class="container">
             <div class="row">
 
-
-                <div class="col-lg-3 offset-lg-0">
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG11" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award11.jpg')}}" />
+                                src="{{ asset('img/awardnew1.jpg')}}" style = "width:300px"/>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 offset-lg-0">
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG12" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award10.jpg')}}" />
+                                src="{{ asset('img/awardnew2.jpg')}}" style = "width:300px" />
                         </div>
                     </a>
-
                 </div>
-                <div class="col-lg-3 offset-lg-0">
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG13" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award12.png')}}" />
+                                src="{{ asset('img/awardnew3.jpg')}}" style = "width:300px"/>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 offset-lg-0">
+               
+            </div>
+        </div>
+    </section>
+
+	<section class="section-about">
+        <div class="container">
+            <div class="row">
+                 <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG14" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/BioDiversityConserver.png')}}" />
+                                src="{{ asset('img/awardnew4.jpg')}}" style = "width:300px"/>
                         </div>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-	<section class="section-about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 offset-lg-0">
+
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG21" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award2.jpg')}}" />
+                                src="{{ asset('img/awardnew12.jpg')}}" style = "width:300px" />
                         </div>
                     </a>
 
-                        </div>
-                <div class="col-lg-3 offset-lg-0">
+                </div>
+
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG22" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award4.jpg')}}" />
+                                src="{{ asset('img/awardnew13.jpg')}}" style = "width:300px"/>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 offset-lg-0">
+
+               
+            </div>
+        </div>
+    </section>
+
+
+     <section class="section-about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG23" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award5.jpg')}}" />
+                                src="{{ asset('img/awardnew5.jpg')}}"/>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 offset-lg-0">
+                <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG24" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award8.jpg')}}" />
+                                src="{{ asset('img/awardnew7.jpg')}}" />
                         </div>
                     </a>
+                </div>
+                <div class="col-lg-4 offset-lg-0">
+                    <a href="#" data-target="#modalIMG24" data-toggle="modal"
+                        class="color-gray-darker c6 td-hover-none">
+                        <div class="ba-0 ds-1">
+                            <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
+                                src="{{ asset('img/awardnew8.jpg')}}" />
                         </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    <section class="section-about">
+    
+     <section class="section-about">
         <div class="container">
             <div class="row">
+
+
                 <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG31" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award1.jpg')}}" />
+                                src="{{ asset('img/awardnew9.jpg')}}" />
                         </div>
                     </a>
                 </div>
@@ -130,7 +155,7 @@
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award10.jpg')}}" />
+                                src="{{ asset('img/awardnew10.jpg')}}" />
                         </div>
                     </a>
                 </div>
@@ -139,22 +164,26 @@
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award3.jpg')}}" />
+                                src="{{ asset('img/awardnew11.jpg')}}" />
                         </div>
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
 
+    
+    
+    
     <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG11" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award11.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew1.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award11.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew1.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -165,10 +194,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award9.png')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew2.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award9.png')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew2.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -179,24 +208,26 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award12.png')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew3.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award12.png')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew3.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+  
+  
     <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG14" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/BioDiversityConserver.png')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew4.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/BioDiversityConserver.png')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew4.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -207,10 +238,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award2.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew12.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award2.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew12.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -221,10 +252,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award4.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew13.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award4.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew13.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -235,10 +266,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award5.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew5.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award5.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew5.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -249,10 +280,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award8.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew7.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award8.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew7.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -263,46 +294,60 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award1.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew8.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award1.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew8.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award10.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew9.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award10.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew9.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG33" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award3.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew10.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award3.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/awardnew10.jpg')}}" target="_blank">Download</a></div>
+                    <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG33" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body mb-0 p-0">
+                    <img src="{{ asset('img/awardnew111.jpg')}}" alt="" style="width:100%">
+                </div>
+                <div class="modal-footer">
+                    <div><a href="{{ asset('img/awardnew11.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script src="{{asset('js/jquery.min.js')}}"></script>
-<script>
+    <script>
     $( 'a a' ).remove();
 		document.documentElement.setAttribute("lang", "en");
 		document.documentElement.removeAttribute("class");
