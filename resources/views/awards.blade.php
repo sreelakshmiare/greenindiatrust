@@ -124,7 +124,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 offset-lg-0">
-                    <a href="#" data-target="#modalIMG24" data-toggle="modal"
+                    <a href="#" data-target="#modalIMG28" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
                         <div class="ba-0 ds-1">
                             <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
@@ -290,7 +290,7 @@
         </div>
     </div>
 
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG31" role="dialog" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG28" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
@@ -304,7 +304,10 @@
         </div>
     </div>
 
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
+
+
+
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG31" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
@@ -318,7 +321,7 @@
         </div>
     </div>
 
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG33" role="dialog" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalIMG32" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
@@ -335,7 +338,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/awardnew111.jpg')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/awardnew11.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
                     <div><a href="{{ asset('img/awardnew11.jpg')}}" target="_blank">Download</a></div>
