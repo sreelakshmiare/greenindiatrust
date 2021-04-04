@@ -8,27 +8,27 @@
             <thead class="bg-warning shadow-sm">
                 <tr>
                     <th>#id</th>
-                    <th>Image</th>  
+                    <th>Image</th>
                     <th>Year</th>
-                    <th>Category</th>          
+                    <th>Category</th>
                     <th>Edit Image</th>
                     <th>Remove</th>
                 </tr>
             </thead>
-            
+
             <tbody>
                 <a href="{{ route('adminCreateGalleryImageForm') }}" class="btn btn-primary">Create New Gallery Image</a>
                 @foreach($galleryimages as $galleryimage)
-                        @php  
+                        @php
                             $category_name;
                         @endphp
-                        @foreach ($categories as $category)                                             
+                        @foreach ($categories as $category)
                             @if ($category->id == $galleryimage['category_id'])
                                 @php
                                     $category_name = $category->name;
                                 @endphp
-                                @break                
-                            @endif                        
+                                @break
+                            @endif
                         @endforeach
                     <tr>
                         <td>{{$galleryimage['id']}}</td>

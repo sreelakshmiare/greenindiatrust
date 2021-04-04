@@ -125,15 +125,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 offset-lg-0">
-                    <a href="#" data-target="#modalIMG32" data-toggle="modal"
-                        class="color-gray-darker c6 td-hover-none">
-                        <div class="ba-0 ds-1">
-                            <img class="img-thumbnail img-fluid shadow award-img" data-bs-hover-animate="pulse"
-                                src="{{ asset('img/award10.jpg')}}" />
-                        </div>
-                    </a>
-                </div>
+
                 <div class="col-lg-4 offset-lg-0">
                     <a href="#" data-target="#modalIMG33" data-toggle="modal"
                         class="color-gray-darker c6 td-hover-none">
@@ -165,10 +157,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award9.png')}}" alt="" style="width:100%">
+                    <img src="{{ asset('img/award10.jpg')}}" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award9.png')}}" target="_blank">Download</a></div>
+                    <div><a href="{{ asset('img/award10.jpg')}}" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
@@ -277,10 +269,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body mb-0 p-0">
-                    <img src="{{ asset('img/award10.jpg')}}" alt="" style="width:100%">
+                    <img src="" alt="" style="width:100%">
                 </div>
                 <div class="modal-footer">
-                    <div><a href="{{ asset('img/award10.jpg')}}" target="_blank">Download</a></div>
+                    <div><a href="" target="_blank">Download</a></div>
                     <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>

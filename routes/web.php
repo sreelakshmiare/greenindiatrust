@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 })->name('main');*/
 
-Route::get('/', 
-        ["uses"=>"DonationsController@index", 
+Route::get('/',
+        ["uses"=>"DonationsController@index",
         "as"=> "main"]
     );
 
@@ -160,22 +160,41 @@ Route::get('/reports', function () {
     return view('reports');
 })->name('reports');
 
-Route::get('/gallery', ["uses"=>"GalleryImagesController@index", 
+Route::get('/gallery', ["uses"=>"GalleryImagesController@index",
 "as"=> "gallery"]
 );
 
-Route::get('getGalleryImagesById/{id}', 
-        ["uses"=>"GalleryImagesController@getGalleryImagesById", 
+Route::get('/videogallery', ["uses"=>"GalleryImagesController@getVideoLinks",
+"as"=> "videogallery"]
+);
+
+Route::get('/mediagallery', ["uses"=>"GalleryImagesController@getMedia",
+"as"=> "mediagallery"]
+);
+
+Route::get('getGalleryImagesById/{id}',
+        ["uses"=>"GalleryImagesController@getGalleryImagesById",
         "as"=> "getGalleryImagesById"]
     );
 
-Route::get('findFundraise/{id}', 
-        ["uses"=>"DonationsController@findFundraise", 
+Route::get('getMediaGalleryImagesById/{id}',
+    ["uses"=>"GalleryImagesController@getMediaGalleryImagesById",
+    "as"=> "getMediaGalleryImagesById"]
+);
+
+Route::get('getVideoGalleryImagesById/{id}',
+    ["uses"=>"GalleryImagesController@getVideoGalleryImagesById",
+    "as"=> "getVideoGalleryImagesById"]
+);
+
+
+Route::get('findFundraise/{id}',
+        ["uses"=>"DonationsController@findFundraise",
         "as"=> "findFundraise"]
     );
 
-Route::get('/news', 
-            ["uses"=>"DonationsController@news", 
+Route::get('/news',
+            ["uses"=>"DonationsController@news",
             "as"=> "news"]
 );
 
@@ -193,26 +212,26 @@ Route::post('facebookstore', ["uses"=>"FacebookController@store",'as'=>'facebook
 Route::post('facebookpost', ["uses"=>"FacebookController@postLink",'as'=>'facebookpost']
 );
 
-Route::get('donate', 
+Route::get('donate',
     ["uses"=>"DonationsController@getDonationsByCategory",'as'=>'donate']
 );
 
-Route::post('sendCreateFundraiseForm', 
-    ["uses"=>"DonationsController@sendCreateFundraiseForm", 
+Route::post('sendCreateFundraiseForm',
+    ["uses"=>"DonationsController@sendCreateFundraiseForm",
     "as"=> "sendCreateFundraiseForm"]
 );
-Route::get('getActiveFundraiseList', 
-    ["uses"=>"DonationsController@getActiveFundraiseList", 
+Route::get('getActiveFundraiseList',
+    ["uses"=>"DonationsController@getActiveFundraiseList",
     "as"=> "getActiveFundraiseList"]
 );
 
-Route::post('sendCreateVolunteerForm', 
-    ["uses"=>"DonationsController@sendCreateVolunteerForm", 
+Route::post('sendCreateVolunteerForm',
+    ["uses"=>"DonationsController@sendCreateVolunteerForm",
     "as"=> "sendCreateVolunteerForm"]
 );
 
 
-Route::post('personalDetail', 
+Route::post('personalDetail',
     ["uses"=>"DonationsController@personalDetail",'as'=>'personalDetail']
 );
 Route::get('pay','RazorpayController@pay')->name('pay');
@@ -223,78 +242,78 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['restrictToAdmin']], function () {
-    Route::get('admin/menus', 
+    Route::get('admin/menus',
         ["uses"=>"Admin\AdminMenusController@index",'as'=>'adminDisplayMenus']
     );
 
-    Route::get('admin/searchAchievements', 
+    Route::get('admin/searchAchievements',
         ["uses"=>"Admin\AchievementsController@searchAchievements",'as'=>'adminSearchAchievements']
     );
 
-    Route::get('admin/achievements', 
+    Route::get('admin/achievements',
         ["uses"=>"Admin\AchievementsController@index",'as'=>'adminDisplayAchievements']
     );
-    
+
     // edit Achievement
-    Route::get('admin/editAchievementForm/{id}', 
-        ["uses"=>"Admin\AchievementsController@editAchievementForm", 
+    Route::get('admin/editAchievementForm/{id}',
+        ["uses"=>"Admin\AchievementsController@editAchievementForm",
         "as"=> "adminEditAchievementForm"]
     );
     // Update Achievement
-    Route::post('admin/updateAchievement/{id}', 
-        ["uses"=>"Admin\AchievementsController@updateAchievement", 
+    Route::post('admin/updateAchievement/{id}',
+        ["uses"=>"Admin\AchievementsController@updateAchievement",
         "as"=> "adminUpdateAchievement"]
-    );    
-       
+    );
+
     // Delete Achievement
-    Route::get('admin/deleteAchievement/{id}', 
-        ["uses"=>"Admin\AchievementsController@deleteAchievement", 
+    Route::get('admin/deleteAchievement/{id}',
+        ["uses"=>"Admin\AchievementsController@deleteAchievement",
         "as"=> "adminDeleteAchievement"]
     );
 
     //display create Achievement form
-    Route::get('admin/createAchievementForm', 
-        ["uses"=>"Admin\AchievementsController@createAchievementForm", 
+    Route::get('admin/createAchievementForm',
+        ["uses"=>"Admin\AchievementsController@createAchievementForm",
         "as"=> "adminCreateAchievementForm"]
     );
 
     //send new Achievement data to database
-    Route::post('admin/sendCreateAchievementForm/', 
-        ["uses"=>"Admin\AchievementsController@sendCreateAchievementForm", 
+    Route::post('admin/sendCreateAchievementForm/',
+        ["uses"=>"Admin\AchievementsController@sendCreateAchievementForm",
         "as"=> "adminSendCreateAchievementForm"]
     );
     // end Achievements
 
     // Roles
     // get all Roles
-    Route::get('admin/roles', 
+    Route::get('admin/roles',
         ["uses"=>"Admin\AdminRolesController@index",'as'=>'adminDisplayRoles']
     );
     // edit Role
-    Route::get('admin/editRoleForm/{id}', 
-        ["uses"=>"Admin\AdminRolesController@editRoleForm", 
+    Route::get('admin/editRoleForm/{id}',
+        ["uses"=>"Admin\AdminRolesController@editRoleForm",
         "as"=> "adminEditRoleForm"]
     );
     // Update Role
-    Route::post('admin/updateRole/{id}', 
-        ["uses"=>"Admin\AdminRolesController@updateRole", 
+    Route::post('admin/updateRole/{id}',
+        ["uses"=>"Admin\AdminRolesController@updateRole",
         "as"=> "adminUpdateRole"]
     );
     // Delete Role
-    Route::get('admin/deleteRole/{id}', 
-        ["uses"=>"Admin\AdminRolesController@deleteRole", 
+    Route::get('admin/deleteRole/{id}',
+        ["uses"=>"Admin\AdminRolesController@deleteRole",
         "as"=> "adminDeleteRole"]
     );
 
     //display create Role form
-    Route::get('admin/createRoleForm', 
-        ["uses"=>"Admin\AdminRolesController@createRoleForm", 
+    Route::get('admin/createRoleForm',
+        ["uses"=>"Admin\AdminRolesController@createRoleForm",
         "as"=> "adminCreateRoleForm"]
     );
 
     //send new Role data to database
-    Route::post('admin/sendCreateRoleForm/', 
-        ["uses"=>"Admin\AdminRolesController@sendCreateRoleForm", 
+    Route::post('admin/sendCreateRoleForm/',
+        ["uses"=>"Admin\AdminRolesController@sendCreateRoleForm",
         "as"=> "adminSendCreateRoleForm"]
     );
     // end Roles
@@ -303,34 +322,34 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
 
     // NewsAndEvents
     // get all NewsAndEvents
-    Route::get('admin/newsandevents', 
+    Route::get('admin/newsandevents',
         ["uses"=>"Admin\AdminNewsAndEventsController@index",'as'=>'adminDisplayNewsAndEvents']
     );
     // edit NewsAndEvents
-    Route::get('admin/editNewsAndEventsForm/{id}', 
-        ["uses"=>"Admin\AdminNewsAndEventsController@editNewsAndEventsForm", 
+    Route::get('admin/editNewsAndEventsForm/{id}',
+        ["uses"=>"Admin\AdminNewsAndEventsController@editNewsAndEventsForm",
         "as"=> "adminEditNewsAndEventsForm"]
     );
     // Update NewsAndEvents
-    Route::post('admin/updateNewsAndEvents/{id}', 
-        ["uses"=>"Admin\AdminNewsAndEventsController@updateNewsAndEvents", 
+    Route::post('admin/updateNewsAndEvents/{id}',
+        ["uses"=>"Admin\AdminNewsAndEventsController@updateNewsAndEvents",
         "as"=> "adminUpdateNewsAndEvents"]
     );
     // Delete NewsAndEvents
-    Route::get('admin/deleteNewsAndEvents/{id}', 
-        ["uses"=>"Admin\AdminNewsAndEventsController@deleteNewsAndEvents", 
+    Route::get('admin/deleteNewsAndEvents/{id}',
+        ["uses"=>"Admin\AdminNewsAndEventsController@deleteNewsAndEvents",
         "as"=> "adminDeleteNewsAndEvents"]
     );
 
     //display create NewsAndEvents form
-    Route::get('admin/createNewsAndEventsForm', 
-        ["uses"=>"Admin\AdminNewsAndEventsController@createNewsAndEventsForm", 
+    Route::get('admin/createNewsAndEventsForm',
+        ["uses"=>"Admin\AdminNewsAndEventsController@createNewsAndEventsForm",
         "as"=> "adminCreateNewsAndEventsForm"]
     );
 
     //send new NewsAndEvents data to database
-    Route::post('admin/sendCreateNewsAndEventsForm/', 
-        ["uses"=>"Admin\AdminNewsAndEventsController@sendCreateNewsAndEventsForm", 
+    Route::post('admin/sendCreateNewsAndEventsForm/',
+        ["uses"=>"Admin\AdminNewsAndEventsController@sendCreateNewsAndEventsForm",
         "as"=> "adminSendCreateNewsAndEventsForm"]
     );
     // end NewsAndEvents
@@ -338,127 +357,127 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
 
     // Menus
     // get all Menus
-    Route::get('admin/menus', 
+    Route::get('admin/menus',
         ["uses"=>"Admin\AdminMenusController@index",'as'=>'adminDisplayMenus']
     );
     // edit Menu
-    Route::get('admin/editMenuForm/{id}', 
-        ["uses"=>"Admin\AdminMenusController@editMenuForm", 
+    Route::get('admin/editMenuForm/{id}',
+        ["uses"=>"Admin\AdminMenusController@editMenuForm",
         "as"=> "adminEditMenuForm"]
     );
     // Update Menu
-    Route::post('admin/updateMenu/{id}', 
-        ["uses"=>"Admin\AdminMenusController@updateMenu", 
+    Route::post('admin/updateMenu/{id}',
+        ["uses"=>"Admin\AdminMenusController@updateMenu",
         "as"=> "adminUpdateMenu"]
     );
     // Delete Menu
-    Route::get('admin/deleteMenu/{id}', 
-        ["uses"=>"Admin\AdminMenusController@deleteMenu", 
+    Route::get('admin/deleteMenu/{id}',
+        ["uses"=>"Admin\AdminMenusController@deleteMenu",
         "as"=> "adminDeleteMenu"]
     );
 
     //display create Menu form
-    Route::get('admin/createMenuForm', 
-        ["uses"=>"Admin\AdminMenusController@createMenuForm", 
+    Route::get('admin/createMenuForm',
+        ["uses"=>"Admin\AdminMenusController@createMenuForm",
         "as"=> "adminCreateMenuForm"]
     );
 
     //send new Menu data to database
-    Route::post('admin/sendCreateMenuForm/', 
-        ["uses"=>"Admin\AdminMenusController@sendCreateMenuForm", 
+    Route::post('admin/sendCreateMenuForm/',
+        ["uses"=>"Admin\AdminMenusController@sendCreateMenuForm",
         "as"=> "adminSendCreateMenuForm"]
     );
-    
 
-    Route::get('admin/searchMenus', 
+
+    Route::get('admin/searchMenus',
         ["uses"=>"Admin\AdminMenusController@searchMenus",'as'=>'adminSearchMenus']
     );
     // end Menus
 
     // Carousel Images
     // get all CarouselImages
-    Route::get('admin/carouselimages', 
+    Route::get('admin/carouselimages',
         ["uses"=>"Admin\AdminCarouselImageController@index",'as'=>'adminDisplayCarouselImages']
     );
     // edit CarouselImage
-    Route::get('admin/editCarouselImageForm/{id}', 
-        ["uses"=>"Admin\AdminCarouselImageController@editCarouselImageForm", 
+    Route::get('admin/editCarouselImageForm/{id}',
+        ["uses"=>"Admin\AdminCarouselImageController@editCarouselImageForm",
         "as"=> "adminEditCarouselImageForm"]
     );
     // Update CarouselImage
-    Route::post('admin/updateCarouselImage/{id}', 
-        ["uses"=>"Admin\AdminCarouselImageController@updateCarouselImage", 
+    Route::post('admin/updateCarouselImage/{id}',
+        ["uses"=>"Admin\AdminCarouselImageController@updateCarouselImage",
         "as"=> "adminUpdateCarouselImage"]
     );
     // Delete CarouselImage
-    Route::get('admin/deleteCarouselImage/{id}', 
-        ["uses"=>"Admin\AdminCarouselImageController@deleteCarouselImage", 
+    Route::get('admin/deleteCarouselImage/{id}',
+        ["uses"=>"Admin\AdminCarouselImageController@deleteCarouselImage",
         "as"=> "adminDeleteCarouselImage"]
     );
 
     //display create CarouselImage form
-    Route::get('admin/createCarouselImageForm', 
-        ["uses"=>"Admin\AdminCarouselImageController@createCarouselImageForm", 
+    Route::get('admin/createCarouselImageForm',
+        ["uses"=>"Admin\AdminCarouselImageController@createCarouselImageForm",
         "as"=> "adminCreateCarouselImageForm"]
     );
 
     //send new CarouselImage data to database
-    Route::post('admin/sendCreateCarouselImageForm/', 
-        ["uses"=>"Admin\AdminCarouselImageController@sendCreateCarouselImageForm", 
+    Route::post('admin/sendCreateCarouselImageForm/',
+        ["uses"=>"Admin\AdminCarouselImageController@sendCreateCarouselImageForm",
         "as"=> "adminSendCreateCarouselImageForm"]
     );
     // end CarouselImages
 
     // get all Users
-    Route::get('admin/users', 
+    Route::get('admin/users',
         ["uses"=>"Admin\AdminUsersController@index",'as'=>'adminDisplayUsers']
     );
     // edit User
-    Route::get('admin/editUserForm/{id}', 
-        ["uses"=>"Admin\AdminUsersController@editUserForm", 
+    Route::get('admin/editUserForm/{id}',
+        ["uses"=>"Admin\AdminUsersController@editUserForm",
         "as"=> "adminEditUserForm"]
     );
     // Update user
-    Route::post('admin/updateUser/{id}', 
-        ["uses"=>"Admin\AdminUsersController@updateUser", 
+    Route::post('admin/updateUser/{id}',
+        ["uses"=>"Admin\AdminUsersController@updateUser",
         "as"=> "adminUpdateUser"]
     );
     // Delete User
-    Route::get('admin/deleteUser/{id}', 
-        ["uses"=>"Admin\AdminUsersController@deleteUser", 
+    Route::get('admin/deleteUser/{id}',
+        ["uses"=>"Admin\AdminUsersController@deleteUser",
         "as"=> "adminDeleteUser"]
     );
 
     // Gallery Images
     // get all GalleryImages
-    Route::get('admin/galleryimages', 
+    Route::get('admin/galleryimages',
         ["uses"=>"Admin\AdminGalleryImageController@index",'as'=>'adminDisplayGalleryImages']
     );
     // edit GalleryImage
-    Route::get('admin/editGalleryImageForm/{id}', 
-        ["uses"=>"Admin\AdminGalleryImageController@editGalleryImageForm", 
+    Route::get('admin/editGalleryImageForm/{id}',
+        ["uses"=>"Admin\AdminGalleryImageController@editGalleryImageForm",
         "as"=> "adminEditGalleryImageForm"]
     );
     // Update GalleryImage
-    Route::post('admin/updateGalleryImage/{id}', 
-        ["uses"=>"Admin\AdminGalleryImageController@updateGalleryImage", 
+    Route::post('admin/updateGalleryImage/{id}',
+        ["uses"=>"Admin\AdminGalleryImageController@updateGalleryImage",
         "as"=> "adminUpdateGalleryImage"]
     );
     // Delete GalleryImage
-    Route::get('admin/deleteGalleryImage/{id}', 
-        ["uses"=>"Admin\AdminGalleryImageController@deleteGalleryImage", 
-        "as"=> "adminDeleteGalleryImage"]   
+    Route::get('admin/deleteGalleryImage/{id}',
+        ["uses"=>"Admin\AdminGalleryImageController@deleteGalleryImage",
+        "as"=> "adminDeleteGalleryImage"]
     );
 
     //display create GalleryImage form
-    Route::get('admin/createGalleryImageForm', 
-        ["uses"=>"Admin\AdminGalleryImageController@createGalleryImageForm", 
+    Route::get('admin/createGalleryImageForm',
+        ["uses"=>"Admin\AdminGalleryImageController@createGalleryImageForm",
         "as"=> "adminCreateGalleryImageForm"]
     );
 
     //send new GalleryImage data to database
-    Route::post('admin/sendCreateGalleryImageForm/', 
-        ["uses"=>"Admin\AdminGalleryImageController@sendCreateGalleryImageForm", 
+    Route::post('admin/sendCreateGalleryImageForm/',
+        ["uses"=>"Admin\AdminGalleryImageController@sendCreateGalleryImageForm",
         "as"=> "adminSendCreateGalleryImageForm"]
     );
     // end GalleryImages
@@ -466,134 +485,134 @@ Route::group(['middleware' => ['restrictToAdmin']], function () {
 
     // Category (Item Type)
     // get all categories
-    Route::get('admin/categories', 
+    Route::get('admin/categories',
         ["uses"=>"Admin\AdminCategoriesController@index",'as'=>'adminDisplayCategories']
     );
     // edit Categories
-    Route::get('admin/editCategoryForm/{id}', 
-        ["uses"=>"Admin\AdminCategoriesController@editCategoryForm", 
+    Route::get('admin/editCategoryForm/{id}',
+        ["uses"=>"Admin\AdminCategoriesController@editCategoryForm",
         "as"=> "adminEditCategoryForm"]
     );
     // Update Categories
-    Route::post('admin/updateCategory/{id}', 
-        ["uses"=>"Admin\AdminCategoriesController@updateCategory", 
+    Route::post('admin/updateCategory/{id}',
+        ["uses"=>"Admin\AdminCategoriesController@updateCategory",
         "as"=> "adminUpdateCategory"]
     );
     // Delete Categories
-    Route::get('admin/deleteCategory/{id}', 
-        ["uses"=>"Admin\AdminCategoriesController@deleteCategory", 
+    Route::get('admin/deleteCategory/{id}',
+        ["uses"=>"Admin\AdminCategoriesController@deleteCategory",
         "as"=> "adminDeleteCategory"]
     );
 
     //display create Categories form
-    Route::get('admin/createCategoryForm', 
-        ["uses"=>"Admin\AdminCategoriesController@createCategoryForm", 
+    Route::get('admin/createCategoryForm',
+        ["uses"=>"Admin\AdminCategoriesController@createCategoryForm",
         "as"=> "adminCreateCategoryForm"]
     );
 
     //send new Categories data to database
-    Route::post('admin/sendCreateCategoryForm/', 
-        ["uses"=>"Admin\AdminCategoriesController@sendCreateCategoryForm", 
+    Route::post('admin/sendCreateCategoryForm/',
+        ["uses"=>"Admin\AdminCategoriesController@sendCreateCategoryForm",
         "as"=> "adminSendCreateCategoryForm"]
     );
-    Route::get('admin/searchCategories', 
+    Route::get('admin/searchCategories',
         ["uses"=>"Admin\AdminCategoriesController@searchCategories",'as'=>'adminSearchCategories']
     );
 
     // End Category
-    
-    
-    Route::get('admin/userDonations', 
+
+
+    Route::get('admin/userDonations',
         ["uses"=>"Admin\AdminUserDonationController@index",'as'=>'adminDisplayUserDonations']
     );
     // edit UserDonation
-    Route::get('admin/editUserDonationForm/{id}', 
-        ["uses"=>"Admin\AdminUserDonationController@editUserDonationForm", 
+    Route::get('admin/editUserDonationForm/{id}',
+        ["uses"=>"Admin\AdminUserDonationController@editUserDonationForm",
         "as"=> "adminEditUserDonationForm"]
     );
     // Update UserDonation
-    Route::post('admin/updateUserDonation/{id}', 
-        ["uses"=>"Admin\AdminUserDonationController@updateUserDonation", 
+    Route::post('admin/updateUserDonation/{id}',
+        ["uses"=>"Admin\AdminUserDonationController@updateUserDonation",
         "as"=> "adminUpdateUserDonation"]
     );
     // Delete UserDonation
-    Route::get('admin/deleteUserDonation/{id}', 
-        ["uses"=>"Admin\AdminUserDonationController@deleteUserDonation", 
-        "as"=> "adminDeleteUserDonation"]   
+    Route::get('admin/deleteUserDonation/{id}',
+        ["uses"=>"Admin\AdminUserDonationController@deleteUserDonation",
+        "as"=> "adminDeleteUserDonation"]
     );
 
 
-    Route::get('admin/fundraises', 
+    Route::get('admin/fundraises',
         ["uses"=>"Admin\AdminFundraiseController@index",'as'=>'adminDisplayFundraises']
     );
     // edit Fundraises
-    Route::get('admin/editFundraiseForm/{id}', 
-        ["uses"=>"Admin\AdminFundraiseController@editFundraiseForm", 
+    Route::get('admin/editFundraiseForm/{id}',
+        ["uses"=>"Admin\AdminFundraiseController@editFundraiseForm",
         "as"=> "adminEditFundraiseForm"]
     );
     // Update Fundraise
-    Route::post('admin/updateFundraise/{id}', 
-        ["uses"=>"Admin\AdminFundraiseController@updateFundraise", 
+    Route::post('admin/updateFundraise/{id}',
+        ["uses"=>"Admin\AdminFundraiseController@updateFundraise",
         "as"=> "adminUpdateFundraise"]
     );
     // Delete Fundraise
-    Route::get('admin/deleteFundraise/{id}', 
-        ["uses"=>"Admin\AdminFundraiseController@deleteFundraise", 
-        "as"=> "adminDeleteFundraise"]   
+    Route::get('admin/deleteFundraise/{id}',
+        ["uses"=>"Admin\AdminFundraiseController@deleteFundraise",
+        "as"=> "adminDeleteFundraise"]
     );
 
 
 
-    Route::get('admin/volunteers', 
+    Route::get('admin/volunteers',
         ["uses"=>"Admin\AdminVolunteerController@index",'as'=>'adminDisplayVolunteers']
     );
     // edit Volunteer
-    Route::get('admin/editVolunteerForm/{id}', 
-        ["uses"=>"Admin\AdminVolunteerController@editVolunteerForm", 
+    Route::get('admin/editVolunteerForm/{id}',
+        ["uses"=>"Admin\AdminVolunteerController@editVolunteerForm",
         "as"=> "adminEditVolunteerForm"]
     );
     // Update Volunteer
-    Route::post('admin/updateVolunteer/{id}', 
-        ["uses"=>"Admin\AdminVolunteerController@updateVolunteer", 
+    Route::post('admin/updateVolunteer/{id}',
+        ["uses"=>"Admin\AdminVolunteerController@updateVolunteer",
         "as"=> "adminUpdateVolunteer"]
     );
     // Delete Volunteer
-    Route::get('admin/deleteVolunteer/{id}', 
-        ["uses"=>"Admin\AdminVolunteerController@deleteVolunteer", 
-        "as"=> "adminDeleteVolunteer"]   
+    Route::get('admin/deleteVolunteer/{id}',
+        ["uses"=>"Admin\AdminVolunteerController@deleteVolunteer",
+        "as"=> "adminDeleteVolunteer"]
     );
 
 
     // Donations
     // get all Donations
-    Route::get('admin/donations', 
+    Route::get('admin/donations',
         ["uses"=>"Admin\AdminDonationsController@index",'as'=>'adminDisplayDonations']
     );
     // edit Donations
-    Route::get('admin/editDonationsForm/{id}', 
-        ["uses"=>"Admin\AdminDonationsController@editDonationsForm", 
+    Route::get('admin/editDonationsForm/{id}',
+        ["uses"=>"Admin\AdminDonationsController@editDonationsForm",
         "as"=> "adminEditDonationsForm"]
     );
     // Update Donations
-    Route::post('admin/updateDonations/{id}', 
-        ["uses"=>"Admin\AdminDonationsController@updateDonations", 
+    Route::post('admin/updateDonations/{id}',
+        ["uses"=>"Admin\AdminDonationsController@updateDonations",
         "as"=> "adminUpdateDonations"]
     );
     // Delete Donations
-    Route::get('admin/deleteDonations/{id}', 
-        ["uses"=>"Admin\AdminDonationsController@deleteDonations", 
-        "as"=> "adminDeleteDonations"]   
+    Route::get('admin/deleteDonations/{id}',
+        ["uses"=>"Admin\AdminDonationsController@deleteDonations",
+        "as"=> "adminDeleteDonations"]
     );
 
     //display create Donations form
-    Route::get('admin/createDonationsForm', 
-        ["uses"=>"Admin\AdminDonationsController@createDonationsForm", 
+    Route::get('admin/createDonationsForm',
+        ["uses"=>"Admin\AdminDonationsController@createDonationsForm",
         "as"=> "adminCreateDonationsForm"]
     );
 
     //send new Donations data to database
-    Route::post('admin/sendCreateDonationsForm/', 
-        ["uses"=>"Admin\AdminDonationsController@sendCreateDonationsForm", 
+    Route::post('admin/sendCreateDonationsForm/',
+        ["uses"=>"Admin\AdminDonationsController@sendCreateDonationsForm",
         "as"=> "adminSendCreateDonationsForm"]
     );
     // end Donations

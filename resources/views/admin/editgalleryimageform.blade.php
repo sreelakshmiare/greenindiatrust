@@ -9,7 +9,7 @@
             <li>{!! print_r($errors->all()) !!}</li>
         </ul>
     </div>
-    @endif      
+    @endif
 
     <form action="{{ route('adminUpdateGalleryImage',['id' => $galleryimage->id ])}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
@@ -22,14 +22,14 @@
                         selected="selected"
                     @endif
                     >{{ $i }}</option>
-                @endforeach              
+                @endforeach
             </select>
         </div>
-    
+
         <div class="form-group">
             <label for="category_id">Categories</label>
-            <select class="form-control" name="category_id">               
-                @foreach ($categories as $category)                        
+            <select class="form-control" name="category_id">
+                @foreach ($categories as $category)
                     <option value="{{ $category->id }}"
                     @if ($category->id == $galleryimage->category_id)
                         selected="selected"
@@ -47,12 +47,12 @@
             <label for="project">Project Name</label>
         <input type="text" class="form-control" name="project" id="project" value="{{ $galleryimage->project}}">
         </div>
-    
+
         <div class="form-group">
             <label for="location">Location Name</label>
             <input type="text" class="form-control" name="location" id="location" value="{{ $galleryimage->location}}">
         </div>
-    
+
         <div class="form-group">
             <label for="description">Project Description</label>
             <input type="text" class="form-control" name="description" id="description" value="{{ $galleryimage->description}}">
@@ -60,21 +60,50 @@
         <div class="form-group">
             <label for="category_id">state</label>
             <select class="form-control" name="state" id="state">
-                <option value="">Please Select</option> 
+                <option value="">Please Select</option>
                 @foreach ($states['states'] as $state)
                     <option value="{{$state['state']}}"
                         @if ($state['state'] == $galleryimage->state)
                             selected="selected"
                         @endif
-                        >{{ $state['state'] }}</option>    
-                @endforeach        
+                        >{{ $state['state'] }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group">
             <label for="activity_date">Activity Date</label>
             <input id="activity_date" type="date" class="form-control" name="activity_date" id="activity_date"  value="{{ $galleryimage->activity_date}}">
-        
+
         </div>
+
+        <div class="form-group">
+            <label for="active_ind">Gallery Type</label>
+            <select class="form-control" name="gallery_type">
+                <option value="photo"
+                    @if ('Y' == $galleryimage->gallery_type)
+                        selected="selected"
+                    @endif
+                    >Photo</option>
+
+                    <option value="video"
+                    @if ('video' == $galleryimage->gallery_type)
+                        selected="selected"
+                    @endif
+                    >Video</option>
+
+                    <option value="media"
+                    @if ('media' == $galleryimage->gallery_type)
+                        selected="selected"
+                    @endif
+                    >Print Media</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="video_link">Video Link</label>
+            <input type="text" class="form-control" name="video_link" id="video_link" value="{{$galleryimage->video_link}}">
+        </div>
+
         <div class="form-group">
             <button class="btn btn-primary" type="submit">Submit </button>
             <button class="btn btn-primary" type="reset">Reset </button>
@@ -91,8 +120,8 @@
             <img src="{{asset ('storage')}}/images/{{$image}}" width="100" height="100" style="max-height:220px" >
         @endforeach
     </div>
-    
-    
+
+
 </div>
 
 @endsection
