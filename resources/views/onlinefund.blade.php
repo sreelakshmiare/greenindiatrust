@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
                 
-                    <h4 class="text-justify text-success">Online Fundraising for GITs Activities:</h4>
+                    <h4 class="text-justify text-success">Online Crowd Fundraising for GITs Activities:</h4>
                     <p class="text-justify text-success">Please register as an online fund raiser for Saving Our Mother Earth and Helping the most benedictory God-loving/pleasing activity – saving the suffering lives around us! 
 
 					</p>

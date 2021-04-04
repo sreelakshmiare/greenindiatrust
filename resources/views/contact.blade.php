@@ -99,7 +99,7 @@
                                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDKPILgi-9deG3OGgxKeML1dFxFxRwbRAw&amp;q=Green+India+Trust%2C+Nellore&amp;zoom=15" width="100%" height="400"></iframe></div>
                             </div>
                             <div class="col-sm-6 col-md-12 col-lg-6">
-                                <h2 class="text-success h4"><i class="fa fa-user"></i> Our Info</h2>
+                                <h2 class="text-success h4"><i class="fa fa-user"></i>Our Info</h2>
                                 <div><span class="text-success"><strong>Dr. Muralikrishna</strong><br></span></div>
                                 <div><span class="text-success">chairman@gitrust.org</span></div>
                                 <div><span class="text-success">gnitrust@gmail.com</span></div>
@@ -109,7 +109,7 @@
                                 <h2 class="text-success h4"><i class="fa fa-location-arrow"></i> Our Address</h2>
                                 <div><span class="text-success"><strong>Green India Trust</strong></span></div>
                                 <div><span class="text-success">16-2-51,Near S2 Cine Complex,</span></div>
-                                <div><span class="text-success">Pogathota, Nellore.</span></div>
+                                <div><span class="text-success">Pogathota, Nellore, AndhraPradesh-524001.</span></div>
                             </div>
                         </div>
                     </div>
